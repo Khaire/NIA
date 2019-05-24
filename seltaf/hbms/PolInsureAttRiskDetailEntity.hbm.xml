@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolInsureAttRiskDetailEntity" table="PolInsureAttRiskDetailEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolInsureAttRiskDetailTitle" column="PolInsureAttRiskDetailTitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigInsuredInterestDetailsTab" column="ConfigInsuredInterestDetailsTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttributesTab" column="ConfigInsuredInterestAttributesTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttachCoveragesTab" column="ConfigInsuredInterestAttachCoveragesTab" type="boolean" />
+			<property name="ConfigInsuredInterestRelationsTab" column="ConfigInsuredInterestRelationsTab" type="boolean" />
+			<property name="ConfigInsuredInterestPaymentsTab" column="ConfigInsuredInterestPaymentsTab" type="boolean" />
+			<property name="ConfigInsuredInterestScheduleTab" column="ConfigInsuredInterestScheduleTab" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigPolicyholder" column="ConfigPolicyholder" type="boolean" />
+			<property name="Policyholder" column="Policyholder" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigPolicyTypeforPAInsuranceFC" column="ConfigPolicyTypeforPAInsuranceFC" type="boolean" />
+			<property name="policyTypeforPAInsuranceFC" column="policyTypeforPAInsuranceFC" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

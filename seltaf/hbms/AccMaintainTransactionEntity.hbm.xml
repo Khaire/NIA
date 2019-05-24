@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AccMaintainTransactionEntity" table="AccMaintainTransactionEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="AccMaintainTransactionTitle" column="AccMaintainTransactionTitle" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigSearchCompany" column="ConfigSearchCompany" type="boolean" />
+			<property name="ConfigSearchBankCashGLCode" column="ConfigSearchBankCashGLCode" type="boolean" />
+			<property name="ConfigSearchVoucherType" column="ConfigSearchVoucherType" type="boolean" />
+			<property name="ConfigSearchVoucherNumber" column="ConfigSearchVoucherNumber" type="boolean" />
+			<property name="ConfigSearchDynamicVoucherNumber" column="ConfigSearchDynamicVoucherNumber" type="boolean" />
+			<property name="TableRowNumber" column="TableRowNumber" type="integer" />
+			<property name="ConfigSearchReferenceType" column="ConfigSearchReferenceType" type="boolean" />
+			<property name="ConfigSearchReferenceNo" column="ConfigSearchReferenceNo" type="boolean" />
+			<property name="ConfigSearchFromDate" column="ConfigSearchFromDate" type="boolean" />
+			<property name="ConfigSearchToDate" column="ConfigSearchToDate" type="boolean" />
+			<property name="ConfigSearchPostingStatus" column="ConfigSearchPostingStatus" type="boolean" />
+			<property name="ConfigCompany" column="ConfigCompany" type="boolean" />
+			<property name="Company" column="Company" type="string" />
+			<property name="ConfigBranch" column="ConfigBranch" type="boolean" />
+			<property name="Branch" column="Branch" type="string" />
+			<property name="ConfigVoucherNumber" column="ConfigVoucherNumber" type="boolean" />
+			<property name="VoucherNumber" column="VoucherNumber" type="string" />
+			<property name="ConfigVoucherDate" column="ConfigVoucherDate" type="boolean" />
+			<property name="VoucherDate" column="VoucherDate" type="string" />
+			<property name="ConfigVoucherType" column="ConfigVoucherType" type="boolean" />
+			<property name="VoucherType" column="VoucherType" type="string" />
+			<property name="ConfigTransactionMode" column="ConfigTransactionMode" type="boolean" />
+			<property name="TransactionMode" column="TransactionMode" type="string" />
+			<property name="ConfigTransactionRuleCode" column="ConfigTransactionRuleCode" type="boolean" />
+			<property name="TransactionRuleCode" column="TransactionRuleCode" type="string" />
+			<property name="ConfigTransactionRuleDesc" column="ConfigTransactionRuleDesc" type="boolean" />
+			<property name="TransactionRuleDesc" column="TransactionRuleDesc" type="string" />
+			<property name="ConfigCurrencyIndicator" column="ConfigCurrencyIndicator" type="boolean" />
+			<property name="CurrencyIndicator" column="CurrencyIndicator" type="string" />
+			<property name="ConfigCurrencyRate" column="ConfigCurrencyRate" type="boolean" />
+			<property name="CurrencyRate" column="CurrencyRate" type="string" />
+			<property name="ConfigVoucherAmount" column="ConfigVoucherAmount" type="boolean" />
+			<property name="VoucherAmount" column="VoucherAmount" type="string" />
+			<property name="ConfigReferenceType" column="ConfigReferenceType" type="boolean" />
+			<property name="ReferenceType" column="ReferenceType" type="string" />
+			<property name="ConfigReferenceNo" column="ConfigReferenceNo" type="boolean" />
+			<property name="ReferenceNo" column="ReferenceNo" type="string" />
+			<property name="ConfigNarration" column="ConfigNarration" type="boolean" />
+			<property name="Narration" column="Narration" type="string" />
+			<property name="ConfigBankCashGLCode" column="ConfigBankCashGLCode" type="boolean" />
+			<property name="BankCashGLCode" column="BankCashGLCode" type="string" />
+			<property name="ConfigBankCashGLName" column="ConfigBankCashGLName" type="boolean" />
+			<property name="BankCashGLName" column="BankCashGLName" type="string" />
+			<property name="ConfigTransactionDate" column="ConfigTransactionDate" type="boolean" />
+			<property name="TransactionDate" column="TransactionDate" type="string" />
+			<property name="ConfigFromDate" column="ConfigFromDate" type="boolean" />
+			<property name="FromDate" column="FromDate" type="string" />
+			<property name="ConfigToDate" column="ConfigToDate" type="boolean" />
+			<property name="ToDate" column="ToDate" type="string" />
+			<property name="ConfigPostingStatus" column="ConfigPostingStatus" type="boolean" />
+			<property name="PostingStatus" column="PostingStatus" type="string" />
+			<property name="ConfigReceivingParty" column="ConfigReceivingParty" type="boolean" />
+			<property name="ReceivingParty" column="ReceivingParty" type="string" />
+			<property name="ConfigAccDistributionButton" column="ConfigAccDistributionButton" type="boolean" />
+			<property name="ConfigReverseButton" column="ConfigReverseButton" type="boolean" />
+			<property name="ConfigSendSMSButton" column="ConfigSendSMSButton" type="boolean" />
+			<property name="ConfigPrintChequeButton" column="ConfigPrintChequeButton" type="boolean" />
+			<property name="ConfigSearchButton" column="ConfigSearchButton" type="boolean" />
+			<property name="ConfigClearButton" column="ConfigClearButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigNewButton" column="ConfigNewButton" type="boolean" />
+			<property name="ConfigAccountingTransactionTab" column="ConfigAccountingTransactionTab" type="boolean" />
+			<property name="ConfigInstrumentDetailTab" column="ConfigInstrumentDetailTab" type="boolean" />
+			<property name="ConfigNarrationDescription" column="ConfigNarrationDescription" type="boolean" />
+			<property name="NarrationDescription" column="NarrationDescription" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

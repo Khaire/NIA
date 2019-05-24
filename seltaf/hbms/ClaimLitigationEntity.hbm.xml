@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimLitigationEntity" table="ClaimLitigationEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="DependencyForLitigationSerial" column="DependencyForLitigationSerial" type="string" />
+			<property name="ConfigClaim" column="ConfigClaim" type="boolean" />
+			<property name="ConfigMember" column="ConfigMember" type="boolean" />
+			<property name="ConfigDocument" column="ConfigDocument" type="boolean" />
+			<property name="ConfigParties" column="ConfigParties" type="boolean" />
+			<property name="ConfigReserve" column="ConfigReserve" type="boolean" />
+			<property name="ConfigPayment" column="ConfigPayment" type="boolean" />
+			<property name="ConfigAttributes" column="ConfigAttributes" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigAddButton" column="ConfigAddButton" type="boolean" />
+			<property name="ConfigSerialNo" column="ConfigSerialNo" type="boolean" />
+			<property name="SerialNo" column="SerialNo" type="string" />
+			<property name="ConfigCaseTitle" column="ConfigCaseTitle" type="boolean" />
+			<property name="CaseTitle" column="CaseTitle" type="string" />
+			<property name="ConfigTitleOfTheCourt" column="ConfigTitleOfTheCourt" type="boolean" />
+			<property name="TitleOfTheCourt" column="TitleOfTheCourt" type="string" />
+			<property name="ConfigLocationOfCourtFindButton" column="ConfigLocationOfCourtFindButton" type="boolean" />
+			<property name="ConfigLocationOfTheCourt" column="ConfigLocationOfTheCourt" type="boolean" />
+			<property name="LocationOfTheCourt" column="LocationOfTheCourt" type="string" />
+			<property name="ConfigPetitionNumber" column="ConfigPetitionNumber" type="boolean" />
+			<property name="PetitionNumber" column="PetitionNumber" type="string" />
+			<property name="ConfigDateOfPetition" column="ConfigDateOfPetition" type="boolean" />
+			<property name="DateOfPetition" column="DateOfPetition" type="string" />
+			<property name="ConfigPetitionerName" column="ConfigPetitionerName" type="boolean" />
+			<property name="PetitionerName" column="PetitionerName" type="string" />
+			<property name="ConfigPetitionerAddress" column="ConfigPetitionerAddress" type="boolean" />
+			<property name="PetitionerAddress" column="PetitionerAddress" type="string" />
+			<property name="ConfigTypeOfLoss" column="ConfigTypeOfLoss" type="boolean" />
+			<property name="TypeOfLoss" column="TypeOfLoss" type="string" />
+			<property name="ConfigNatureOfInjury" column="ConfigNatureOfInjury" type="boolean" />
+			<property name="NatureOfInjury" column="NatureOfInjury" type="string" />
+			<property name="ConfigAmountClaimed" column="ConfigAmountClaimed" type="boolean" />
+			<property name="AmountClaimed" column="AmountClaimed" type="string" />
+			<property name="ConfigTypeOfCourt" column="ConfigTypeOfCourt" type="boolean" />
+			<property name="TypeOfCourt" column="TypeOfCourt" type="string" />
+			<property name="ConfigAdvocateForInsuranceCo" column="ConfigAdvocateForInsuranceCo" type="boolean" />
+			<property name="AdvocateForInsuranceCo" column="AdvocateForInsuranceCo" type="string" />
+			<property name="ConfigAdvocateCodeFindButton" column="ConfigAdvocateCodeFindButton" type="boolean" />
+			<property name="ConfigDateOfAppointment" column="ConfigDateOfAppointment" type="boolean" />
+			<property name="DateOfAppointment" column="DateOfAppointment" type="string" />
+			<property name="ConfigAdvocatePetitionerCodeFindButton" column="ConfigAdvocatePetitionerCodeFindButton" type="boolean" />
+			<property name="ConfigAdvocateForPetitioner" column="ConfigAdvocateForPetitioner" type="boolean" />
+			<property name="AdvocateForPetitioner" column="AdvocateForPetitioner" type="string" />
+			<property name="ConfigWSFiled" column="ConfigWSFiled" type="boolean" />
+			<property name="WSFiled" column="WSFiled" type="string" />
+			<property name="ConfigApplicationUS170Filed" column="ConfigApplicationUS170Filed" type="boolean" />
+			<property name="ApplicationUS170Filed" column="ApplicationUS170Filed" type="string" />
+			<property name="ConfigModeOfSettlement" column="ConfigModeOfSettlement" type="boolean" />
+			<property name="ModeOfSettlement" column="ModeOfSettlement" type="string" />
+			<property name="ConfigDateOfAwardOrSettlement" column="ConfigDateOfAwardOrSettlement" type="boolean" />
+			<property name="DateOfAwardOrSettlement" column="DateOfAwardOrSettlement" type="string" />
+			<property name="ConfigDateOfReceiptOfAward" column="ConfigDateOfReceiptOfAward" type="boolean" />
+			<property name="DateOfReceiptOfAward" column="DateOfReceiptOfAward" type="string" />
+			<property name="ConfigAmountAwardedOrSettled" column="ConfigAmountAwardedOrSettled" type="boolean" />
+			<property name="AmountAwardedOrSettled" column="AmountAwardedOrSettled" type="string" />
+			<property name="ConfigRateOfInterest" column="ConfigRateOfInterest" type="boolean" />
+			<property name="RateOfInterest" column="RateOfInterest" type="string" />
+			<property name="ConfigNoOfDays" column="ConfigNoOfDays" type="boolean" />
+			<property name="NoOfDays" column="NoOfDays" type="string" />
+			<property name="ConfigPenaltyAmount" column="ConfigPenaltyAmount" type="boolean" />
+			<property name="PenaltyAmount" column="PenaltyAmount" type="string" />
+			<property name="ConfigTotalAmount" column="ConfigTotalAmount" type="boolean" />
+			<property name="TotalAmount" column="TotalAmount" type="string" />
+			<property name="ConfigDateOfAppeal" column="ConfigDateOfAppeal" type="boolean" />
+			<property name="DateOfAppeal" column="DateOfAppeal" type="string" />
+			<property name="ConfigRemarks" column="ConfigRemarks" type="boolean" />
+			<property name="Remarks" column="Remarks" type="string" />
+			<property name="ConfigFileNumber" column="ConfigFileNumber" type="boolean" />
+			<property name="FileNumber" column="FileNumber" type="string" />
+			<property name="ConfigNoFaultLiabilityDepositAmount" column="ConfigNoFaultLiabilityDepositAmount" type="boolean" />
+			<property name="NoFaultLiabilityDepositAmount" column="NoFaultLiabilityDepositAmount" type="string" />
+			<property name="ConfigAmountDepositedInAppeal" column="ConfigAmountDepositedInAppeal" type="boolean" />
+			<property name="AmountDepositedInAppeal" column="AmountDepositedInAppeal" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSelectSerialNo" column="ConfigSelectSerialNo" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

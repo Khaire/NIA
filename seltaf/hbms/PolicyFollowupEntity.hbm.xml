@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyFollowupEntity" table="PolicyFollowupEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigPolicy" column="ConfigPolicy" type="boolean" />
+			<property name="ConfigAttribute" column="ConfigAttribute" type="boolean" />
+			<property name="ConfigMember" column="ConfigMember" type="boolean" />
+			<property name="ConfigCoverage" column="ConfigCoverage" type="boolean" />
+			<property name="ConfigClientDetails" column="ConfigClientDetails" type="boolean" />
+			<property name="ConfigRelations" column="ConfigRelations" type="boolean" />
+			<property name="ConfigPayments" column="ConfigPayments" type="boolean" />
+			<property name="ConfigFollowup" column="ConfigFollowup" type="boolean" />
+			<property name="ConfigDocument" column="ConfigDocument" type="boolean" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyholder" column="ConfigPolicyholder" type="boolean" />
+			<property name="Policyholder" column="Policyholder" type="string" />
+			<property name="ConfigProduct" column="ConfigProduct" type="boolean" />
+			<property name="ProductLabel" column="ProductLabel" type="string" />
+			<property name="ConfigPolicyFollowupTableCancellationBasisRemaks" column="ConfigPolicyFollowupTableCancellationBasisRemaks" type="boolean" />
+			<property name="PolicyFollowupTableCancellationBasisRemaks" column="PolicyFollowupTableCancellationBasisRemaks" type="string" />
+			<property name="ConfigFollowUpEventTable" column="ConfigFollowUpEventTable" type="boolean" />
+			<property name="TableRowNumber" column="TableRowNumber" type="integer" />
+			<property name="SlNo" column="SlNo" type="integer" />
+			<property name="ConfigSerialNo" column="ConfigSerialNo" type="boolean" />
+			<property name="SerialNo" column="SerialNo" type="string" />
+			<property name="ConfigEventDate" column="ConfigEventDate" type="boolean" />
+			<property name="EventDate" column="EventDate" type="string" />
+			<property name="ConfigEventCode" column="ConfigEventCode" type="boolean" />
+			<property name="EventCode" column="EventCode" type="string" />
+			<property name="ConfigEventRemarks" column="ConfigEventRemarks" type="boolean" />
+			<property name="EventRemarks" column="EventRemarks" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

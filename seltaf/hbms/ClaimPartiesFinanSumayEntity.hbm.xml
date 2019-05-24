@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimPartiesFinanSumayEntity" table="ClaimPartiesFinanSumayEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimPartyFinancialSummaryTitle" column="ClaimPartyFinancialSummaryTitle" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigClaimNo" column="ConfigClaimNo" type="boolean" />
+			<property name="ClaimNo" column="ClaimNo" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigPartyName" column="ConfigPartyName" type="boolean" />
+			<property name="PartyName" column="PartyName" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigTypeOfSurvey" column="ConfigTypeOfSurvey" type="boolean" />
+			<property name="TypeOfSurvey" column="TypeOfSurvey" type="string" />
+			<property name="ConfigDateOfAppointment" column="ConfigDateOfAppointment" type="boolean" />
+			<property name="DateOfAppointment" column="DateOfAppointment" type="string" />
+			<property name="ConfigDateOfSurvey" column="ConfigDateOfSurvey" type="boolean" />
+			<property name="DateOfSurvey" column="DateOfSurvey" type="string" />
+			<property name="ConfigPlaceOfSurvey" column="ConfigPlaceOfSurvey" type="boolean" />
+			<property name="PlaceOfSurvey" column="PlaceOfSurvey" type="string" />
+			<property name="ConfigExpectedSurveyReportSubmissionDate" column="ConfigExpectedSurveyReportSubmissionDate" type="boolean" />
+			<property name="ExpectedSurveyReportSubmissionDate" column="ExpectedSurveyReportSubmissionDate" type="string" />
+			<property name="ConfigSurveyComments" column="ConfigSurveyComments" type="boolean" />
+			<property name="SurveyComments" column="SurveyComments" type="string" />
+			<property name="ConfigAssessedAmount" column="ConfigAssessedAmount" type="boolean" />
+			<property name="AssessedAmount" column="AssessedAmount" type="string" />
+			<property name="ConfigOtherExpenses" column="ConfigOtherExpenses" type="boolean" />
+			<property name="OtherExpenses" column="OtherExpenses" type="string" />
+			<property name="ConfigTotalFees" column="ConfigTotalFees" type="boolean" />
+			<property name="TotalFees" column="TotalFees" type="string" />
+			<property name="ConfigSurveyFees" column="ConfigSurveyFees" type="boolean" />
+			<property name="SurveyFees" column="SurveyFees" type="string" />
+			<property name="ConfigServiceTax" column="ConfigServiceTax" type="boolean" />
+			<property name="ServiceTax" column="ServiceTax" type="string" />
+			<property name="ConfigActualReportSubmissionDate" column="ConfigActualReportSubmissionDate" type="boolean" />
+			<property name="ActualReportSubmissionDate" column="ActualReportSubmissionDate" type="string" />
+			<property name="ConfigBarCouncilEnrollmentNo" column="ConfigBarCouncilEnrollmentNo" type="boolean" />
+			<property name="BarCouncilEnrollmentNo" column="BarCouncilEnrollmentNo" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

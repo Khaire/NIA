@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.InstrumentDetailsEntity" table="InstrumentDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigCompany" column="ConfigCompany" type="boolean" />
+			<property name="Company" column="Company" type="string" />
+			<property name="ConfigVoucherType" column="ConfigVoucherType" type="boolean" />
+			<property name="VoucherType" column="VoucherType" type="string" />
+			<property name="ConfigCurrencyRate" column="ConfigCurrencyRate" type="boolean" />
+			<property name="CurrenyRate" column="CurrenyRate" type="string" />
+			<property name="ConfigAcTransaction" column="ConfigAcTransaction" type="boolean" />
+			<property name="ConfigInstrumentDetail" column="ConfigInstrumentDetail" type="boolean" />
+			<property name="ConfigVoucherNumber" column="ConfigVoucherNumber" type="boolean" />
+			<property name="VoucherNumber" column="VoucherNumber" type="string" />
+			<property name="ConfigVoucherAmount" column="ConfigVoucherAmount" type="boolean" />
+			<property name="VoucherAmount" column="VoucherAmount" type="string" />
+			<property name="ConfigVoucherCurrency " column="ConfigVoucherCurrency " type="boolean" />
+			<property name="VoucherCurrency " column="VoucherCurrency " type="string" />
+			<property name="ConfigInstrumentNo" column="ConfigInstrumentNo" type="boolean" />
+			<property name="ConfigSearchInstrumentNo" column="ConfigSearchInstrumentNo" type="boolean" />
+			<property name="InstrumentNo" column="InstrumentNo" type="string" />
+			<property name="ConfigInstrumentDate " column="ConfigInstrumentDate " type="boolean" />
+			<property name="InstrumentDate " column="InstrumentDate " type="string" />
+			<property name="ConfigAmount" column="ConfigAmount" type="boolean" />
+			<property name="Amount" column="Amount" type="string" />
+			<property name="ConfigExpiryDate" column="ConfigExpiryDate" type="boolean" />
+			<property name="ExpiryDate" column="ExpiryDate" type="string" />
+			<property name="ConfigInFavourOf" column="ConfigInFavourOf" type="boolean" />
+			<property name="InFavourOf" column="InFavourOf" type="string" />
+			<property name="ConfigDraweeBankName " column="ConfigDraweeBankName " type="boolean" />
+			<property name="DraweeBankName " column="DraweeBankName " type="string" />
+			<property name="ConfigMICRCode" column="ConfigMICRCode" type="boolean" />
+			<property name="MICRCode" column="MICRCode" type="string" />
+			<property name="ConfigIFSCCode " column="ConfigIFSCCode " type="boolean" />
+			<property name="IFSCCode " column="IFSCCode " type="string" />
+			<property name="ConfigBranchName" column="ConfigBranchName" type="boolean" />
+			<property name="BranchName" column="BranchName" type="string" />
+			<property name="ConfigPreparedBy" column="ConfigPreparedBy" type="boolean" />
+			<property name="PreparedBy" column="PreparedBy" type="string" />
+			<property name="ConfigCheckedBy" column="ConfigCheckedBy" type="boolean" />
+			<property name="CheckedBy" column="CheckedBy" type="string" />
+			<property name="ConfigClearanceDate" column="ConfigClearanceDate" type="boolean" />
+			<property name="ClearanceDate" column="ClearanceDate" type="string" />
+			<property name="ConfigClearChequeButton" column="ConfigClearChequeButton" type="boolean" />
+			<property name="ConfigDishonourChequeButton" column="ConfigDishonourChequeButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

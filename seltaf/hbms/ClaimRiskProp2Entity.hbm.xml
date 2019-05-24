@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimRiskProp2Entity" table="ClaimRiskProp2Entity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="NextPageTitle" column="NextPageTitle" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigTotalSumInsured" column="ConfigTotalSumInsured" type="boolean" />
+			<property name="TotalSumInsured" column="TotalSumInsured" type="string" />
+			<property name="ConfigSueAndLabourCharges" column="ConfigSueAndLabourCharges" type="boolean" />
+			<property name="SueAndLabourCharges" column="SueAndLabourCharges" type="string" />
+			<property name="ConfigCollisionLiability" column="ConfigCollisionLiability" type="boolean" />
+			<property name="CollisionLiability" column="CollisionLiability" type="string" />
+			<property name="ConfigTotalClaimAmount" column="ConfigTotalClaimAmount" type="boolean" />
+			<property name="TotalClaimAmount" column="TotalClaimAmount" type="string" />
+			<property name="ConfigTotalDeductibleAmount" column="ConfigTotalDeductibleAmount" type="boolean" />
+			<property name="TotalDeductibleAmount" column="TotalDeductibleAmount" type="string" />
+			<property name="ConfigUnderInsurancePercent" column="ConfigUnderInsurancePercent" type="boolean" />
+			<property name="UnderInsurancePercent" column="UnderInsurancePercent" type="string" />
+			<property name="ConfigUnderInsuranceAmount" column="ConfigUnderInsuranceAmount" type="boolean" />
+			<property name="UnderInsuranceAmount" column="UnderInsuranceAmount" type="string" />
+			<property name="ConfigOtherRecoveredAmount" column="ConfigOtherRecoveredAmount" type="boolean" />
+			<property name="OtherRecoveredAmount" column="OtherRecoveredAmount" type="string" />
+			<property name="ConfigNetClaimAmount" column="ConfigNetClaimAmount" type="boolean" />
+			<property name="NetClaimAmount" column="NetClaimAmount" type="string" />
+			<property name="ConfigRemarks" column="ConfigRemarks" type="boolean" />
+			<property name="Remarks" column="Remarks" type="string" />
+			<property name="ConfigWhetherThePolicyIs64VBCompliant" column="ConfigWhetherThePolicyIs64VBCompliant" type="boolean" />
+			<property name="WhetherThePolicyIs64VBCompliant" column="WhetherThePolicyIs64VBCompliant" type="string" />
+			<property name="ConfigSumInsuredForSectionPhysicalDamage" column="ConfigSumInsuredForSectionPhysicalDamage" type="boolean" />
+			<property name="SumInsuredForSectionPhysicalDamage" column="SumInsuredForSectionPhysicalDamage" type="string" />
+			<property name="ConfigAssessedAmountOfLossBySurveyorForSectionI" column="ConfigAssessedAmountOfLossBySurveyorForSectionI" type="boolean" />
+			<property name="AssessedAmountOfLossBySurveyorForSectionI" column="AssessedAmountOfLossBySurveyorForSectionI" type="string" />
+			<property name="ConfigCurrencyOfClaimAssessedForSectionI" column="ConfigCurrencyOfClaimAssessedForSectionI" type="boolean" />
+			<property name="CurrencyOfClaimAssessedForSectionI" column="CurrencyOfClaimAssessedForSectionI" type="string" />
+			<property name="ConfigClaimAssessedAmountEquivalentToINRForSectionI" column="ConfigClaimAssessedAmountEquivalentToINRForSectionI" type="boolean" />
+			<property name="ClaimAssessedAmountEquivalentToINRForSectionI" column="ClaimAssessedAmountEquivalentToINRForSectionI" type="string" />
+			<property name="ConfigDeductibleForSectionPhysicalDamage" column="ConfigDeductibleForSectionPhysicalDamage" type="boolean" />
+			<property name="DeductibleForSectionPhysicalDamage" column="DeductibleForSectionPhysicalDamage" type="string" />
+			<property name="ConfigTotalGRT" column="ConfigTotalGRT" type="boolean" />
+			<property name="TotalGRT" column="TotalGRT" type="string" />
+			<property name="ConfigSIForChartersLiabilityInsurance" column="ConfigSIForChartersLiabilityInsurance" type="boolean" />
+			<property name="SIForChartersLiabilityInsurance" column="SIForChartersLiabilityInsurance" type="string" />
+			<property name="ConfigChartersBunkerInsuranceLiability" column="ConfigChartersBunkerInsuranceLiability" type="boolean" />
+			<property name="ChartersBunkerInsuranceLiability" column="ChartersBunkerInsuranceLiability" type="string" />
+			<property name="ConfigChartersBunkerDeductible" column="ConfigChartersBunkerDeductible" type="boolean" />
+			<property name="ChartersBunkerDeductible" column="ChartersBunkerDeductible" type="string" />
+			<property name="ConfigChartersFreightInsuranceLiability" column="ConfigChartersFreightInsuranceLiability" type="boolean" />
+			<property name="ChartersFreightInsuranceLiability" column="ChartersFreightInsuranceLiability" type="string" />
+			<property name="ConfigChartersFreightDeductible" column="ConfigChartersFreightDeductible" type="boolean" />
+			<property name="ChartersFreightDeductible" column="ChartersFreightDeductible" type="string" />
+			<property name="ConfigChartersLiabilityDeductible" column="ConfigChartersLiabilityDeductible" type="boolean" />
+			<property name="ChartersLiabilityDeductible" column="ChartersLiabilityDeductible" type="string" />
+			<property name="ConfigProtectionAndIndemnityDeductible" column="ConfigProtectionAndIndemnityDeductible" type="boolean" />
+			<property name="ProtectionAndIndemnityDeductible" column="ProtectionAndIndemnityDeductible" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigVesselRegistrationNo" column="ConfigVesselRegistrationNo" type="boolean" />
+			<property name="VesselRegistrationNo" column="VesselRegistrationNo" type="string" />
+			<property name="ConfigPlaceOfBeaching" column="ConfigPlaceOfBeaching" type="boolean" />
+			<property name="PlaceOfBeaching" column="PlaceOfBeaching" type="string" />
+			<property name="ConfigBuildersName" column="ConfigBuildersName" type="boolean" />
+			<property name="BuildersName" column="BuildersName" type="string" />
+			<property name="ConfigMakersName" column="ConfigMakersName" type="boolean" />
+			<property name="MakersName" column="MakersName" type="string" />
+			<property name="ConfigEngineType" column="ConfigEngineType" type="boolean" />
+			<property name="EngineType" column="EngineType" type="string" />
+			<property name="ConfigAdditionalPerilsClaim" column="ConfigAdditionalPerilsClaim" type="boolean" />
+			<property name="AdditionalPerilsClaim" column="AdditionalPerilsClaim" type="string" />
+			<property name="ConfigAdditionalPerilsDeductibleAmount" column="ConfigAdditionalPerilsDeductibleAmount" type="boolean" />
+			<property name="AdditionalPerilsDeductibleAmount" column="AdditionalPerilsDeductibleAmount" type="string" />
+			<property name="ConfigTypeOfRiskInClaim" column="ConfigTypeOfRiskInClaim" type="boolean" />
+			<property name="TypeOfRiskInClaim" column="TypeOfRiskInClaim" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

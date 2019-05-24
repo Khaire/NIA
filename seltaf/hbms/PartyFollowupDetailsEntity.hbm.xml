@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PartyFollowupDetailsEntity" table="PartyFollowupDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigPartyTab" column="ConfigPartyTab" type="boolean" />
+			<property name="ConfigPartyRolesTab" column="ConfigPartyRolesTab" type="boolean" />
+			<property name="ConfigContactsTab" column="ConfigContactsTab" type="boolean" />
+			<property name="ConfigRelatedPartiesTab" column="ConfigRelatedPartiesTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigHierarchyTab" column="ConfigHierarchyTab" type="boolean" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="ConfigNewButton" column="ConfigNewButton" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigPartyName" column="ConfigPartyName" type="boolean" />
+			<property name="PartyName" column="PartyName" type="string" />
+			<property name="ConfigFollowupDate" column="ConfigFollowupDate" type="boolean" />
+			<property name="FollowupDate" column="FollowupDate" type="string" />
+			<property name="ConfigFollowupTime" column="ConfigFollowupTime" type="boolean" />
+			<property name="FollowupTime" column="FollowupTime" type="string" />
+			<property name="ConfigAssignedTo" column="ConfigAssignedTo" type="boolean" />
+			<property name="AssignedTo" column="AssignedTo" type="string" />
+			<property name="ConfigAssignedBy" column="ConfigAssignedBy" type="boolean" />
+			<property name="AssignedBy" column="AssignedBy" type="string" />
+			<property name="ConfigEventCode" column="ConfigEventCode" type="boolean" />
+			<property name="EventCode" column="EventCode" type="string" />
+			<property name="ConfigJobStatus" column="ConfigJobStatus" type="boolean" />
+			<property name="JobStatus" column="JobStatus" type="string" />
+			<property name="ConfigKeyword" column="ConfigKeyword" type="boolean" />
+			<property name="Keyword" column="Keyword" type="string" />
+			<property name="ConfigPriority" column="ConfigPriority" type="boolean" />
+			<property name="Priority" column="Priority" type="string" />
+			<property name="ConfigEventEffectiveDate" column="ConfigEventEffectiveDate" type="boolean" />
+			<property name="EventEffectiveDate" column="EventEffectiveDate" type="string" />
+			<property name="ConfigFollowupDescription" column="ConfigFollowupDescription" type="boolean" />
+			<property name="FollowupDescription" column="FollowupDescription" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigCompleteButton" column="ConfigCompleteButton" type="boolean" />
+			<property name="ConfigCancelButton" column="ConfigCancelButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="TableRowNumber" column="TableRowNumber" type="integer" />
+			<property name="ConfigSearchDate" column="ConfigSearchDate" type="boolean" />
+			<property name="SearchDate" column="SearchDate" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

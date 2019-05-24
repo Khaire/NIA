@@ -1,0 +1,90 @@
+package com.aqm.staf.library.pages.common;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.aqm.staf.framework.core.BasePage;
+import com.aqm.staf.framework.core.PageElement;
+import com.aqm.staf.framework.core.WaitType;
+import com.aqm.staf.framework.core.WebPage;
+
+public class ClaimPartiesAddSurveyor extends BasePage {
+	private PageElement claimPartyFinancialSummaryPageTitle;
+	private PageElement claimTitle;
+	private PageElement insuredItemTitle;
+	private PageElement documentTitle;
+	private PageElement partiesTitle;
+	private PageElement reserveTitle;
+	private PageElement paymentTitle;
+	private PageElement attributesTitle;
+	private PageElement claimNumberLabel;
+	private PageElement policyNumberLabel;
+	private PageElement claimDateLabel;
+	private PageElement claimStatusLabel;
+	private PageElement productCodeLabel; 
+	private PageElement causeOfLossLabel;
+	private PageElement partyCodeLabel;
+	private PageElement partyNameLabel;
+	private PageElement applicableEventCodeLabel;
+	private PageElement surveyorCategoryDropdown;
+	private PageElement dateOfAppointmentTextField;
+	private PageElement surveyorLicenseNumberTextField;
+	private PageElement surveyorLicenseStartDateTextField;
+	private PageElement surveyorLicenseExpiryDateTextField;
+	private PageElement dateOfSurveyTextField;
+	private PageElement placeOfSurveyTextField;
+	private PageElement surveyReportNoTextField;
+	private PageElement surveyReportDateTextField;
+	private PageElement expectedSurveyReportSubmissionDateTextField;
+	private PageElement surveyCommentsTextField;
+	private PageElement surveyFeesTextField;
+	private PageElement otherExpensesTextField;
+	private PageElement serviceTaxForPreliminarySurveyTextField;
+	private PageElement totalFeesTextField;
+	private PageElement qualityOfAssessmentDropdown;
+	private PageElement technicalCompetencyDropdown;
+	private PageElement actualReportSubmissionDateTextField;
+	private PageElement saveButton;
+	private PageElement backButton;
+
+	public ClaimPartiesAddSurveyor(WebDriver driver, String pageName) {
+		super(driver, pageName);
+		claimPartyFinancialSummaryPageTitle = new PageElement(By.xpath("//div//b[contains(text(),'Claim Party Financial Summary')]"),"Claim Party Financial Summary Page Title",false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		claimTitle = new PageElement(By.xpath("//a//b//div[contains(text(),'Claim')]"), "Claim Title", false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		insuredItemTitle = new PageElement(By.xpath("//a//b//div[contains(text(),'Insured Item')]"), "Insured Item Title", false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		documentTitle = new PageElement(By.xpath("//a//b//div[contains(text(),'Document')]"), "Document Title", false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		partiesTitle = new PageElement(By.xpath("//a//b//div[contains(text(),'Parties')]"), "Parties Title", false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		reserveTitle = new PageElement(By.xpath("//a//b//div[contains(text(),'Reserve')]"), "Reserve Title", false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		paymentTitle = new PageElement(By.xpath("//a//b//div[contains(text(),'Payment')]"), "Payment Title", false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		attributesTitle = new PageElement(By.xpath("//a//b//div[contains(text(),'Attributes')]"), "Attributes Title", false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		claimNumberLabel =  new PageElement(By.xpath(genericLocatorforLabel("S0200", "Claim")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		policyNumberLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Policy")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		claimDateLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Date")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		claimStatusLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Status")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		productCodeLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Code")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		causeOfLossLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Cause Of Loss")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		partyCodeLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Party Code")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		partyNameLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Name")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		applicableEventCodeLabel = new PageElement(By.xpath(genericLocatorforLabel("S0200", "Applicable Event Code")),"Policy Number Label", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyorCategoryDropdown = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue1", "select")),"Surveyor Category Dropdown", false, WaitType.WAITFORELEMENTTOBEEENABLED,10);
+		dateOfAppointmentTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Date of Appointment", "input")),"Date Of Appointment Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyorLicenseNumberTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue3", "input")),"surveyor License Number Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyorLicenseStartDateTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Surveyor License Start Date", "input")),"Surveyor License Start Date Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyorLicenseExpiryDateTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Surveyor License Expiry Date", "input")),"Surveyor License Expiry Date Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		dateOfSurveyTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Date of survey", "input")),"Date of Survey Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		placeOfSurveyTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue7", "textarea")),"place Of Survey Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyReportNoTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue8", "input")),"surveyReportNoTextField ", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyReportDateTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Survey Report Date", "input")),"surveyReportDateTextField", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		expectedSurveyReportSubmissionDateTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Survey Report Submission Date", "input")),"Survey Report Submission Date Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyCommentsTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue11", "textarea")),"surveyComments Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		surveyFeesTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Survey Fees", "input")),"Survey Fees Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		otherExpensesTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue13", "input")),"otherExpensesTextField", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		serviceTaxForPreliminarySurveyTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue14", "input")),"serviceTaxForPreliminarySurveyTextField", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		totalFeesTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue15", "input")),"totalFeesTextField", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		qualityOfAssessmentDropdown = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue16", "select")),"qualityOfAssessmentDropdown", false, WaitType.WAITFORELEMENTTOBEEENABLED,10);
+		technicalCompetencyDropdown = new PageElement(By.xpath(locatorforQuestionAnswerPanel("pParametervalue17", "select")),"technicalCompetencyDropdown", false, WaitType.WAITFORELEMENTTOBEEENABLED,10);
+		actualReportSubmissionDateTextField = new PageElement(By.xpath(locatorforQuestionAnswerPanel("Actual Report Submission Date", "input")),"Actual Report Submission Date Text Field", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		saveButton = new PageElement(By.name("Save"),"Save Button",false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+		backButton = new PageElement(By.name("Back"),"Back Button",false, WaitType.WAITFORELEMENTTOBECLICKABLE,10);
+	}
+}

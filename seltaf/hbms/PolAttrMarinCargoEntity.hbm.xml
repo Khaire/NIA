@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolAttrMarinCargoEntity" table="PolAttrMarinCargoEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="NextPageTitle" column="NextPageTitle" type="string" />
+			<property name="ConfigIsGstExempted" column="ConfigIsGstExempted" type="boolean" />
+			<property name="IsGstExempted" column="IsGstExempted" type="string" />
+			<property name="ConfigReasonForGstExemption" column="ConfigReasonForGstExemption" type="boolean" />
+			<property name="ReasonForGstExemption" column="ReasonForGstExemption" type="string" />
+			<property name="ConfigNameOfSEZLocation" column="ConfigNameOfSEZLocation" type="boolean" />
+			<property name="NameOfSEZLocation" column="NameOfSEZLocation" type="string" />
+			<property name="ConfigWhetherA2Certificatesubmitted" column="ConfigWhetherA2Certificatesubmitted" type="boolean" />
+			<property name="WhetherA2Certificatesubmitted" column="WhetherA2Certificatesubmitted" type="string" />
+			<property name="ConfigA2CertificateNumber" column="ConfigA2CertificateNumber" type="boolean" />
+			<property name="A2CertificateNumber" column="A2CertificateNumber" type="string" />
+			<property name="ConfigDateOfIssuanceOfA2Certificate" column="ConfigDateOfIssuanceOfA2Certificate" type="boolean" />
+			<property name="DateOfIssuanceOfA2Certificate" column="DateOfIssuanceOfA2Certificate" type="string" />
+			<property name="ConfigNameOfTheAuthorityIssuingTheA2Certificate" column="ConfigNameOfTheAuthorityIssuingTheA2Certificate" type="boolean" />
+			<property name="NameOfTheAuthorityIssuingTheA2Certificate" column="NameOfTheAuthorityIssuingTheA2Certificate" type="string" />
+			<property name="ConfigDesignationOfTheAuthorityIssuingTheA2Certificate" column="ConfigDesignationOfTheAuthorityIssuingTheA2Certificate" type="boolean" />
+			<property name="DesignationOfTheAuthorityIssuingTheA2Certificate" column="DesignationOfTheAuthorityIssuingTheA2Certificate" type="string" />
+			<property name="ConfigCoInsuranceApplicable" column="ConfigCoInsuranceApplicable" type="boolean" />
+			<property name="CoInsuranceApplicable" column="CoInsuranceApplicable" type="string" />
+			<property name="ConfigTypeOfPolicyForSV" column="ConfigTypeOfPolicyForSV" type="boolean" />
+			<property name="TypeOfPolicyForSV" column="TypeOfPolicyForSV" type="string" />
+			<property name="ConfigopenCoverAgreementNumber" column="ConfigopenCoverAgreementNumber" type="boolean" />
+			<property name="OpenCoverAgreementNumber" column="OpenCoverAgreementNumber" type="string" />
+			<property name="ConfigDeclarationBookStartNo" column="ConfigDeclarationBookStartNo" type="boolean" />
+			<property name="DeclarationBookStartNo" column="DeclarationBookStartNo" type="string" />
+			<property name="ConfigDeclarationBookEndNo" column="ConfigDeclarationBookEndNo" type="boolean" />
+			<property name="DeclarationBookEndNo" column="DeclarationBookEndNo" type="string" />
+			<property name="ConfigMinimumExcessRs" column="ConfigMinimumExcessRs" type="boolean" />
+			<property name="MinimumExcessRs" column="MinimumExcessRs" type="string" />
+			<property name="ConfigSpecialConditions" column="ConfigSpecialConditions" type="boolean" />
+			<property name="SpecialConditions" column="SpecialConditions" type="string" />
+			<property name="ConfigNatureOfTrade" column="ConfigNatureOfTrade" type="boolean" />
+			<property name="NatureOfTrade" column="NatureOfTrade" type="string" />
+			<property name="ConfigExcessApplicable" column="ConfigExcessApplicable" type="boolean" />
+			<property name="ExcessApplicable" column="ExcessApplicable" type="string" />
+			<property name="ConfigexcessApplicableOn" column="ConfigexcessApplicableOn" type="boolean" />
+			<property name="ExcessApplicableOn" column="ExcessApplicableOn" type="string" />
+			<property name="ConfigExcessClaimAmount" column="ConfigExcessClaimAmount" type="boolean" />
+			<property name="ExcessClaimAmount" column="ExcessClaimAmount" type="string" />
+			<property name="ConfigExcessOthers" column="ConfigExcessOthers" type="boolean" />
+			<property name="ExcessOthers" column="ExcessOthers" type="string" />
+			<property name="ConfigExcessSI" column="ConfigExcessSI" type="boolean" />
+			<property name="ExcessSI" column="ExcessSI" type="string" />
+			<property name="ConfigsubjectToSanctionsLimitationAndExclusionClauseList" column="ConfigsubjectToSanctionsLimitationAndExclusionClauseList" type="boolean" />
+			<property name="SubjectToSanctionsLimitationAndExclusionClauseList" column="SubjectToSanctionsLimitationAndExclusionClauseList" type="string" />
+			<property name="ConfigSubjectToPrivateCarriersWarranty" column="ConfigSubjectToPrivateCarriersWarranty" type="boolean" />
+			<property name="SubjectToPrivateCarriersWarranty" column="SubjectToPrivateCarriersWarranty" type="string" />
+			<property name="ConfigSubjectToClosedVehicleWarranty" column="ConfigSubjectToClosedVehicleWarranty" type="boolean" />
+			<property name="SubjectToClosedVehicleWarranty" column="SubjectToClosedVehicleWarranty" type="string" />
+			<property name="ConfigInstallementPercentageList" column="ConfigInstallementPercentageList" type="boolean" />
+			<property name="ConfigCargoTerminationOfTransitStorageClause" column="ConfigCargoTerminationOfTransitStorageClause" type="boolean" />
+			<property name="CargoTerminationOfTransitStorageClause" column="CargoTerminationOfTransitStorageClause" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolderName" column="ConfigPolicyHolderName" type="boolean" />
+			<property name="PolicyHolderName" column="PolicyHolderName" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigPolicyDetailsDITitle" column="ConfigPolicyDetailsDITitle" type="boolean" />
+			<property name="PolicyDetailsDITitle" column="PolicyDetailsDITitle" type="string" />
+			<property name="ConfigForwordButton" column="ConfigForwordButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigTypeOfDevelopmentOfficer" column="ConfigTypeOfDevelopmentOfficer" type="boolean" />
+			<property name="TypeOfDevelopmentOfficer" column="TypeOfDevelopmentOfficer" type="string" />
+			<property name="ConfigInstallmentPercentageTextFieldOfNextWindow" column="ConfigInstallmentPercentageTextFieldOfNextWindow" type="boolean" />
+			<property name="InstallmentPercentageTextFieldOfNextWindow" column="InstallmentPercentageTextFieldOfNextWindow" type="string" />
+			<property name="ConfigSaveNewWindowButton" column="ConfigSaveNewWindowButton" type="boolean" />
+			<property name="ConfigInstallmentPercentageOpenButton" column="ConfigInstallmentPercentageOpenButton" type="boolean" />
+			<property name="ConfigDisplayOfPremium" column="ConfigDisplayOfPremium" type="boolean" />
+			<property name="DisplayOfPremium" column="DisplayOfPremium" type="string" />
+			<property name="ConfigIsthePaymentreceivedfromGovtEntity" column="ConfigIsthePaymentreceivedfromGovtEntity" type="boolean" />
+			<property name="IsthePaymentreceivedfromGovtEntity" column="IsthePaymentreceivedfromGovtEntity" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolInsrIntCovrDetlPUPAEntity" table="PolInsrIntCovrDetlPUPAEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolicyCoverDetailsINDPUTitle" column="PolicyCoverDetailsINDPUTitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigInsuredInterestDetailsTab" column="ConfigInsuredInterestDetailsTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttributesTab" column="ConfigInsuredInterestAttributesTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttachCoveragesTab" column="ConfigInsuredInterestAttachCoveragesTab" type="boolean" />
+			<property name="ConfigInsuredInterestRelationsTab" column="ConfigInsuredInterestRelationsTab" type="boolean" />
+			<property name="ConfigInsuredInterestPaymentsTab" column="ConfigInsuredInterestPaymentsTab" type="boolean" />
+			<property name="ConfigInsuredInterestScheduleTab" column="ConfigInsuredInterestScheduleTab" type="boolean" />
+			<property name="ConfigAttachCoverageDetailsTab" column="ConfigAttachCoverageDetailsTab" type="boolean" />
+			<property name="ConfigAttachCoverageAttributesTab" column="ConfigAttachCoverageAttributesTab" type="boolean" />
+			<property name="ConfigAttachCoveragePremiumTab" column="ConfigAttachCoveragePremiumTab" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigPolicyholder" column="ConfigPolicyholder" type="boolean" />
+			<property name="Policyholder" column="Policyholder" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigCoverageCode" column="ConfigCoverageCode" type="boolean" />
+			<property name="CoverageCode" column="CoverageCode" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigSerialNo" column="ConfigSerialNo" type="boolean" />
+			<property name="SerialNo" column="SerialNo" type="string" />
+			<property name="ConfigCoverageName" column="ConfigCoverageName" type="boolean" />
+			<property name="CoverageName" column="CoverageName" type="string" />
+			<property name="ConfigIsTableACoverrequired" column="ConfigIsTableACoverrequired" type="boolean" />
+			<property name="IsTableACoverrequired" column="IsTableACoverrequired" type="string" />
+			<property name="ConfigSumInsuredforTableA" column="ConfigSumInsuredforTableA" type="boolean" />
+			<property name="SumInsuredforTableA" column="SumInsuredforTableA" type="string" />
+			<property name="ConfigRateforTableA" column="ConfigRateforTableA" type="boolean" />
+			<property name="RateforTableA" column="RateforTableA" type="string" />
+			<property name="ConfigIsTableBCoverrequired" column="ConfigIsTableBCoverrequired" type="boolean" />
+			<property name="IsTableBCoverrequired" column="IsTableBCoverrequired" type="string" />
+			<property name="ConfigSumInsuredforTableB" column="ConfigSumInsuredforTableB" type="boolean" />
+			<property name="SumInsuredforTableB" column="SumInsuredforTableB" type="string" />
+			<property name="ConfigRateforTableB" column="ConfigRateforTableB" type="boolean" />
+			<property name="RateforTableB" column="RateforTableB" type="string" />
+			<property name="ConfigIsTableCCoverrequired" column="ConfigIsTableCCoverrequired" type="boolean" />
+			<property name="IsTableCCoverrequired" column="IsTableCCoverrequired" type="string" />
+			<property name="ConfigSumInsuredforTableC" column="ConfigSumInsuredforTableC" type="boolean" />
+			<property name="SumInsuredforTableC" column="SumInsuredforTableC" type="string" />
+			<property name="ConfigRateforTableC" column="ConfigRateforTableC" type="boolean" />
+			<property name="RateforTableC" column="RateforTableC" type="string" />
+			<property name="ConfigIsTableDCoverrequired" column="ConfigIsTableDCoverrequired" type="boolean" />
+			<property name="IsTableDCoverrequired" column="IsTableDCoverrequired" type="string" />
+			<property name="ConfigSumInsuredforTableD" column="ConfigSumInsuredforTableD" type="boolean" />
+			<property name="SumInsuredforTableD" column="SumInsuredforTableD" type="string" />
+			<property name="ConfigRateforTableD" column="ConfigRateforTableD" type="boolean" />
+			<property name="RateforTableD" column="RateforTableD" type="string" />
+			<property name="ConfigCapitalSumInsured" column="ConfigCapitalSumInsured" type="boolean" />
+			<property name="CapitalSumInsured" column="CapitalSumInsured" type="string" />
+			<property name="ConfigIsWarAndAlliedRiskCoverageToIndiansWorking" column="ConfigIsWarAndAlliedRiskCoverageToIndiansWorking" type="boolean" />
+			<property name="IsWarAndAlliedRiskCoverageToIndiansWorking" column="IsWarAndAlliedRiskCoverageToIndiansWorking" type="string" />
+			<property name="ConfigCountryofOperation" column="ConfigCountryofOperation" type="boolean" />
+			<property name="CountryofOperation" column="CountryofOperation" type="string" />
+			<property name="ConfigTypeofPeriod" column="ConfigTypeofPeriod" type="boolean" />
+			<property name="TypeofPeriod" column="TypeofPeriod" type="string" />
+			<property name="ConfigSumInsuredforWarandAlliedRiskCoverage" column="ConfigSumInsuredforWarandAlliedRiskCoverage" type="boolean" />
+			<property name="SumInsuredforWarandAlliedRiskCoverage" column="SumInsuredforWarandAlliedRiskCoverage" type="string" />
+			<property name="ConfigRateforAbnormalOrApprehensiveOrWarPeriod" column="ConfigRateforAbnormalOrApprehensiveOrWarPeriod" type="boolean" />
+			<property name="RateforAbnormalOrApprehensiveOrWarPeriod" column="RateforAbnormalOrApprehensiveOrWarPeriod" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

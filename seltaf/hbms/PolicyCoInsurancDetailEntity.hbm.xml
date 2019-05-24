@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyCoInsurancDetailEntity" table="PolicyCoInsurancDetailEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigCoInsuranceDetailTable" column="ConfigCoInsuranceDetailTable" type="boolean" />
+			<property name="ConfigCoInsuranceType" column="ConfigCoInsuranceType" type="boolean" />
+			<property name="CoInsuranceType" column="CoInsuranceType" type="string" />
+			<property name="ConfigCoInsuranceCommission" column="ConfigCoInsuranceCommission" type="boolean" />
+			<property name="CoInsuranceCommission" column="CoInsuranceCommission" type="string" />
+			<property name="TableRowNumber" column="TableRowNumber" type="integer" />
+			<property name="ConfigCoInsureCompany" column="ConfigCoInsureCompany" type="boolean" />
+			<property name="CoInsureCompany" column="CoInsureCompany" type="string" />
+			<property name="ConfigCompanyFindButton" column="ConfigCompanyFindButton" type="boolean" />
+			<property name="ConfigCompanyPartyCode" column="ConfigCompanyPartyCode" type="boolean" />
+			<property name="CompanyPartyCode" column="CompanyPartyCode" type="string" />
+			<property name="ConfigCoInsureSite" column="ConfigCoInsureSite" type="boolean" />
+			<property name="CoInsureSite" column="CoInsureSite" type="string" />
+			<property name="ConfigSiteFindButton" column="ConfigSiteFindButton" type="boolean" />
+			<property name="ConfigSitePartyCode" column="ConfigSitePartyCode" type="boolean" />
+			<property name="SitePartyCode" column="SitePartyCode" type="string" />
+			<property name="ConfigCoInsureLeader" column="ConfigCoInsureLeader" type="boolean" />
+			<property name="CoInsureLeader" column="CoInsureLeader" type="string" />
+			<property name="ConfigCoInsureSharePercentage" column="ConfigCoInsureSharePercentage" type="boolean" />
+			<property name="CoInsureSharePercentage" column="CoInsureSharePercentage" type="string" />
+			<property name="ConfigAddNewRowButton" column="ConfigAddNewRowButton" type="boolean" />
+			<property name="ConfigSave" column="ConfigSave" type="boolean" />
+			<property name="ConfigBack" column="ConfigBack" type="boolean" />
+			<property name="ConfigAddPreviousRowCheckButton" column="ConfigAddPreviousRowCheckButton" type="boolean" />
+			<property name="ConfigDeleteRowButton" column="ConfigDeleteRowButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

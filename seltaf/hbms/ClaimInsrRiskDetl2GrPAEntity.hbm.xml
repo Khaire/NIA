@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimInsrRiskDetl2GrPAEntity" table="ClaimInsrRiskDetl2GrPAEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributesTab" column="ConfigInsuredItemAttributesTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigPreviousPolicyNumber" column="ConfigPreviousPolicyNumber" type="boolean" />
+			<property name="PreviousPolicyNumber" column="PreviousPolicyNumber" type="string" />
+			<property name="ConfigNatureOfTreatment" column="ConfigNatureOfTreatment" type="boolean" />
+			<property name="NatureOfTreatment" column="NatureOfTreatment" type="string" />
+			<property name="ConfigPoliceStation" column="ConfigPoliceStation" type="boolean" />
+			<property name="PoliceStation" column="PoliceStation" type="string" />
+			<property name="ConfigNameOfHospitalWherePostMortemReportIsDone" column="ConfigNameOfHospitalWherePostMortemReportIsDone" type="boolean" />
+			<property name="NameOfHospitalWherePostMortemReportIsDone" column="NameOfHospitalWherePostMortemReportIsDone" type="string" />
+			<property name="ConfigDateOfAdmissionInHospital" column="ConfigDateOfAdmissionInHospital" type="boolean" />
+			<property name="DateOfAdmissionInHospital" column="DateOfAdmissionInHospital" type="string" />
+			<property name="ConfigDateofDischargefromtheHospital" column="ConfigDateofDischargefromtheHospital" type="boolean" />
+			<property name="DateofDischargefromtheHospital" column="DateofDischargefromtheHospital" type="string" />
+			<property name="ConfigNameAndPlaceoftheHospital" column="ConfigNameAndPlaceoftheHospital" type="boolean" />
+			<property name="NameAndPlaceoftheHospital" column="NameAndPlaceoftheHospital" type="string" />
+			<property name="ConfigDateofCompletionofTreatment" column="ConfigDateofCompletionofTreatment" type="boolean" />
+			<property name="DateofCompletionofTreatment" column="DateofCompletionofTreatment" type="string" />
+			<property name="ConfigTotalMedicalExpenses" column="ConfigTotalMedicalExpenses" type="boolean" />
+			<property name="TotalMedicalExpenses" column="TotalMedicalExpenses" type="string" />
+			<property name="ConfigTotalDateofCommencementofTreatment" column="ConfigTotalDateofCommencementofTreatment" type="boolean" />
+			<property name="DateofCommencementofTreatment" column="DateofCommencementofTreatment" type="string" />
+			<property name="ConfigTotalDateofCompletionofTreatment" column="ConfigTotalDateofCompletionofTreatment" type="boolean" />
+			<property name="TotalDateofCompletionofTreatment" column="TotalDateofCompletionofTreatment" type="string" />
+			<property name="ConfigTotalMedicalExpensesOPD" column="ConfigTotalMedicalExpensesOPD" type="boolean" />
+			<property name="TotalMedicalExpensesOPD" column="TotalMedicalExpensesOPD" type="string" />
+			<property name="ConfigPeriodOfLeaveAsPerleaveCertificateFromTheEmployerFrom" column="ConfigPeriodOfLeaveAsPerleaveCertificateFromTheEmployerFrom" type="boolean" />
+			<property name="PeriodOfLeaveAsPerleaveCertificateFromTheEmployerFrom" column="PeriodOfLeaveAsPerleaveCertificateFromTheEmployerFrom" type="string" />
+			<property name="ConfigPeriodOfLeaveAsPerleaveCertificateFromTheEmployerTo" column="ConfigPeriodOfLeaveAsPerleaveCertificateFromTheEmployerTo" type="boolean" />
+			<property name="PeriodOfLeaveAsPerleaveCertificateFromTheEmployerTo" column="PeriodOfLeaveAsPerleaveCertificateFromTheEmployerTo" type="string" />
+			<property name="ConfigFitnessCertificatefromDoctorFrom" column="ConfigFitnessCertificatefromDoctorFrom" type="boolean" />
+			<property name="FitnessCertificatefromDoctorFrom" column="FitnessCertificatefromDoctorFrom" type="string" />
+			<property name="ConfigFitnessCertificatefromDoctorTo" column="ConfigFitnessCertificatefromDoctorTo" type="boolean" />
+			<property name="FitnessCertificatefromDoctorTo" column="FitnessCertificatefromDoctorTo" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackwardButton" column="ConfigBackwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

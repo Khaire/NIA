@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimPaymentEntity" table="ClaimPaymentEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimPaymentTitle" column="ClaimPaymentTitle" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigClaimNo" column="ConfigClaimNo" type="boolean" />
+			<property name="ClaimNo" column="ClaimNo" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigNewButton" column="ConfigNewButton" type="boolean" />
+			<property name="ConfigPartyFunction" column="ConfigPartyFunction" type="boolean" />
+			<property name="PartyFunction" column="PartyFunction" type="string" />
+			<property name="ConfigSearchPartyCode" column="ConfigSearchPartyCode" type="boolean" />
+			<property name="ConfigPartyCodeFindButton" column="ConfigPartyCodeFindButton" type="boolean" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigClaimAmount" column="ConfigClaimAmount" type="boolean" />
+			<property name="ClaimAmount" column="ClaimAmount" type="string" />
+			<property name="ConfigCurrency" column="ConfigCurrency" type="boolean" />
+			<property name="Currency" column="Currency" type="string" />
+			<property name="ConfigCurrencyRate" column="ConfigCurrencyRate" type="boolean" />
+			<property name="CurrencyRate" column="CurrencyRate" type="string" />
+			<property name="ConfigClaimAmountINR" column="ConfigClaimAmountINR" type="boolean" />
+			<property name="ClaimAmountINR" column="ClaimAmountINR" type="string" />
+			<property name="ConfigPurpose" column="ConfigPurpose" type="boolean" />
+			<property name="Purpose" column="Purpose" type="string" />
+			<property name="ConfigReferenceType" column="ConfigReferenceType" type="boolean" />
+			<property name="ReferenceType" column="ReferenceType" type="string" />
+			<property name="ConfigReferenceNumber" column="ConfigReferenceNumber" type="boolean" />
+			<property name="ReferenceNumber" column="ReferenceNumber" type="string" />
+			<property name="ConfigInOutIndicator" column="ConfigInOutIndicator" type="boolean" />
+			<property name="InOutIndicator" column="InOutIndicator" type="string" />
+			<property name="ConfigInterestRate" column="ConfigInterestRate" type="boolean" />
+			<property name="InterestRate" column="InterestRate" type="string" />
+			<property name="ConfigInterestAmount" column="ConfigInterestAmount" type="boolean" />
+			<property name="InterestAmount" column="InterestAmount" type="string" />
+			<property name="ConfigServiceTaxApplicable" column="ConfigServiceTaxApplicable" type="boolean" />
+			<property name="ServiceTaxApplicable" column="ServiceTaxApplicable" type="string" />
+			<property name="ConfigServiceTaxAmount" column="ConfigServiceTaxAmount" type="boolean" />
+			<property name="ServiceTaxAmount" column="ServiceTaxAmount" type="string" />
+			<property name="ConfigTotalAmount" column="ConfigTotalAmount" type="boolean" />
+			<property name="TotalAmount" column="TotalAmount" type="string" />
+			<property name="ConfigRemarks" column="ConfigRemarks" type="boolean" />
+			<property name="Remarks" column="Remarks" type="string" />
+			<property name="ConfigPaymentOption" column="ConfigPaymentOption" type="boolean" />
+			<property name="PaymentOption" column="PaymentOption" type="string" />
+			<property name="ConfigNoOfInstallments" column="ConfigNoOfInstallments" type="boolean" />
+			<property name="NoOfInstallments" column="NoOfInstallments" type="string" />
+			<property name="ConfigPaymentFrequency" column="ConfigPaymentFrequency" type="boolean" />
+			<property name="PaymentFrequency" column="PaymentFrequency" type="string" />
+			<property name="ConfigRecoveredFrom" column="ConfigRecoveredFrom" type="boolean" />
+			<property name="RecoveredFrom" column="RecoveredFrom" type="string" />
+			<property name="ConfigApprovedBy" column="ConfigApprovedBy" type="boolean" />
+			<property name="ApprovedBy" column="ApprovedBy" type="string" />
+			<property name="ConfigApprovedTimestamp" column="ConfigApprovedTimestamp" type="boolean" />
+			<property name="ApprovedTimestamp" column="ApprovedTimestamp" type="string" />
+			<property name="ConfigIsClaimSettlementOfficeANonCWISSOffice" column="ConfigIsClaimSettlementOfficeANonCWISSOffice" type="boolean" />
+			<property name="IsClaimSettlementOfficeANonCWISSOffice" column="IsClaimSettlementOfficeANonCWISSOffice" type="string" />
+			<property name="ConfigOfficeCode" column="ConfigOfficeCode" type="boolean" />
+			<property name="OfficeCode" column="OfficeCode" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigPaymentCycleButton" column="ConfigPaymentCycleButton" type="boolean" />
+			<property name="ConfigRejectApprovalButton" column="ConfigRejectApprovalButton" type="boolean" />
+			<property name="ConfigApproveButton" column="ConfigApproveButton" type="boolean" />
+			<property name="ConfigRejectButton" column="ConfigRejectButton" type="boolean" />
+			<property name="ConfigPaymentsFrequency" column="ConfigPaymentsFrequency" type="boolean" />
+			<property name="ConfigReason" column="ConfigReason" type="boolean" />
+			<property name="Reason" column="Reason" type="string" />
+			<property name="ConfigSaveWindow" column="ConfigSaveWindow" type="boolean" />
+			<property name="Browser" column="Browser" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

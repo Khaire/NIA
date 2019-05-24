@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolInsAttPHT1PLRMembPAEntity" table="PolInsAttPHT1PLRMembPAEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="boolean" />
+			<property name="Product" column="Product" type="boolean" />
+			<property name="ConfigPolicyTab			" column="ConfigPolicyTab			" type="boolean" />
+			<property name="ConfigAttributeTab			" column="ConfigAttributeTab			" type="boolean" />
+			<property name="ConfigInsuredInterestTab			" column="ConfigInsuredInterestTab			" type="boolean" />
+			<property name="ConfigCoverageTab			" column="ConfigCoverageTab			" type="boolean" />
+			<property name="ConfigClientDetailsTab			" column="ConfigClientDetailsTab			" type="boolean" />
+			<property name="ConfigRelationTab			" column="ConfigRelationTab			" type="boolean" />
+			<property name="ConfigPaymentsTab			" column="ConfigPaymentsTab			" type="boolean" />
+			<property name="ConfigFollowupTab			" column="ConfigFollowupTab			" type="boolean" />
+			<property name="ConfigDocumentTab			" column="ConfigDocumentTab			" type="boolean" />
+			<property name="ConfigInsuredInterestDetailsTab			" column="ConfigInsuredInterestDetailsTab			" type="boolean" />
+			<property name="ConfigInsuredInterestAttributesTab			" column="ConfigInsuredInterestAttributesTab			" type="boolean" />
+			<property name="ConfigInsuredInterestAttachCoveragesTab			" column="ConfigInsuredInterestAttachCoveragesTab			" type="boolean" />
+			<property name="ConfigInsuredInterestRelationsTab			" column="ConfigInsuredInterestRelationsTab			" type="boolean" />
+			<property name="ConfigInsuredInterestPaymentsTab			" column="ConfigInsuredInterestPaymentsTab			" type="boolean" />
+			<property name="ConfigInsuredInterestScheduleTab			" column="ConfigInsuredInterestScheduleTab			" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigPolicyholder" column="ConfigPolicyholder" type="boolean" />
+			<property name="Policyholder" column="Policyholder" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigOrderNumber" column="ConfigOrderNumber" type="boolean" />
+			<property name="OrderNumber" column="OrderNumber" type="string" />
+			<property name="ConfigCardNumber" column="ConfigCardNumber" type="boolean" />
+			<property name="CardNumber" column="CardNumber" type="string" />
+			<property name="ConfigCardMemberName" column="ConfigCardMemberName" type="boolean" />
+			<property name="CardMemberName" column="CardMemberName" type="string" />
+			<property name="ConfigDOBofMember" column="ConfigDOBofMember" type="boolean" />
+			<property name="DOBofMember" column="DOBofMember" type="string" />
+			<property name="ConfigAge" column="ConfigAge" type="boolean" />
+			<property name="Age" column="Age" type="string" />
+			<property name="ConfigApplicantName" column="ConfigApplicantName" type="boolean" />
+			<property name="ApplicantName" column="ApplicantName" type="string" />
+			<property name="ConfigRelation" column="ConfigRelation" type="boolean" />
+			<property name="Relation" column="Relation" type="string" />
+			<property name="ConfigPAPlanType" column="ConfigPAPlanType" type="boolean" />
+			<property name="PAPlanType" column="PAPlanType" type="string" />
+			<property name="ConfigAddress1" column="ConfigAddress1" type="boolean" />
+			<property name="Address1" column="Address1" type="string" />
+			<property name="ConfigAddress2" column="ConfigAddress2" type="boolean" />
+			<property name="Address2" column="Address2" type="string" />
+			<property name="ConfigAddress3" column="ConfigAddress3" type="boolean" />
+			<property name="Address3" column="Address3" type="string" />
+			<property name="ConfigADDRESS4" column="ConfigADDRESS4" type="boolean" />
+			<property name="ADDRESS4" column="ADDRESS4" type="string" />
+			<property name="ConfigCity" column="ConfigCity" type="boolean" />
+			<property name="City" column="City" type="string" />
+			<property name="ConfigPincode" column="ConfigPincode" type="boolean" />
+			<property name="Pincode" column="Pincode" type="string" />
+			<property name="ConfigResTel" column="ConfigResTel" type="boolean" />
+			<property name="ResTel" column="ResTel" type="string" />
+			<property name="ConfigOffTel" column="ConfigOffTel" type="boolean" />
+			<property name="OffTel" column="OffTel" type="string" />
+			<property name="ConfigCertificateNo" column="ConfigCertificateNo" type="boolean" />
+			<property name="CertificateNo" column="CertificateNo" type="string" />
+			<property name="ConfigAccountNo" column="ConfigAccountNo" type="boolean" />
+			<property name="AccountNo" column="AccountNo" type="string" />
+			<property name="ConfigCustomerCode" column="ConfigCustomerCode" type="boolean" />
+			<property name="CustomerCode" column="CustomerCode" type="string" />
+			<property name="ConfigPreExistingDisease" column="ConfigPreExistingDisease" type="boolean" />
+			<property name="PreExistingDisease" column="PreExistingDisease" type="string" />
+			<property name="ConfigTaxdeduction" column="ConfigTaxdeduction" type="boolean" />
+			<property name="Taxdeduction" column="Taxdeduction" type="string" />
+			<property name="ConfigSex" column="ConfigSex" type="boolean" />
+			<property name="Sex" column="Sex" type="string" />
+			<property name="ConfigPAPREMIUM" column="ConfigPAPREMIUM" type="boolean" />
+			<property name="PAPREMIUM" column="PAPREMIUM" type="string" />
+			<property name="ConfigDateofBirthofNominee" column="ConfigDateofBirthofNominee" type="boolean" />
+			<property name="DateofBirthofNominee" column="DateofBirthofNominee" type="string" />
+			<property name="ConfigAgeofNominee" column="ConfigAgeofNominee" type="boolean" />
+			<property name="AgeofNominee" column="AgeofNominee" type="string" />
+			<property name="ConfigDateofEntryofNomination" column="ConfigDateofEntryofNomination" type="boolean" />
+			<property name="DateofEntryofNomination" column="DateofEntryofNomination" type="string" />
+			<property name="ConfigMCPolicyNumber" column="ConfigMCPolicyNumber" type="boolean" />
+			<property name="MCPolicyNumber" column="MCPolicyNumber" type="string" />
+			<property name="ConfigCertificateMobileNo" column="ConfigCertificateMobileNo" type="boolean" />
+			<property name="CertificateMobileNo" column="CertificateMobileNo" type="string" />
+			<property name="ConfigCertificateEmailId" column="ConfigCertificateEmailId" type="boolean" />
+			<property name="CertificateEmailId" column="CertificateEmailId" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

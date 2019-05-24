@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolInsureAttrGrpNamePAEntity" table="PolInsureAttrGrpNamePAEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolInsureAttrGrpNamePATitle" column="PolInsureAttrGrpNamePATitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigInsuredInterestDetailsTab" column="ConfigInsuredInterestDetailsTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttributesTab" column="ConfigInsuredInterestAttributesTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttachCoveragesTab" column="ConfigInsuredInterestAttachCoveragesTab" type="boolean" />
+			<property name="ConfigInsuredInterestRelationsTab" column="ConfigInsuredInterestRelationsTab" type="boolean" />
+			<property name="ConfigInsuredInterestPaymentsTab" column="ConfigInsuredInterestPaymentsTab" type="boolean" />
+			<property name="ConfigInsuredInterestScheduleTab" column="ConfigInsuredInterestScheduleTab" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigPolicyHolder" column="ConfigPolicyHolder" type="boolean" />
+			<property name="PolicyHolder" column="PolicyHolder" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigGroupNamedDetails" column="ConfigGroupNamedDetails" type="boolean" />
+			<property name="ConfigGroupNamedDetailsNameOfMember" column="ConfigGroupNamedDetailsNameOfMember" type="boolean" />
+			<property name="GroupNamedDetailsNameOfMember" column="GroupNamedDetailsNameOfMember" type="string" />
+			<property name="ConfigGroupNamedDetailsEmployeeId" column="ConfigGroupNamedDetailsEmployeeId" type="boolean" />
+			<property name="GroupNamedDetailsEmployeeId" column="GroupNamedDetailsEmployeeId" type="string" />
+			<property name="ConfigGroupNamedDetailsAge" column="ConfigGroupNamedDetailsAge" type="boolean" />
+			<property name="GroupNamedDetailsAge" column="GroupNamedDetailsAge" type="string" />
+			<property name="ConfigGroupNamedDetailsSex" column="ConfigGroupNamedDetailsSex" type="boolean" />
+			<property name="GroupNamedDetailsSex" column="GroupNamedDetailsSex" type="string" />
+			<property name="ConfigGroupNamedDetailsCadre" column="ConfigGroupNamedDetailsCadre" type="boolean" />
+			<property name="GroupNamedDetailsCadre" column="GroupNamedDetailsCadre" type="string" />
+			<property name="ConfigGroupNamedDetailsSumInsured" column="ConfigGroupNamedDetailsSumInsured" type="boolean" />
+			<property name="GroupNamedDetailsSumInsured" column="GroupNamedDetailsSumInsured" type="string" />
+			<property name="ConfigGroupNamedDetailsNumberOfFlightJourney" column="ConfigGroupNamedDetailsNumberOfFlightJourney" type="boolean" />
+			<property name="GroupNamedDetailsNumberOfFlightJourney" column="GroupNamedDetailsNumberOfFlightJourney" type="string" />
+			<property name="ConfigGroupUnnamedDetails" column="ConfigGroupUnnamedDetails" type="boolean" />
+			<property name="ConfigUnnamedNumberOfFlights" column="ConfigUnnamedNumberOfFlights" type="boolean" />
+			<property name="UnnamedNumberOfFlights" column="UnnamedNumberOfFlights" type="string" />
+			<property name="ConfigUnnamedDetailsSerialNo" column="ConfigUnnamedDetailsSerialNo" type="boolean" />
+			<property name="UnnamedDetailsSerialNo" column="UnnamedDetailsSerialNo" type="string" />
+			<property name="ConfigUnnamedDetailsCadre" column="ConfigUnnamedDetailsCadre" type="boolean" />
+			<property name="UnnamedDetailsCadre" column="UnnamedDetailsCadre" type="string" />
+			<property name="ConfigUnnamedDetailsNumberOfPersonsPerCadre" column="ConfigUnnamedDetailsNumberOfPersonsPerCadre" type="boolean" />
+			<property name="UnnamedDetailsNumberOfPersonsPerCadre" column="UnnamedDetailsNumberOfPersonsPerCadre" type="string" />
+			<property name="ConfigUnnamedDetailsSumInsuredPerPersonPerFlight" column="ConfigUnnamedDetailsSumInsuredPerPersonPerFlight" type="boolean" />
+			<property name="UnnamedDetailsSumInsuredPerPersonPerFlight" column="UnnamedDetailsSumInsuredPerPersonPerFlight" type="string" />
+			<property name="ConfigUnnamedDetailsSumInsuredForCadre" column="ConfigUnnamedDetailsSumInsuredForCadre" type="boolean" />
+			<property name="UnnamedDetailsSumInsuredForCadre" column="UnnamedDetailsSumInsuredForCadre" type="string" />
+			<property name="ConfigAgeofInsured" column="ConfigAgeofInsured" type="boolean" />
+			<property name="AgeofInsured" column="AgeofInsured" type="string" />
+			<property name="ConfigNomineesName" column="ConfigNomineesName" type="boolean" />
+			<property name="NomineesName" column="NomineesName" type="string" />
+			<property name="ConfigNominees" column="ConfigNominees" type="boolean" />
+			<property name="Nominees" column="Nominees" type="string" />
+			<property name="ConfigNomineesRelationWithInsured" column="ConfigNomineesRelationWithInsured" type="boolean" />
+			<property name="NomineesRelationWithInsured" column="NomineesRelationWithInsured" type="string" />
+			<property name="ConfigNumberOfFlights" column="ConfigNumberOfFlights" type="boolean" />
+			<property name="NumberOfFlights" column="NumberOfFlights" type="string" />
+			<property name="ConfigDetailsOfFlight" column="ConfigDetailsOfFlight" type="boolean" />
+			<property name="DetailsOfFlight" column="DetailsOfFlight" type="string" />
+			<property name="ConfigNameOfTheAirlines" column="ConfigNameOfTheAirlines" type="boolean" />
+			<property name="NameOfTheAirlines" column="NameOfTheAirlines" type="string" />
+			<property name="ConfigFlightNo" column="ConfigFlightNo" type="boolean" />
+			<property name="FlightNo" column="FlightNo" type="string" />
+			<property name="ConfigSumInsuredPerFlight" column="ConfigSumInsuredPerFlight" type="boolean" />
+			<property name="SumInsuredPerFlight" column="SumInsuredPerFlight" type="string" />
+			<property name="ConfigTotalSumInsured" column="ConfigTotalSumInsured" type="boolean" />
+			<property name="TotalSumInsured" column="TotalSumInsured" type="string" />
+			<property name="ConfigOpenButton" column="ConfigOpenButton" type="boolean" />
+			<property name="ConfigAddButton" column="ConfigAddButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigCloseButton" column="ConfigCloseButton" type="boolean" />
+			<property name="ConfigDeleteButton" column="ConfigDeleteButton" type="boolean" />
+			<property name="ConfigForwordButton" column="ConfigForwordButton" type="boolean" />
+			<property name="ConfigPreviousButton" column="ConfigPreviousButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSaveButtonUnnamed" column="ConfigSaveButtonUnnamed" type="boolean" />
+			<property name="ConfigCloseButtonUnnamed" column="ConfigCloseButtonUnnamed" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolInsIntAttTransCommEntity" table="PolInsIntAttTransCommEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigMemberDetail" column="ConfigMemberDetail" type="boolean" />
+			<property name="ConfigMemberAttributes" column="ConfigMemberAttributes" type="boolean" />
+			<property name="ConfigAttachCoverages" column="ConfigAttachCoverages" type="boolean" />
+			<property name="ConfigMemberRelations" column="ConfigMemberRelations" type="boolean" />
+			<property name="ConfigMemberPayments" column="ConfigMemberPayments" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigBackwardButton" column="ConfigBackwardButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigOpenButton" column="ConfigOpenButton" type="boolean" />
+			<property name="ConfigAddButton" column="ConfigAddButton" type="boolean" />
+			<property name="ConfigSavebuttonME" column="ConfigSavebuttonME" type="boolean" />
+			<property name="ConfigtypeOfExport" column="ConfigtypeOfExport" type="boolean" />
+			<property name="typeOfExport" column="typeOfExport" type="string" />
+			<property name="ConfigMachinery" column="ConfigMachinery" type="boolean" />
+			<property name="Machinery" column="Machinery" type="string" />
+			<property name="ConfigSecondHand" column="ConfigSecondHand" type="boolean" />
+			<property name="SecondHand" column="SecondHand" type="string" />
+			<property name="ConfigwhetherOverDimensional" column="ConfigwhetherOverDimensional" type="boolean" />
+			<property name="whetherOverDimensional" column="whetherOverDimensional" type="string" />
+			<property name="ConfigbasisOfValuation" column="ConfigbasisOfValuation" type="boolean" />
+			<property name="basisOfValuation" column="basisOfValuation" type="string" />
+			<property name="ConfigtypeOfPost" column="ConfigtypeOfPost" type="boolean" />
+			<property name="typeOfPost" column="typeOfPost" type="string" />
+			<property name="ConfigtypeOfCarrier" column="ConfigtypeOfCarrier" type="boolean" />
+			<property name="typeOfCarrier" column="typeOfCarrier" type="string" />
+			<property name="ConfigtypeOfBill" column="ConfigtypeOfBill" type="boolean" />
+			<property name="typeOfBill" column="typeOfBill" type="string" />
+			<property name="ConfigdutyInsuranceApplicable" column="ConfigdutyInsuranceApplicable" type="boolean" />
+			<property name="dutyInsuranceApplicable" column="dutyInsuranceApplicable" type="string" />
+			<property name="ConfigpercentageExtra" column="ConfigpercentageExtra" type="boolean" />
+			<property name="percentageExtra" column="percentageExtra" type="string" />
+			<property name="ConfigincreasedValueSumInsured" column="ConfigincreasedValueSumInsured" type="boolean" />
+			<property name="increasedValueSumInsured" column="increasedValueSumInsured" type="string" />
+			<property name="ConfigbillNumber" column="ConfigbillNumber" type="boolean" />
+			<property name="billNumber" column="billNumber" type="string" />
+			<property name="ConfigmarkNumber" column="ConfigmarkNumber" type="boolean" />
+			<property name="markNumber" column="markNumber" type="string" />
+			<property name="ConfigbillDate" column="ConfigbillDate" type="boolean" />
+			<property name="billDate" column="billDate" type="string" />
+			<property name="ConfigTransportDetails" column="ConfigTransportDetails" type="boolean" />
+			<property name="ConfigCommodityDetails" column="ConfigCommodityDetails" type="boolean" />
+			<property name="ConfigmodeOfTransport" column="ConfigmodeOfTransport" type="boolean" />
+			<property name="modeOfTransport" column="modeOfTransport" type="string" />
+			<property name="ConfigfromPlace" column="ConfigfromPlace" type="boolean" />
+			<property name="fromPlace" column="fromPlace" type="string" />
+			<property name="ConfigtoPlace" column="ConfigtoPlace" type="boolean" />
+			<property name="toPlace" column="toPlace" type="string" />
+			<property name="ConfigcommodityDescription" column="ConfigcommodityDescription" type="boolean" />
+			<property name="commodityDescription" column="commodityDescription" type="string" />
+			<property name="ConfigpackagingDescription" column="ConfigpackagingDescription" type="boolean" />
+			<property name="packagingDescription" column="packagingDescription" type="string" />
+			<property name="ConfigcommoditySumInsured" column="ConfigcommoditySumInsured" type="boolean" />
+			<property name="commoditySumInsured" column="commoditySumInsured" type="string" />
+			<property name="ConfigcommodityRate" column="ConfigcommodityRate" type="boolean" />
+			<property name="commodityRate" column="commodityRate" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

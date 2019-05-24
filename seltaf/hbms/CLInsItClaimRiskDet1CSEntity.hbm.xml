@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.CLInsItClaimRiskDet1CSEntity" table="CLInsItClaimRiskDet1CSEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimRiskDetail2Title" column="ClaimRiskDetail2Title" type="string" />
+			<property name="ConfigClaimSubTab" column="ConfigClaimSubTab" type="boolean" />
+			<property name="ConfigClaimInsuredItemTab" column="ConfigClaimInsuredItemTab" type="boolean" />
+			<property name="ConfigClaimDocumentTab" column="ConfigClaimDocumentTab" type="boolean" />
+			<property name="ConfigClaimPartiesTab" column="ConfigClaimPartiesTab" type="boolean" />
+			<property name="ConfigClaimReserveTab" column="ConfigClaimReserveTab" type="boolean" />
+			<property name="ConfigClaimPaymentTab" column="ConfigClaimPaymentTab" type="boolean" />
+			<property name="ConfigClaimAttributesTab" column="ConfigClaimAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigInsuredName" column="ConfigInsuredName" type="boolean" />
+			<property name="InsuredName" column="InsuredName" type="string" />
+			<property name="ConfigTypeofInsolvency" column="ConfigTypeofInsolvency" type="boolean" />
+			<property name="TypeofInsolvency" column="TypeofInsolvency" type="string" />
+			<property name="ConfigNameAndAddOfInsolvencyPractitionerRec" column="ConfigNameAndAddOfInsolvencyPractitionerRec" type="boolean" />
+			<property name="NameAndAddOfInsolvencyPractitionerRec" column="NameAndAddOfInsolvencyPractitionerRec" type="string" />
+			<property name="ConfigTypeOfBuyer" column="ConfigTypeOfBuyer" type="boolean" />
+			<property name="TypeOfBuyer" column="TypeOfBuyer" type="string" />
+			<property name="ConfigNoofDaysOverdue" column="ConfigNoofDaysOverdue" type="boolean" />
+			<property name="NoofDaysOverdue" column="NoofDaysOverdue" type="string" />
+			<property name="ConfigTotalAmountOwedBytheApprovedBuyer" column="ConfigTotalAmountOwedBytheApprovedBuyer" type="boolean" />
+			<property name="TotalAmountOwedBytheApprovedBuyer" column="TotalAmountOwedBytheApprovedBuyer" type="string" />
+			<property name="ConfigAmountReceived" column="ConfigAmountReceived" type="boolean" />
+			<property name="AmountReceived" column="AmountReceived" type="string" />
+			<property name="ConfigNetAmountOwing" column="ConfigNetAmountOwing" type="boolean" />
+			<property name="NetAmountOwing" column="NetAmountOwing" type="string" />
+			<property name="ConfigClaimedAmount" column="ConfigClaimedAmount" type="boolean" />
+			<property name="ClaimedAmount" column="ClaimedAmount" type="string" />
+			<property name="ConfigWasAnyBillorChequeDishonouredDuringTheAbovePeriod" column="ConfigWasAnyBillorChequeDishonouredDuringTheAbovePeriod" type="boolean" />
+			<property name="WasAnyBillorChequeDishonouredDuringTheAbovePeriod" column="WasAnyBillorChequeDishonouredDuringTheAbovePeriod" type="string" />
+			<property name="ConfigDetailsofBillChequeDishonoured" column="ConfigDetailsofBillChequeDishonoured" type="boolean" />
+			<property name="DetailsofBillChequeDishonoured" column="DetailsofBillChequeDishonoured" type="string" />
+			<property name="ConfigRiskCode" column="ConfigRiskCode" type="boolean" />
+			<property name="RiskCode" column="RiskCode" type="string" />
+			<property name="ConfigBuyerCode" column="ConfigBuyerCode" type="boolean" />
+			<property name="BuyerCode" column="BuyerCode" type="string" />
+			<property name="ConfigBuyerName" column="ConfigBuyerName" type="boolean" />
+			<property name="BuyerName" column="BuyerName" type="string" />
+			<property name="ConfigLocationAddress" column="ConfigLocationAddress" type="boolean" />
+			<property name="LocationAddress" column="LocationAddress" type="string" />
+			<property name="ConfigTradingStartDate" column="ConfigTradingStartDate" type="boolean" />
+			<property name="TradingStartDate" column="TradingStartDate" type="string" />
+			<property name="ConfigwhetherInvoicesSubmittedAreDulyAcknowledged" column="ConfigwhetherInvoicesSubmittedAreDulyAcknowledged" type="boolean" />
+			<property name="whetherInvoicesSubmittedAreDulyAcknowledged" column="whetherInvoicesSubmittedAreDulyAcknowledged" type="string" />
+			<property name="ConfigWhetherThebuyerIsCLorDCL" column="ConfigWhetherThebuyerIsCLorDCL" type="boolean" />
+			<property name="WhetherThebuyerIsCLorDCL" column="WhetherThebuyerIsCLorDCL" type="string" />
+			<property name="ConfigDateofExpiryOfWaitingPeriod" column="ConfigDateofExpiryOfWaitingPeriod" type="boolean" />
+			<property name="DateofExpiryOfWaitingPeriod" column="DateofExpiryOfWaitingPeriod" type="string" />
+			<property name="ConfigAmountOfDebtConfirmedbyInsolvencypractitioner" column="ConfigAmountOfDebtConfirmedbyInsolvencypractitioner" type="boolean" />
+			<property name="AmountOfDebtConfirmedbyInsolvencypractitioner" column="AmountOfDebtConfirmedbyInsolvencypractitioner" type="string" />
+			<property name="ConfigDateOfRegistrationOfDebt" column="ConfigDateOfRegistrationOfDebt" type="boolean" />
+			<property name="DateOfRegistrationOfDebt" column="DateOfRegistrationOfDebt" type="string" />
+			<property name="ConfigWhetherInvoicesWereDeclaredInTheMonthly" column="ConfigWhetherInvoicesWereDeclaredInTheMonthly" type="boolean" />
+			<property name="WhetherInvoicesWereDeclaredInTheMonthly" column="WhetherInvoicesWereDeclaredInTheMonthly" type="string" />
+			<property name="ConfigWhetherAccountStatementProvidedDulyCertified" column="ConfigWhetherAccountStatementProvidedDulyCertified" type="boolean" />
+			<property name="WhetherAccountStatementProvidedDulyCertified" column="WhetherAccountStatementProvidedDulyCertified" type="string" />
+			<property name="ConfigWhetherDebtIsAcknowledgedByTheBuyer" column="ConfigWhetherDebtIsAcknowledgedByTheBuyer" type="boolean" />
+			<property name="WhetherDebtIsAcknowledgedByTheBuyer" column="WhetherDebtIsAcknowledgedByTheBuyer" type="string" />
+			<property name="ConfigLegalActionInitiatedByInsured" column="ConfigLegalActionInitiatedByInsured" type="boolean" />
+			<property name="LegalActionInitiatedByInsured" column="LegalActionInitiatedByInsured" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

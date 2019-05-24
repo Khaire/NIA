@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimReservePageEntity" table="ClaimReservePageEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimReservePageTitle" column="ClaimReservePageTitle" type="string" />
+			<property name="ConfigClaim" column="ConfigClaim" type="boolean" />
+			<property name="ConfigMember" column="ConfigMember" type="boolean" />
+			<property name="ConfigDocument" column="ConfigDocument" type="boolean" />
+			<property name="ConfigParties" column="ConfigParties" type="boolean" />
+			<property name="ConfigReserve" column="ConfigReserve" type="boolean" />
+			<property name="ConfigPayment" column="ConfigPayment" type="boolean" />
+			<property name="ConfigAttribute" column="ConfigAttribute" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigReserveTypeFunction" column="ConfigReserveTypeFunction" type="boolean" />
+			<property name="ReserveTypeFunction" column="ReserveTypeFunction" type="string" />
+			<property name="ConfigReserveAmount" column="ConfigReserveAmount" type="boolean" />
+			<property name="ReserveAmount" column="ReserveAmount" type="string" />
+			<property name="ConfigReserveTypeFunctionForSecondRow" column="ConfigReserveTypeFunctionForSecondRow" type="boolean" />
+			<property name="ReserveTypeFunctionForSecondRow" column="ReserveTypeFunctionForSecondRow" type="string" />
+			<property name="ConfigReserveAmountForSecondRow" column="ConfigReserveAmountForSecondRow" type="boolean" />
+			<property name="ReserveAmountForSecondRow" column="ReserveAmountForSecondRow" type="string" />
+			<property name="ConfigReserveTypeFunctionThirdRow" column="ConfigReserveTypeFunctionThirdRow" type="boolean" />
+			<property name="ReserveTypeFunctionThirdRow" column="ReserveTypeFunctionThirdRow" type="string" />
+			<property name="ConfigReserveAmountThirdRow" column="ConfigReserveAmountThirdRow" type="boolean" />
+			<property name="ReserveAmountThirdRow" column="ReserveAmountThirdRow" type="string" />
+			<property name="ConfigReason" column="ConfigReason" type="boolean" />
+			<property name="Reason" column="Reason" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigNewButton" column="ConfigNewButton" type="boolean" />
+			<property name="ConfigReserveHistoryTable" column="ConfigReserveHistoryTable" type="boolean" />
+			<property name="TableRowNumber" column="TableRowNumber" type="integer" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

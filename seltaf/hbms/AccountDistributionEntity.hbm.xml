@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AccountDistributionEntity" table="AccountDistributionEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="AccountDistributionTitle" column="AccountDistributionTitle" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="DependencyForVoucherNumber" column="DependencyForVoucherNumber" type="string" />
+			<property name="DependencyForGLSLCode" column="DependencyForGLSLCode" type="string" />
+			<property name="DependencyGLDescriptionCode" column="DependencyGLDescriptionCode" type="string" />
+			<property name="ConfigCompany" column="ConfigCompany" type="boolean" />
+			<property name="Company" column="Company" type="string" />
+			<property name="ConfigVoucherType" column="ConfigVoucherType" type="boolean" />
+			<property name="VoucherType" column="VoucherType" type="string" />
+			<property name="ConfigVoucherNumber" column="ConfigVoucherNumber" type="boolean" />
+			<property name="VoucherNumber" column="VoucherNumber" type="string" />
+			<property name="ConfigTransactionDate" column="ConfigTransactionDate" type="boolean" />
+			<property name="TransactionDate" column="TransactionDate" type="string" />
+			<property name="ConfigVoucherAmount" column="ConfigVoucherAmount" type="boolean" />
+			<property name="VoucherAmount" column="VoucherAmount" type="string" />
+			<property name="ConfigVoucherAmountTransCurrency" column="ConfigVoucherAmountTransCurrency" type="boolean" />
+			<property name="VoucherAmountTransCurrency" column="VoucherAmountTransCurrency" type="string" />
+			<property name="ConfigCurrencyIndicator" column="ConfigCurrencyIndicator" type="boolean" />
+			<property name="CurrencyIndicator" column="CurrencyIndicator" type="string" />
+			<property name="ConfigTransactionCurrencyNIA" column="ConfigTransactionCurrencyNIA" type="boolean" />
+			<property name="TransactionCurrencyNIA" column="TransactionCurrencyNIA" type="string" />
+			<property name="ConfigCurrencyRate" column="ConfigCurrencyRate" type="boolean" />
+			<property name="CurrencyRate" column="CurrencyRate" type="string" />
+			<property name="ConfigReceivingParty" column="ConfigReceivingParty" type="boolean" />
+			<property name="ReceivingParty" column="ReceivingParty" type="string" />
+			<property name="ConfigReverseButton" column="ConfigReverseButton" type="boolean" />
+			<property name="ConfigSendSMSButton" column="ConfigSendSMSButton" type="boolean" />
+			<property name="ConfigPrintChequeButton" column="ConfigPrintChequeButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigAccountingTransactionTab" column="ConfigAccountingTransactionTab" type="boolean" />
+			<property name="ConfigInstrumentDetailTab" column="ConfigInstrumentDetailTab" type="boolean" />
+			<property name="ConfigGLCode1" column="ConfigGLCode1" type="boolean" />
+			<property name="GLCode1" column="GLCode1" type="string" />
+			<property name="ConfigGLDescription1" column="ConfigGLDescription1" type="boolean" />
+			<property name="GLDescription1" column="GLDescription1" type="string" />
+			<property name="ConfigGLDescription1FindButton" column="ConfigGLDescription1FindButton" type="boolean" />
+			<property name="ConfigGLCode2" column="ConfigGLCode2" type="boolean" />
+			<property name="GLCode2" column="GLCode2" type="string" />
+			<property name="ConfigGLDescription2" column="ConfigGLDescription2" type="boolean" />
+			<property name="GLDescription2" column="GLDescription2" type="string" />
+			<property name="ConfigGLDescription2FindButton" column="ConfigGLDescription2FindButton" type="boolean" />
+			<property name="ConfigPostButton" column="ConfigPostButton" type="boolean" />
+			<property name="ConfigCloseButton" column="ConfigCloseButton" type="boolean" />
+			<property name="ConfigAccountingDistributionTable" column="ConfigAccountingDistributionTable" type="boolean" />
+			<property name="ConfigFetchGLDescriptionCode" column="ConfigFetchGLDescriptionCode" type="boolean" />
+			<property name="GLDescriptionCode" column="GLDescriptionCode" type="string" />
+			<property name="TableRowNumber" column="TableRowNumber" type="integer" />
+			<property name="ReversalMessage" column="ReversalMessage" type="string" />
+			<property name="ConfigReasonForInitiate" column="ConfigReasonForInitiate" type="boolean" />
+			<property name="ReasonForInitiate" column="ReasonForInitiate" type="string" />
+			<property name="ConfigUserId" column="ConfigUserId" type="boolean" />
+			<property name="UserId" column="UserId" type="string" />
+			<property name="ConfigRole" column="ConfigRole" type="boolean" />
+			<property name="Role" column="Role" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

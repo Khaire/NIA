@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolAttrEquipmentsEngEntity" table="PolAttrEquipmentsEngEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigQuoteNoLabel" column="ConfigQuoteNoLabel" type="boolean" />
+			<property name="QuoteNoLabel" column="QuoteNoLabel" type="string" />
+			<property name="ConfigStatusLabel" column="ConfigStatusLabel" type="boolean" />
+			<property name="StatusLabel" column="StatusLabel" type="string" />
+			<property name="ConfigPolicyholderLabel" column="ConfigPolicyholderLabel" type="boolean" />
+			<property name="PolicyholderLabel" column="PolicyholderLabel" type="string" />
+			<property name="ConfigProductLabel" column="ConfigProductLabel" type="boolean" />
+			<property name="ProductLabel" column="ProductLabel" type="string" />
+			<property name="ConfigExactDescriptionOfThePropertyTobeErected" column="ConfigExactDescriptionOfThePropertyTobeErected" type="boolean" />
+			<property name="ExactDescriptionOfThePropertyTobeErected" column="ExactDescriptionOfThePropertyTobeErected" type="string" />
+			<property name="ConfigForMachManunameTypeSizeCapWeightPressrevolOfMainMachEquip" column="ConfigForMachManunameTypeSizeCapWeightPressrevolOfMainMachEquip" type="boolean" />
+			<property name="ForMachManunameTypeSizeCapWeightPressrevolOfMainMachEquip" column="ForMachManunameTypeSizeCapWeightPressrevolOfMainMachEquip" type="string" />
+			<property name="ConfigHavePlansDesignAndMatofThekindUsedinTheProject" column="ConfigHavePlansDesignAndMatofThekindUsedinTheProject" type="boolean" />
+			<property name="HavePlansDesignAndMatofThekindUsedinTheProject" column="HavePlansDesignAndMatofThekindUsedinTheProject" type="string" />
+			<property name="ConfigConfirmThatNoEquipmentsInTheProjectisPrototypical" column="ConfigConfirmThatNoEquipmentsInTheProjectisPrototypical" type="boolean" />
+			<property name="ConfirmThatNoEquipmentsInTheProjectisPrototypical" column="ConfirmThatNoEquipmentsInTheProjectisPrototypical" type="string" />
+			<property name="ConfigNameOfProcessLicensorsAndthePlantUnitsIncluded" column="ConfigNameOfProcessLicensorsAndthePlantUnitsIncluded" type="boolean" />
+			<property name="NameOfProcessLicensorsAndthePlantUnitsIncluded" column="NameOfProcessLicensorsAndthePlantUnitsIncluded" type="string" />
+			<property name="ConfigIsThereAnyAggravatedRiskOfFireExplosion" column="ConfigIsThereAnyAggravatedRiskOfFireExplosion" type="boolean" />
+			<property name="IsThereAnyAggravatedRiskOfFireExplosion" column="IsThereAnyAggravatedRiskOfFireExplosion" type="string" />
+			<property name="ConfigDetailsOfRiskFireExplosion" column="ConfigDetailsOfRiskFireExplosion" type="boolean" />
+			<property name="DetailsOfRiskFireExplosion" column="DetailsOfRiskFireExplosion" type="string" />
+			<property name="ConfigTotalPML" column="ConfigTotalPML" type="boolean" />
+			<property name="TotalPML" column="TotalPML" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigBackwardButton" column="ConfigBackwardButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

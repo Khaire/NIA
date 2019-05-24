@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyAttrCDPolDetailsEntity" table="PolicyAttrCDPolDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolderName" column="ConfigPolicyHolderName" type="boolean" />
+			<property name="PolicyHolderName" column="PolicyHolderName" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigCoInsuranceApplicable" column="ConfigCoInsuranceApplicable" type="boolean" />
+			<property name="CoInsuranceApplicable" column="CoInsuranceApplicable" type="string" />
+			<property name="ConfigNameofInsurer" column="ConfigNameofInsurer" type="boolean" />
+			<property name="NameofInsurer" column="NameofInsurer" type="string" />
+			<property name="ConfigInstallmentPercentageListOpenButton" column="ConfigInstallmentPercentageListOpenButton" type="boolean" />
+			<property name="ConfigInstallmentPercentage" column="ConfigInstallmentPercentage" type="boolean" />
+			<property name="InstallmentPercentage" column="InstallmentPercentage" type="string" />
+			<property name="ConfigSaveWindowButton" column="ConfigSaveWindowButton" type="boolean" />
+			<property name="ConfigOpenButton" column="ConfigOpenButton" type="boolean" />
+			<property name="ConfigOpportunityId" column="ConfigOpportunityId" type="boolean" />
+			<property name="OpportunityId" column="OpportunityId" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigForwordButton" column="ConfigForwordButton" type="boolean" />
+			<property name="ConfigCountryDetailsListOpenButton" column="ConfigCountryDetailsListOpenButton" type="boolean" />
+			<property name="ConfigCountryOpenButton" column="ConfigCountryOpenButton" type="boolean" />
+			<property name="ConfigCountryWindowAddButton" column="ConfigCountryWindowAddButton" type="boolean" />
+			<property name="ConfigCountryCode" column="ConfigCountryCode" type="boolean" />
+			<property name="CountryCode" column="CountryCode" type="string" />
+			<property name="ConfigCountryName" column="ConfigCountryName" type="boolean" />
+			<property name="CountryName" column="CountryName" type="string" />
+			<property name="ConfigCountryGroup" column="ConfigCountryGroup" type="boolean" />
+			<property name="CountryGroup" column="CountryGroup" type="string" />
+			<property name="ConfigWaitingperiod" column="ConfigWaitingperiod" type="boolean" />
+			<property name="Waitingperiod" column="Waitingperiod" type="string" />
+			<property name="ConfigDCLAvailability" column="ConfigDCLAvailability" type="boolean" />
+			<property name="DCLAvailability" column="DCLAvailability" type="string" />
+			<property name="ConfigPoliticalRisk" column="ConfigPoliticalRisk" type="boolean" />
+			<property name="PoliticalRisk" column="PoliticalRisk" type="string" />
+			<property name="ConfigSpecialTerms" column="ConfigSpecialTerms" type="boolean" />
+			<property name="SpecialTerms" column="SpecialTerms" type="string" />
+			<property name="ConfigDelete" column="ConfigDelete" type="boolean" />
+			<property name="ConfigCountryWindowSaveButton" column="ConfigCountryWindowSaveButton" type="boolean" />
+			<property name="ConfigIsServiceTaxExempted" column="ConfigIsServiceTaxExempted" type="boolean" />
+			<property name="IsServiceTaxExempted" column="IsServiceTaxExempted" type="string" />
+			<property name="ConfigTypeOfPolicy" column="ConfigTypeOfPolicy" type="boolean" />
+			<property name="TypeOfPolicy" column="TypeOfPolicy" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

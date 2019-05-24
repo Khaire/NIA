@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClonePolicySchemeEntity" table="ClonePolicySchemeEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClonePolicySchemeTitle" column="ClonePolicySchemeTitle" type="string" />
+			<property name="DependencyForPolicy" column="DependencyForPolicy" type="string" />
+			<property name="DependencyForPolicyAttributeClone" column="DependencyForPolicyAttributeClone" type="string" />
+			<property name="ConfigReferencePolicySchemeNo" column="ConfigReferencePolicySchemeNo" type="boolean" />
+			<property name="ReferencePolicySchemeNo" column="ReferencePolicySchemeNo" type="string" />
+			<property name="ConfigReferenceQuoteno" column="ConfigReferenceQuoteno" type="boolean" />
+			<property name="ReferenceQuoteno" column="ReferenceQuoteno" type="string" />
+			<property name="ConfigQuoteIntimationDate" column="ConfigQuoteIntimationDate" type="boolean" />
+			<property name="QuoteIntimationDate" column="QuoteIntimationDate" type="string" />
+			<property name="ConfigClonedQuoteNo" column="ConfigClonedQuoteNo" type="boolean" />
+			<property name="ClonedQuoteNo" column="ClonedQuoteNo" type="string" />
+			<property name="ConfigCloneButton" column="ConfigCloneButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

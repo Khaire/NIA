@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PDRskDetailSecndPageMLEntity" table="PDRskDetailSecndPageMLEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="RiskDetailsPDNextPageTitle" column="RiskDetailsPDNextPageTitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigAnyOneAccidentAOA" column="ConfigAnyOneAccidentAOA" type="boolean" />
+			<property name="AnyOneAccidentAOA" column="AnyOneAccidentAOA" type="string" />
+			<property name="ConfigAOAAOY" column="ConfigAOAAOY" type="boolean" />
+			<property name="AOAAOY" column="AOAAOY" type="string" />
+			<property name="ConfigAnyOneYearandintheAggregateAOY" column="ConfigAnyOneYearandintheAggregateAOY" type="boolean" />
+			<property name="AnyOneYearandintheAggregateAOY" column="AnyOneYearandintheAggregateAOY" type="string" />
+			<property name="ConfigRetroactiveDateOne" column="ConfigRetroactiveDateOne" type="boolean" />
+			<property name="RetroactiveDateOne" column="RetroactiveDateOne" type="string" />
+			<property name="ConfigDeductibleTypeOne" column="ConfigDeductibleTypeOne" type="boolean" />
+			<property name="DeductibleTypeOne" column="DeductibleTypeOne" type="string" />
+			<property name="ConfigPercentageOnOne" column="ConfigPercentageOnOne" type="boolean" />
+			<property name="PercentageOnOne" column="PercentageOnOne" type="string" />
+			<property name="ConfigGeographicalJurisdictionOne" column="ConfigGeographicalJurisdictionOne" type="boolean" />
+			<property name="GeographicalJurisdictionOne" column="GeographicalJurisdictionOne" type="string" />
+			<property name="ConfigDeductibleforIndiaOne" column="ConfigDeductibleforIndiaOne" type="boolean" />
+			<property name="DeductibleforIndiaOne" column="DeductibleforIndiaOne" type="string" />
+			<property name="ConfigDeductibleforWorldwideExcludingUSAandCanadaOne" column="ConfigDeductibleforWorldwideExcludingUSAandCanadaOne" type="boolean" />
+			<property name="DeductibleforWorldwideExcludingUSAandCanadaOne" column="DeductibleforWorldwideExcludingUSAandCanadaOne" type="string" />
+			<property name="ConfigDeductibleforWorldwideIncludingUSAandCanadaOne" column="ConfigDeductibleforWorldwideIncludingUSAandCanadaOne" type="boolean" />
+			<property name="DeductibleforWorldwideIncludingUSAandCanadaOne" column="DeductibleforWorldwideIncludingUSAandCanadaOne" type="string" />
+			<property name="ConfigRetroactiveDateTwo" column="ConfigRetroactiveDateTwo" type="boolean" />
+			<property name="RetroactiveDateTwo" column="RetroactiveDateTwo" type="string" />
+			<property name="ConfigRetroactiveDateThree" column="ConfigRetroactiveDateThree" type="boolean" />
+			<property name="RetroactiveDateThree" column="RetroactiveDateThree" type="string" />
+			<property name="ConfigRetroactiveDateFour" column="ConfigRetroactiveDateFour" type="boolean" />
+			<property name="RetroactiveDateFour" column="RetroactiveDateFour" type="string" />
+			<property name="ConfigRetroactiveDateFive" column="ConfigRetroactiveDateFive" type="boolean" />
+			<property name="RetroactiveDateFive" column="RetroactiveDateFive" type="string" />
+			<property name="ConfigDoyouwanttoattachTechnicalCollaboratorsLiability" column="ConfigDoyouwanttoattachTechnicalCollaboratorsLiability" type="boolean" />
+			<property name="DoyouwanttoattachTechnicalCollaboratorsLiability" column="DoyouwanttoattachTechnicalCollaboratorsLiability" type="string" />
+			<property name="ConfigSubLimitofattachTechnicalCollaboratorsLiability" column="ConfigSubLimitofattachTechnicalCollaboratorsLiability" type="boolean" />
+			<property name="SubLimitofattachTechnicalCollaboratorsLiability" column="SubLimitofattachTechnicalCollaboratorsLiability" type="string" />
+			<property name="ConfigOptionsforTechnicalCollaboratorsLiability" column="ConfigOptionsforTechnicalCollaboratorsLiability" type="boolean" />
+			<property name="OptionsforTechnicalCollaboratorsLiability" column="OptionsforTechnicalCollaboratorsLiability" type="string" />
+			<property name="ConfigLoadingPercntforTechnicalCollaboratorsLiability" column="ConfigLoadingPercntforTechnicalCollaboratorsLiability" type="boolean" />
+			<property name="LoadingPercntforTechnicalCollaboratorsLiability" column="LoadingPercntforTechnicalCollaboratorsLiability" type="string" />
+			<property name="ConfigLoadingAmountforTechnicalCollaboratorsLiability" column="ConfigLoadingAmountforTechnicalCollaboratorsLiability" type="boolean" />
+			<property name="LoadingAmountforTechnicalCollaboratorsLiability" column="LoadingAmountforTechnicalCollaboratorsLiability" type="string" />
+			<property name="ConfigDoYouWantToAttachContractors" column="ConfigDoYouWantToAttachContractors" type="boolean" />
+			<property name="DoYouWantToAttachContractors" column="DoYouWantToAttachContractors" type="string" />
+			<property name="ConfigSubLimitofAttachContractor" column="ConfigSubLimitofAttachContractor" type="boolean" />
+			<property name="SubLimitofAttachContractor" column="SubLimitofAttachContractor" type="string" />
+			<property name="ConfigOptionsforAttachContractor" column="ConfigOptionsforAttachContractor" type="boolean" />
+			<property name="OptionsforAttachContractor" column="OptionsforAttachContractor" type="string" />
+			<property name="ConfigLoadingPercntforAttachContractor" column="ConfigLoadingPercntforAttachContractor" type="boolean" />
+			<property name="LoadingPercntforAttachContractor" column="LoadingPercntforAttachContractor" type="string" />
+			<property name="ConfigLoadingAmountforAttachContractor" column="ConfigLoadingAmountforAttachContractor" type="boolean" />
+			<property name="LoadingAmountforAttachContractor" column="LoadingAmountforAttachContractor" type="string" />
+			<property name="ConfigDoyouwanttoattachIntellectualPropertyRights" column="ConfigDoyouwanttoattachIntellectualPropertyRights" type="boolean" />
+			<property name="DoyouwanttoattachIntellectualPropertyRights" column="DoyouwanttoattachIntellectualPropertyRights" type="string" />
+			<property name="ConfigSubLimitofattachIntellectualPropertyRights" column="ConfigSubLimitofattachIntellectualPropertyRights" type="boolean" />
+			<property name="SubLimitofattachIntellectualPropertyRights" column="SubLimitofattachIntellectualPropertyRights" type="string" />
+			<property name="ConfigOptionsforattachIntellectualPropertyRights" column="ConfigOptionsforattachIntellectualPropertyRights" type="boolean" />
+			<property name="OptionsforattachIntellectualPropertyRights" column="OptionsforattachIntellectualPropertyRights" type="string" />
+			<property name="ConfigLoadingPercentforattachIntellectualPropertyRights" column="ConfigLoadingPercentforattachIntellectualPropertyRights" type="boolean" />
+			<property name="LoadingPercentforattachIntellectualPropertyRights" column="LoadingPercentforattachIntellectualPropertyRights" type="string" />
+			<property name="ConfigLoadingAmountforattachIntellectualPropertyRights" column="ConfigLoadingAmountforattachIntellectualPropertyRights" type="boolean" />
+			<property name="LoadingAmountforattachIntellectualPropertyRights" column="LoadingAmountforattachIntellectualPropertyRights" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigEstimatedTurnoverAnnualfees" column="ConfigEstimatedTurnoverAnnualfees" type="boolean" />
+			<property name="EstimatedTurnoverAnnualfees" column="EstimatedTurnoverAnnualfees" type="string" />
+			<property name="ConfigSpecialTermsandConditions" column="ConfigSpecialTermsandConditions" type="boolean" />
+			<property name="SpecialTermsandConditions" column="SpecialTermsandConditions" type="string" />
+			<property name="ConfigSpecialcoversIfany" column="ConfigSpecialcoversIfany" type="boolean" />
+			<property name="SpecialcoversIfany" column="SpecialcoversIfany" type="string" />
+			<property name="ConfigLoadingPercentforTurnover" column="ConfigLoadingPercentforTurnover" type="boolean" />
+			<property name="LoadingPercentforTurnover" column="LoadingPercentforTurnover" type="string" />
+			<property name="ConfigLoading" column="ConfigLoading" type="boolean" />
+			<property name="Loading" column="Loading" type="string" />
+			<property name="ConfigDeductible" column="ConfigDeductible" type="boolean" />
+			<property name="Deductible" column="Deductible" type="string" />
+			<property name="ConfigSpecialConditionsOne" column="ConfigSpecialConditionsOne" type="boolean" />
+			<property name="SpecialConditionsOne" column="SpecialConditionsOne" type="string" />
+			<property name="ConfigSpecialConditionsTwo" column="ConfigSpecialConditionsTwo" type="boolean" />
+			<property name="SpecialConditionsTwo" column="SpecialConditionsTwo" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

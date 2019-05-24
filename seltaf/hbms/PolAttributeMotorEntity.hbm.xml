@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolAttributeMotorEntity" table="PolAttributeMotorEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="NextPageTitle" column="NextPageTitle" type="string" />
+			<property name="ConfigCoverNoteNo" column="ConfigCoverNoteNo" type="boolean" />
+			<property name="CoverNoteNo" column="CoverNoteNo" type="string" />
+			<property name="ConfigCoverNoteBookNo" column="ConfigCoverNoteBookNo" type="boolean" />
+			<property name="CoverNoteBookNo" column="CoverNoteBookNo" type="string" />
+			<property name="ConfigCoverNoteIssueDate" column="ConfigCoverNoteIssueDate" type="boolean" />
+			<property name="CoverNoteIssueDate" column="CoverNoteIssueDate" type="string" />
+			<property name="ConfigCoverNoteIssuedTimeStamp" column="ConfigCoverNoteIssuedTimeStamp" type="boolean" />
+			<property name="CoverNoteIssuedTimeStamp" column="CoverNoteIssuedTimeStamp" type="string" />
+			<property name="ConfigCoverNoteReceivedDate" column="ConfigCoverNoteReceivedDate" type="boolean" />
+			<property name="CoverNoteReceivedDate" column="CoverNoteReceivedDate" type="string" />
+			<property name="ConfigFireexplosionselfIgnitionOrLightningPerilRequired" column="ConfigFireexplosionselfIgnitionOrLightningPerilRequired" type="boolean" />
+			<property name="FireexplosionselfIgnitionOrLightningPerilRequired" column="FireexplosionselfIgnitionOrLightningPerilRequired" type="string" />
+			<property name="ConfigBurglaryHousebreakingOrTheftperilRequired" column="ConfigBurglaryHousebreakingOrTheftperilRequired" type="boolean" />
+			<property name="BurglaryHousebreakingOrTheftperilRequired" column="BurglaryHousebreakingOrTheftperilRequired" type="string" />
+			<property name="ConfigRiotAndStrikePerilRequired" column="ConfigRiotAndStrikePerilRequired" type="boolean" />
+			<property name="RiotAndStrikePerilRequired" column="RiotAndStrikePerilRequired" type="string" />
+			<property name="ConfigEarthquakeDamagePerilRequired" column="ConfigEarthquakeDamagePerilRequired" type="boolean" />
+			<property name="EarthquakeDamagePerilRequired" column="EarthquakeDamagePerilRequired" type="string" />
+			<property name="ConfigFloodTyphoonHurricaneStormTempestInundationCycloneHailstorm" column="ConfigFloodTyphoonHurricaneStormTempestInundationCycloneHailstorm" type="boolean" />
+			<property name="FloodTyphoonHurricaneStormTempestInundationCycloneHailstorm" column="FloodTyphoonHurricaneStormTempestInundationCycloneHailstorm" type="string" />
+			<property name="ConfigAccidentalExternalMeansPerilRequired" column="ConfigAccidentalExternalMeansPerilRequired" type="boolean" />
+			<property name="AccidentalExternalMeansPerilRequired" column="AccidentalExternalMeansPerilRequired" type="string" />
+			<property name="ConfigMaliciousActPerilRequired" column="ConfigMaliciousActPerilRequired" type="boolean" />
+			<property name="MaliciousActPerilRequired" column="MaliciousActPerilRequired" type="string" />
+			<property name="ConfigTerroristActivityPerilRequired" column="ConfigTerroristActivityPerilRequired" type="boolean" />
+			<property name="TerroristActivityPerilRequired" column="TerroristActivityPerilRequired" type="string" />
+			<property name="ConfigWhilstInTransitByRoadRail" column="ConfigWhilstInTransitByRoadRail" type="boolean" />
+			<property name="WhilstInTransitByRoadRail" column="WhilstInTransitByRoadRail" type="string" />
+			<property name="ConfigLandslideRockslidePerilRequired" column="ConfigLandslideRockslidePerilRequired" type="boolean" />
+			<property name="LandslideRockslidePerilRequired" column="LandslideRockslidePerilRequired" type="string" />
+			<property name="ConfigIsServiceTaxExempted" column="ConfigIsServiceTaxExempted" type="boolean" />
+			<property name="IsServiceTaxExempted" column="IsServiceTaxExempted" type="string" />
+			<property name="ConfigOpportunityId" column="ConfigOpportunityId" type="boolean" />
+			<property name="OpportunityId" column="OpportunityId" type="string" />
+			<property name="ConfigIsItDeclarationTypePolicy" column="ConfigIsItDeclarationTypePolicy" type="boolean" />
+			<property name="IsItDeclarationTypePolicy" column="IsItDeclarationTypePolicy" type="string" />
+			<property name="ConfigCoInsuranceApplicable" column="ConfigCoInsuranceApplicable" type="boolean" />
+			<property name="CoInsuranceApplicable" column="CoInsuranceApplicable" type="string" />
+			<property name="ConfigFinancierNameFromPortal" column="ConfigFinancierNameFromPortal" type="boolean" />
+			<property name="FinancierNameFromPortal" column="FinancierNameFromPortal" type="string" />
+			<property name="ConfigTypeOfFinancingAgreementFromPortal" column="ConfigTypeOfFinancingAgreementFromPortal" type="boolean" />
+			<property name="TypeOfFinancingAgreementFromPortal" column="TypeOfFinancingAgreementFromPortal" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigForwordButton" column="ConfigForwordButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

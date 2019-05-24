@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.SecurityPartyEntity" table="SecurityPartyEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigPrimaryInformation" column="ConfigPrimaryInformation" type="boolean" />
+			<property name="ConfigMaintainRoleLink" column="ConfigMaintainRoleLink" type="boolean" />
+			<property name="ConfigMaintainUserLink" column="ConfigMaintainUserLink" type="boolean" />
+			<property name="ConfigMaintainDataLink" column="ConfigMaintainDataLink" type="boolean" />
+			<property name="ConfigNewOfficeCreationLink" column="ConfigNewOfficeCreationLink" type="boolean" />
+			<property name="ConfigHelpLink" column="ConfigHelpLink" type="boolean" />
+			<property name="ConfigUserCode" column="ConfigUserCode" type="boolean" />
+			<property name="UserCode" column="UserCode" type="string" />
+			<property name="ConfigUserName" column="ConfigUserName" type="boolean" />
+			<property name="UserName" column="UserName" type="string" />
+			<property name="ConfigRoleCode" column="ConfigRoleCode" type="boolean" />
+			<property name="RoleCode" column="RoleCode" type="string" />
+			<property name="ConfigRoleCodeFindButton" column="ConfigRoleCodeFindButton" type="boolean" />
+			<property name="ConfigRoleName" column="ConfigRoleName" type="boolean" />
+			<property name="RoleName" column="RoleName" type="string" />
+			<property name="ConfigStartDate" column="ConfigStartDate" type="boolean" />
+			<property name="StartDate" column="StartDate" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

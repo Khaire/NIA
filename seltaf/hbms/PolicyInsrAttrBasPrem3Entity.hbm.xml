@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyInsrAttrBasPrem3Entity" table="PolicyInsrAttrBasPrem3Entity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolicyInsrAttrBasPrem3Title" column="PolicyInsrAttrBasPrem3Title" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolderName" column="ConfigPolicyHolderName" type="boolean" />
+			<property name="PolicyHolderName" column="PolicyHolderName" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigPreviousClaimExperience" column="ConfigPreviousClaimExperience" type="boolean" />
+			<property name="PreviousClaimExperience" column="PreviousClaimExperience" type="string" />
+			<property name="ConfigSpecialDiscountPer" column="ConfigSpecialDiscountPer" type="boolean" />
+			<property name="SpecialDiscountPer" column="SpecialDiscountPer" type="string" />
+			<property name="ConfigClaimExperienceUnderMaternityBenefitsForTheLastThreeYears" column="ConfigClaimExperienceUnderMaternityBenefitsForTheLastThreeYears" type="boolean" />
+			<property name="ClaimExperienceUnderMaternityBenefitsForTheLastThreeYears" column="ClaimExperienceUnderMaternityBenefitsForTheLastThreeYears" type="string" />
+			<property name="ConfigClaimExpunderHealthInsuranceforTheLast3YrsExcludingTheCurrentYear" column="ConfigClaimExpunderHealthInsuranceforTheLast3YrsExcludingTheCurrentYear" type="boolean" />
+			<property name="ClaimExpunderHealthInsuranceforTheLast3YrsExcludingTheCurrentYear" column="ClaimExpunderHealthInsuranceforTheLast3YrsExcludingTheCurrentYear" type="string" />
+			<property name="ConfigCurrentYearClaimExperience" column="ConfigCurrentYearClaimExperience" type="boolean" />
+			<property name="CurrentYearClaimExperience" column="CurrentYearClaimExperience" type="string" />
+			<property name="ConfigPremiumForFireBusinessForTheLastThreeYearsExcludingTheCurrentYear" column="ConfigPremiumForFireBusinessForTheLastThreeYearsExcludingTheCurrentYear" type="boolean" />
+			<property name="PremiumForFireBusinessForTheLastThreeYearsExcludingTheCurrentYear" column="PremiumForFireBusinessForTheLastThreeYearsExcludingTheCurrentYear" type="string" />
+			<property name="ConfigClaimRatioForFireBusinessForTheLast3YearsExcludingTheCurrentYear" column="ConfigClaimRatioForFireBusinessForTheLast3YearsExcludingTheCurrentYear" type="boolean" />
+			<property name="ClaimRatioForFireBusinessForTheLast3YearsExcludingTheCurrentYear" column="ClaimRatioForFireBusinessForTheLast3YearsExcludingTheCurrentYear" type="string" />
+			<property name="ConfigPremiumForMarineBusinessForTheLastThreeYearsExcludingTheCurrentYear" column="ConfigPremiumForMarineBusinessForTheLastThreeYearsExcludingTheCurrentYear" type="boolean" />
+			<property name="PremiumForMarineBusinessForTheLastThreeYearsExcludingTheCurrentYear" column="PremiumForMarineBusinessForTheLastThreeYearsExcludingTheCurrentYear" type="string" />
+			<property name="ConfigClaimRatioForMarineBusinessForTheLast3YearsExcludingTheCurrentYr" column="ConfigClaimRatioForMarineBusinessForTheLast3YearsExcludingTheCurrentYr" type="boolean" />
+			<property name="ClaimRatioForMarineBusinessForTheLast3YearsExcludingTheCurrentYr" column="ClaimRatioForMarineBusinessForTheLast3YearsExcludingTheCurrentYr" type="string" />
+			<property name="ConfigPremiumForMiscOtherThanHealthBusinessForLastYrsExcludingCurrentYr" column="ConfigPremiumForMiscOtherThanHealthBusinessForLastYrsExcludingCurrentYr" type="boolean" />
+			<property name="PremiumForMiscOtherThanHealthBusinessForLastYrsExcludingCurrentYr" column="PremiumForMiscOtherThanHealthBusinessForLastYrsExcludingCurrentYr" type="string" />
+			<property name="ConfigClaimRatioForMiscOtherThanHealthBusinessForLastYrsExcludingCurrYr" column="ConfigClaimRatioForMiscOtherThanHealthBusinessForLastYrsExcludingCurrYr" type="boolean" />
+			<property name="ClaimRatioForMiscOtherThanHealthBusinessForLastYrsExcludingCurrYr" column="ClaimRatioForMiscOtherThanHealthBusinessForLastYrsExcludingCurrYr" type="string" />
+			<property name="ConfigTotalPremium" column="ConfigTotalPremium" type="boolean" />
+			<property name="TotalPremium" column="TotalPremium" type="string" />
+			<property name="ConfigTotalClaimRatio" column="ConfigTotalClaimRatio" type="boolean" />
+			<property name="TotalClaimRatio" column="TotalClaimRatio" type="string" />
+			<property name="ConfigUnderwritingOfficeRecommendations" column="ConfigUnderwritingOfficeRecommendations" type="boolean" />
+			<property name="UnderwritingOfficeRecommendations" column="UnderwritingOfficeRecommendations" type="string" />
+			<property name="ConfigClaimRatioPer" column="ConfigClaimRatioPer" type="boolean" />
+			<property name="ClaimRatioPer" column="ClaimRatioPer" type="string" />
+			<property name="ConfigProceedButton" column="ConfigProceedButton" type="boolean" />
+			<property name="ConfigViewButton" column="ConfigViewButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigMemberDetail" column="ConfigMemberDetail" type="boolean" />
+			<property name="ConfigMemberAttributes" column="ConfigMemberAttributes" type="boolean" />
+			<property name="ConfigMemberAttachCoverages" column="ConfigMemberAttachCoverages" type="boolean" />
+			<property name="ConfigMemberRelations" column="ConfigMemberRelations" type="boolean" />
+			<property name="ConfigMemberPayments" column="ConfigMemberPayments" type="boolean" />
+			<property name="ConfigMemberFund" column="ConfigMemberFund" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

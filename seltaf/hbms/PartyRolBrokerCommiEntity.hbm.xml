@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PartyRolBrokerCommiEntity" table="PartyRolBrokerCommiEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigPartyTab" column="ConfigPartyTab" type="boolean" />
+			<property name="ConfigPartyRolesTab" column="ConfigPartyRolesTab" type="boolean" />
+			<property name="ConfigContactsTab" column="ConfigContactsTab" type="boolean" />
+			<property name="ConfigRelatedPartiesTab" column="ConfigRelatedPartiesTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigHierarchyTab" column="ConfigHierarchyTab" type="boolean" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigPartyName" column="ConfigPartyName" type="boolean" />
+			<property name="PartyName" column="PartyName" type="string" />
+			<property name="ConfigBrokerLicenseNo" column="ConfigBrokerLicenseNo" type="boolean" />
+			<property name="BrokerLicenseNo" column="BrokerLicenseNo" type="string" />
+			<property name="ConfigPanNo" column="ConfigPanNo" type="boolean" />
+			<property name="PanNo" column="PanNo" type="string" />
+			<property name="ConfigLicenseIssueDate" column="ConfigLicenseIssueDate" type="boolean" />
+			<property name="LicenseIssueDate" column="LicenseIssueDate" type="string" />
+			<property name="ConfigLicenseExpiryDate" column="ConfigLicenseExpiryDate" type="boolean" />
+			<property name="LicenseExpiryDate" column="LicenseExpiryDate" type="string" />
+			<property name="ConfigManualPartyCode" column="ConfigManualPartyCode" type="boolean" />
+			<property name="ManualPartyCode" column="ManualPartyCode" type="string" />
+			<property name="ConfigMarkedAsOld" column="ConfigMarkedAsOld" type="boolean" />
+			<property name="MarkedAsOld" column="MarkedAsOld" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBranchName" column="ConfigBranchName" type="boolean" />
+			<property name="BranchName" column="BranchName" type="string" />
+			<property name="ConfigBranchType" column="ConfigBranchType" type="boolean" />
+			<property name="BranchType" column="BranchType" type="string" />
+			<property name="ConfigTypeOfOfficer" column="ConfigTypeOfOfficer" type="boolean" />
+			<property name="TypeOfOfficer" column="TypeOfOfficer" type="string" />
+			<property name="ConfigDOLStartDate" column="ConfigDOLStartDate" type="boolean" />
+			<property name="DOLStartDate" column="DOLStartDate" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

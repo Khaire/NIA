@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimRiskDetEngEntity" table="ClaimRiskDetEngEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="NextPageTitle" column="NextPageTitle" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigPolicyNoCertificateNo5" column="ConfigPolicyNoCertificateNo5" type="boolean" />
+			<property name="PolicyNoCertificateNo5" column="PolicyNoCertificateNo5" type="string" />
+			<property name="ConfigSumInsured5" column="ConfigSumInsured5" type="boolean" />
+			<property name="SumInsured5" column="SumInsured5" type="string" />
+			<property name="ConfigMarineCargoClaimNo5" column="ConfigMarineCargoClaimNo5" type="boolean" />
+			<property name="MarineCargoClaimNo5" column="MarineCargoClaimNo5" type="string" />
+			<property name="ConfigMarineCargoPolicyNoCertificateNo5" column="ConfigMarineCargoPolicyNoCertificateNo5" type="boolean" />
+			<property name="MarineCargoPolicyNoCertificateNo5" column="MarineCargoPolicyNoCertificateNo5" type="string" />
+			<property name="ConfigNatureOfLoss5" column="ConfigNatureOfLoss5" type="boolean" />
+			<property name="NatureOfLoss5" column="NatureOfLoss5" type="string" />
+			<property name="ConfigCauseOfLoss5" column="ConfigCauseOfLoss5" type="boolean" />
+			<property name="CauseOfLoss5" column="CauseOfLoss5" type="string" />
+			<property name="ConfigDateOfLoss5" column="ConfigDateOfLoss5" type="boolean" />
+			<property name="DateOfLoss5" column="DateOfLoss5" type="string" />
+			<property name="ConfigComments5" column="ConfigComments5" type="boolean" />
+			<property name="Comments5" column="Comments5" type="string" />
+			<property name="ConfigDateOfIntimation5" column="ConfigDateOfIntimation5" type="boolean" />
+			<property name="DateOfIntimation5" column="DateOfIntimation5" type="string" />
+			<property name="ConfigTimeOfLoss5" column="ConfigTimeOfLoss5" type="boolean" />
+			<property name="TimeOfLoss5" column="TimeOfLoss5" type="string" />
+			<property name="ConfigIndemnityPeriodInMonths" column="ConfigIndemnityPeriodInMonths" type="boolean" />
+			<property name="IndemnityPeriodInMonths" column="IndemnityPeriodInMonths" type="string" />
+			<property name="ConfigStandardTimeExcessInWeeks" column="ConfigStandardTimeExcessInWeeks" type="boolean" />
+			<property name="StandardTimeExcessInWeeks" column="StandardTimeExcessInWeeks" type="string" />
+			<property name="ConfigAgreedOptedTimeExcessinWeeks" column="ConfigAgreedOptedTimeExcessinWeeks" type="boolean" />
+			<property name="AgreedOptedTimeExcessinWeeks" column="AgreedOptedTimeExcessinWeeks" type="string" />
+			<property name="ConfigSpecialFeaturesOfClaimIfAny" column="ConfigSpecialFeaturesOfClaimIfAny" type="boolean" />
+			<property name="SpecialFeaturesOfClaimIfAny" column="SpecialFeaturesOfClaimIfAny" type="string" />
+			<property name="ConfigCalculatedExcessEng" column="ConfigCalculatedExcessEng" type="boolean" />
+			<property name="CalculatedExcessEng" column="CalculatedExcessEng" type="string" />
+			<property name="ConfigWhetherThePolicyIs64VBCompliant" column="ConfigWhetherThePolicyIs64VBCompliant" type="boolean" />
+			<property name="WhetherThePolicyIs64VBCompliant" column="WhetherThePolicyIs64VBCompliant" type="string" />
+			<property name="ConfigListOfTheCountries" column="ConfigListOfTheCountries" type="boolean" />
+			<property name="ListOfTheCountries" column="ListOfTheCountries" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

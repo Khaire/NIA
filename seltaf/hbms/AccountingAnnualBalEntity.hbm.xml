@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AccountingAnnualBalEntity" table="AccountingAnnualBalEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigAccountDetailsTab" column="ConfigAccountDetailsTab" type="boolean" />
+			<property name="ConfigAnnualBalanceDetailsTab" column="ConfigAnnualBalanceDetailsTab" type="boolean" />
+			<property name="ConfigGlCode" column="ConfigGlCode" type="boolean" />
+			<property name="GlCode" column="GlCode" type="string" />
+			<property name="ConfigAccountType" column="ConfigAccountType" type="boolean" />
+			<property name="AccountType" column="AccountType" type="string" />
+			<property name="ConfigDepartment" column="ConfigDepartment" type="boolean" />
+			<property name="Department" column="Department" type="string" />
+			<property name="ConfigLevelIndicator" column="ConfigLevelIndicator" type="boolean" />
+			<property name="LevelIndicator" column="LevelIndicator" type="string" />
+			<property name="ConfigCompany" column="ConfigCompany" type="boolean" />
+			<property name="Company" column="Company" type="string" />
+			<property name="ConfigBranch" column="ConfigBranch" type="boolean" />
+			<property name="Branch" column="Branch" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

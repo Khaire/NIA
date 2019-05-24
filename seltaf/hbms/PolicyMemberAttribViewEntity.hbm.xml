@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyMemberAttribViewEntity" table="PolicyMemberAttribViewEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigMemberDetailTab" column="ConfigMemberDetailTab" type="boolean" />
+			<property name="ConfigMemberAttributesTab" column="ConfigMemberAttributesTab" type="boolean" />
+			<property name="ConfigMemberAttachCoveragesTab" column="ConfigMemberAttachCoveragesTab" type="boolean" />
+			<property name="ConfigMemberRelationsTab" column="ConfigMemberRelationsTab" type="boolean" />
+			<property name="ConfigMemberPaymentsTab" column="ConfigMemberPaymentsTab" type="boolean" />
+			<property name="ConfigMemberFundTab" column="ConfigMemberFundTab" type="boolean" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigSchemeNo" column="ConfigSchemeNo" type="boolean" />
+			<property name="SchemeNo" column="SchemeNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyholder" column="ConfigPolicyholder" type="boolean" />
+			<property name="Policyholder" column="Policyholder" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigMemberCode" column="ConfigMemberCode" type="boolean" />
+			<property name="MemberCode" column="MemberCode" type="string" />
+			<property name="ConfigSerialNo" column="ConfigSerialNo" type="boolean" />
+			<property name="SerialNo" column="SerialNo" type="string" />
+			<property name="ConfigReinsPendingIndicator" column="ConfigReinsPendingIndicator" type="boolean" />
+			<property name="ReinsPendingIndicator" column="ReinsPendingIndicator" type="string" />
+			<property name="ConfigNameOfMember" column="ConfigNameOfMember" type="boolean" />
+			<property name="NameOfMember" column="NameOfMember" type="string" />
+			<property name="ConfigSexOfMember" column="ConfigSexOfMember" type="boolean" />
+			<property name="SexOfMember" column="SexOfMember" type="string" />
+			<property name="ConfigRelationCancerMediclaim" column="ConfigRelationCancerMediclaim" type="boolean" />
+			<property name="RelationCancerMediclaim" column="RelationCancerMediclaim" type="string" />
+			<property name="ConfigDOBOfMember" column="ConfigDOBOfMember" type="boolean" />
+			<property name="DOBOfMember" column="DOBOfMember" type="string" />
+			<property name="ConfigAgeInYear" column="ConfigAgeInYear" type="boolean" />
+			<property name="AgeInYear" column="AgeInYear" type="string" />
+			<property name="ConfigOccupationForCancerMediclaim" column="ConfigOccupationForCancerMediclaim" type="boolean" />
+			<property name="OccupationForCancerMediclaim" column="OccupationForCancerMediclaim" type="string" />
+			<property name="ConfigOtherOccupationDetail" column="ConfigOtherOccupationDetail" type="boolean" />
+			<property name="OtherOccupationDetail" column="OtherOccupationDetail" type="string" />
+			<property name="ConfigHeightOfMember" column="ConfigHeightOfMember" type="boolean" />
+			<property name="HeightOfMember" column="HeightOfMember" type="string" />
+			<property name="ConfigWeightOfMember" column="ConfigWeightOfMember" type="boolean" />
+			<property name="WeightOfMember" column="WeightOfMember" type="string" />
+			<property name="ConfigWaistLineInInches" column="ConfigWaistLineInInches" type="boolean" />
+			<property name="WaistLineInInches" column="WaistLineInInches" type="string" />
+			<property name="ConfigDoYouSmoke" column="ConfigDoYouSmoke" type="boolean" />
+			<property name="DoYouSmoke" column="DoYouSmoke" type="string" />
+			<property name="ConfigDoYouConsumeTobacco" column="ConfigDoYouConsumeTobacco" type="boolean" />
+			<property name="DoYouConsumeTobacco" column="DoYouConsumeTobacco" type="string" />
+			<property name="ConfigDoYouDrinkAlcohol" column="ConfigDoYouDrinkAlcohol" type="boolean" />
+			<property name="DoYouDrinkAlcohol" column="DoYouDrinkAlcohol" type="string" />
+			<property name="ConfigSumInsuredCancerExpenses" column="ConfigSumInsuredCancerExpenses" type="boolean" />
+			<property name="SumInsuredCancerExpenses" column="SumInsuredCancerExpenses" type="string" />
+			<property name="ConfigAssigneeName" column="ConfigAssigneeName" type="boolean" />
+			<property name="AssigneeName" column="AssigneeName" type="string" />
+			<property name="ConfigPhysicianName" column="ConfigPhysicianName" type="boolean" />
+			<property name="PhysicianName" column="PhysicianName" type="string" />
+			<property name="ConfigCumulativeBonus " column="ConfigCumulativeBonus " type="boolean" />
+			<property name=" CumulativeBonus " column=" CumulativeBonus " type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="Hypertension" column="Hypertension" type="string" />
+			<property name="ConfigDiabetes" column="ConfigDiabetes" type="boolean" />
+			<property name="Diabetes" column="Diabetes" type="string" />
+			<property name="ConfigPreexistingDiseaseForMediclaimMember" column="ConfigPreexistingDiseaseForMediclaimMember" type="boolean" />
+			<property name="PreexistingDiseaseForMediclaimMember" column="PreexistingDiseaseForMediclaimMember" type="string" />
+			<property name="ConfigNatureOfDisease" column="ConfigNatureOfDisease" type="boolean" />
+			<property name="NatureOfDisease" column="NatureOfDisease" type="string" />
+			<property name="ConfigNameAndAddressOfMedicalAttendantSurgeon" column="ConfigNameAndAddressOfMedicalAttendantSurgeon" type="boolean" />
+			<property name="NameAndAddressOfMedicalAttendantSurgeon" column="NameAndAddressOfMedicalAttendantSurgeon" type="string" />
+			<property name="ConfigDateFirstTreated" column="ConfigDateFirstTreated" type="boolean" />
+			<property name="DateFirstTreated" column="DateFirstTreated" type="string" />
+			<property name="ConfigFirstTreatmentCompleted" column="ConfigFirstTreatmentCompleted" type="boolean" />
+			<property name="FirstTreatmentCompleted" column="FirstTreatmentCompleted" type="string" />
+			<property name="ConfigWhetherFullyCured" column="ConfigWhetherFullyCured" type="boolean" />
+			<property name="WhetherFullyCured" column="WhetherFullyCured" type="string" />
+			<property name="ConfigDoYouChewTobacco" column="ConfigDoYouChewTobacco" type="boolean" />
+			<property name="DoYouChewTobacco" column="DoYouChewTobacco" type="string" />
+			<property name="ConfigSumInsuredForFamilyFloater " column="ConfigSumInsuredForFamilyFloater " type="boolean" />
+			<property name="SumInsuredForFamilyFloater " column="SumInsuredForFamilyFloater " type="string" />
+			<property name="ConfigDummyT1PLR" column="ConfigDummyT1PLR" type="boolean" />
+			<property name="DummyT1PLR" column="DummyT1PLR" type="string" />
+			<property name="ConfigMedicalReport" column="ConfigMedicalReport" type="boolean" />
+			<property name="MedicalReport" column="MedicalReport" type="string" />
+			<property name="ConfigPolicyStatus" column="ConfigPolicyStatus" type="boolean" />
+			<property name="PolicyStatus" column="PolicyStatus" type="string" />
+			<property name="ConfigPreviousPolicyDetailsWithNIA" column="ConfigPreviousPolicyDetailsWithNIA" type="boolean" />
+			<property name="PreviousPolicyDetailsWithNIA" column="PreviousPolicyDetailsWithNIA" type="string" />
+			<property name="ConfigDummy11" column="ConfigDummy11" type="boolean" />
+			<property name="Dummy11" column="Dummy11" type="string" />
+			<property name="ConfigStartDateForMemberInPolicy" column="ConfigStartDateForMemberInPolicy" type="boolean" />
+			<property name="StartDateForMemberInPolicy" column="StartDateForMemberInPolicy" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

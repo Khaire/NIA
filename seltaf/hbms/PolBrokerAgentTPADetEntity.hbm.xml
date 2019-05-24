@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolBrokerAgentTPADetEntity" table="PolBrokerAgentTPADetEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigBrokerCode" column="ConfigBrokerCode" type="boolean" />
+			<property name="ConfigOrganization" column="ConfigOrganization" type="boolean" />
+			<property name="ConfigIndividual" column="ConfigIndividual" type="boolean" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigSITECode" column="ConfigSITECode" type="boolean" />
+			<property name="ConfigSITEPartyCode" column="ConfigSITEPartyCode" type="boolean" />
+			<property name="SITEPartyCode" column="SITEPartyCode" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigChangeStakeCode" column="ConfigChangeStakeCode" type="boolean" />
+			<property name="ChangeStakeCode" column="ChangeStakeCode" type="string" />
+			<property name="ConfigIsAgentrequired" column="ConfigIsAgentrequired" type="boolean" />
+			<property name="IsAgentrequired" column="IsAgentrequired" type="string" />
+			<property name="ConfigAgentCode" column="ConfigAgentCode" type="boolean" />
+			<property name="AgentCode" column="AgentCode" type="string" />
+			<property name="ConfigSITEAgentCode" column="ConfigSITEAgentCode" type="boolean" />
+			<property name="SITEAgentCode" column="SITEAgentCode" type="string" />
+			<property name="ConfigDirectCode" column="ConfigDirectCode" type="boolean" />
+			<property name="DirectPartyCode" column="DirectPartyCode" type="string" />
+			<property name="ConfigDevlpOffCode" column="ConfigDevlpOffCode" type="boolean" />
+			<property name="DevlpOffCode" column="DevlpOffCode" type="string" />
+			<property name="ConfigCorAgentCode" column="ConfigCorAgentCode" type="boolean" />
+			<property name="CorAgentCode" column="CorAgentCode" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

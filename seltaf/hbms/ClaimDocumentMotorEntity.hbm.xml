@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimDocumentMotorEntity" table="ClaimDocumentMotorEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigNew" column="ConfigNew" type="boolean" />
+			<property name="ConfigRenewalNotice" column="ConfigRenewalNotice" type="boolean" />
+			<property name="ConfigDocumentName" column="ConfigDocumentName" type="boolean" />
+			<property name="DocumentName" column="DocumentName" type="string" />
+			<property name="ConfigTemplateRequired" column="ConfigTemplateRequired" type="boolean" />
+			<property name="TemplateRequired" column="TemplateRequired" type="string" />
+			<property name="ConfigDocumentType" column="ConfigDocumentType" type="boolean" />
+			<property name="DocumentType" column="DocumentType" type="string" />
+			<property name="ConfigKeyword" column="ConfigKeyword" type="boolean" />
+			<property name="Keyword" column="Keyword" type="string" />
+			<property name="ConfigUploadFile" column="ConfigUploadFile" type="boolean" />
+			<property name="ConfigSave" column="ConfigSave" type="boolean" />
+			<property name="ConfigClose" column="ConfigClose" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyRelationDetailEntity" table="PolicyRelationDetailEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolicyRelationDetailTitle" column="PolicyRelationDetailTitle" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="DependencyForScrollBusinessSourceCode" column="DependencyForScrollBusinessSourceCode" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolder" column="ConfigPolicyHolder" type="boolean" />
+			<property name="PolicyHolder" column="PolicyHolder" type="string" />
+			<property name="ConfigProductLabel" column="ConfigProductLabel" type="boolean" />
+			<property name="ProductLabel" column="ProductLabel" type="string" />
+			<property name="ConfigDetailsTab" column="ConfigDetailsTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigStakeCode" column="ConfigStakeCode" type="boolean" />
+			<property name="StakeCode" column="StakeCode" type="string" />
+			<property name="ConfigStakeName" column="ConfigStakeName" type="boolean" />
+			<property name="StakeName" column="StakeName" type="string" />
+			<property name="ConfigStakeCodeSearch" column="ConfigStakeCodeSearch" type="boolean" />
+			<property name="ConfigStakeCodeFindButton" column="ConfigStakeCodeFindButton" type="boolean" />
+			<property name="StakeCodeSearch" column="StakeCodeSearch" type="string" />
+			<property name="ConfigPartyCodeFindButton" column="ConfigPartyCodeFindButton" type="boolean" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigPartyName" column="ConfigPartyName" type="boolean" />
+			<property name="PartyName" column="PartyName" type="string" />
+			<property name="ConfigPartyCodeSearch" column="ConfigPartyCodeSearch" type="boolean" />
+			<property name="PartyCodeSearch" column="PartyCodeSearch" type="string" />
+			<property name="ConfigBillingPartyCheckBox" column="ConfigBillingPartyCheckBox" type="boolean" />
+			<property name="ConfigSearchrPartyCode" column="ConfigSearchrPartyCode" type="boolean" />
+			<property name="ConfigHouseNumber" column="ConfigHouseNumber" type="boolean" />
+			<property name="HouseNumber" column="HouseNumber" type="string" />
+			<property name="ConfigRoadNumberAndName" column="ConfigRoadNumberAndName" type="boolean" />
+			<property name="RoadNumberAndName" column="RoadNumberAndName" type="string" />
+			<property name="ConfigBlockAndAreaName" column="ConfigBlockAndAreaName" type="boolean" />
+			<property name="BlockAndAreaName" column="BlockAndAreaName" type="string" />
+			<property name="ConfigPhoneNumber" column="ConfigPhoneNumber" type="boolean" />
+			<property name="PhoneNumber" column="PhoneNumber" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigIsAgentRequiredDropdown" column="ConfigIsAgentRequiredDropdown" type="boolean" />
+			<property name="IsAgentRequiredDropdown" column="IsAgentRequiredDropdown" type="string" />
+			<property name="ConfigNewButton" column="ConfigNewButton" type="boolean" />
+			<property name="ConfigDeleteButton" column="ConfigDeleteButton" type="boolean" />
+			<property name="ConfigAttributeSaveButton" column="ConfigAttributeSaveButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigProperty" column="ConfigProperty" type="boolean" />
+			<property name="ConfigApplicationEventCodeLabel" column="ConfigApplicationEventCodeLabel" type="boolean" />
+			<property name="ConfigCommissionRate" column="ConfigCommissionRate" type="boolean" />
+			<property name="CommissionRate" column="CommissionRate" type="string" />
+			<property name="ConfigBrokerCommissionRate" column="ConfigBrokerCommissionRate" type="boolean" />
+			<property name="BrokerCommissionRate" column="BrokerCommissionRate" type="string" />
+			<property name="ConfigCorporateAgentCommissionRate" column="ConfigCorporateAgentCommissionRate" type="boolean" />
+			<property name="CorporateAgentCommissionRate" column="CorporateAgentCommissionRate" type="string" />
+			<property name="ConfigRelationAttributesTab" column="ConfigRelationAttributesTab" type="boolean" />
+			<property name="ConfigClearButton" column="ConfigClearButton" type="boolean" />
+			<property name="ConfigContactDetails" column="ConfigContactDetails" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

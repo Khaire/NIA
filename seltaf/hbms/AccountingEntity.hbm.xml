@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AccountingEntity" table="AccountingEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="AccountingTitle" column="AccountingTitle" type="string" />
+			<property name="ConfigMaintainTrasactionType" column="ConfigMaintainTrasactionType" type="boolean" />
+			<property name="ConfigMaintainGLSLAccount" column="ConfigMaintainGLSLAccount" type="boolean" />
+			<property name="ConfigMaintainTxnRule" column="ConfigMaintainTxnRule" type="boolean" />
+			<property name="ConfigMaintainTrasaction" column="ConfigMaintainTrasaction" type="boolean" />
+			<property name="ConfigExchangeRate" column="ConfigExchangeRate" type="boolean" />
+			<property name="ConfigDebitCreditNotes" column="ConfigDebitCreditNotes" type="boolean" />
+			<property name="ConfigCollection" column="ConfigCollection" type="boolean" />
+			<property name="ConfigMaintainBGCD" column="ConfigMaintainBGCD" type="boolean" />
+			<property name="ConfigMaintainScroll" column="ConfigMaintainScroll" type="boolean" />
+			<property name="ConfigChequeDishonour" column="ConfigChequeDishonour" type="boolean" />
+			<property name="ConfigCoinsuranceVoucherConsolidation" column="ConfigCoinsuranceVoucherConsolidation" type="boolean" />
+			<property name="ConfigHelp" column="ConfigHelp" type="boolean" />
+			<property name="ConfigProceedButton" column="ConfigProceedButton" type="boolean" />
+			<property name="ConfigCompany" column="ConfigCompany" type="boolean" />
+			<property name="Company" column="Company" type="string" />
+			<property name="ConfigTransactionMode " column="ConfigTransactionMode " type="boolean" />
+			<property name="TransactionMode" column="TransactionMode" type="string" />
+			<property name="ConfigTransactionRuleCode" column="ConfigTransactionRuleCode" type="boolean" />
+			<property name="TransactionRuleCode" column="TransactionRuleCode" type="string" />
+			<property name="ConfigTransactionRuleDesc" column="ConfigTransactionRuleDesc" type="boolean" />
+			<property name="TransactionRuleDesc" column="TransactionRuleDesc" type="string" />
+			<property name="ConfigCurrencyIndicator" column="ConfigCurrencyIndicator" type="boolean" />
+			<property name="CurrencyIndicator" column="CurrencyIndicator" type="string" />
+			<property name="ConfigCurrencyRate" column="ConfigCurrencyRate" type="boolean" />
+			<property name="CurrencyRate" column="CurrencyRate" type="string" />
+			<property name="ConfigTransactionDate" column="ConfigTransactionDate" type="boolean" />
+			<property name="TransactionDate" column="TransactionDate" type="string" />
+			<property name="ConfigReceivingParty" column="ConfigReceivingParty" type="boolean" />
+			<property name="ReceivingParty" column="ReceivingParty" type="string" />
+			<property name="ConfigAccountingTransactionTab" column="ConfigAccountingTransactionTab" type="boolean" />
+			<property name="ConfigUserId" column="ConfigUserId" type="string" />
+			<property name="UserId" column="UserId" type="boolean" />
+			<property name="ConfigRole" column="ConfigRole" type="string" />
+			<property name="Role" column="Role" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

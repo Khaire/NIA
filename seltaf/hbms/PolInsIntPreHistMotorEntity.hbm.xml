@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolInsIntPreHistMotorEntity" table="PolInsIntPreHistMotorEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigDateOfPurchaseOfVehicleByProposer" column="ConfigDateOfPurchaseOfVehicleByProposer" type="boolean" />
+			<property name="DateOfPurchaseOfVehicleByProposer" column="DateOfPurchaseOfVehicleByProposer" type="string" />
+			<property name="ConfigVehicleNewOrSecondHandAtTheTimeOfPurchase" column="ConfigVehicleNewOrSecondHandAtTheTimeOfPurchase" type="boolean" />
+			<property name="VehicleNewOrSecondHandAtTheTimeOfPurchase" column="VehicleNewOrSecondHandAtTheTimeOfPurchase" type="string" />
+			<property name="ConfigVehicleUsedForPrivateSocialDomesticPleasureProfessionalPurpose" column="ConfigVehicleUsedForPrivateSocialDomesticPleasureProfessionalPurpose" type="boolean" />
+			<property name="VehicleUsedForPrivateSocialDomesticPleasureProfessionalPurpose" column="VehicleUsedForPrivateSocialDomesticPleasureProfessionalPurpose" type="string" />
+			<property name="ConfigIsVehicleInGoodCondition" column="ConfigIsVehicleInGoodCondition" type="boolean" />
+			<property name="IsVehicleInGoodCondition" column="IsVehicleInGoodCondition" type="string" />
+			<property name="ConfigGiveVehicleDetails" column="ConfigGiveVehicleDetails" type="boolean" />
+			<property name="GiveVehicleDetails" column="GiveVehicleDetails" type="string" />
+			<property name="ConfigWhetherVehicleBelongsToForeignEmbassyOrConsulate" column="ConfigWhetherVehicleBelongsToForeignEmbassyOrConsulate" type="boolean" />
+			<property name="WhetherVehicleBelongsToForeignEmbassyOrConsulate" column="WhetherVehicleBelongsToForeignEmbassyOrConsulate" type="string" />
+			<property name="ConfigWhetherTheVehicleIsGovernmentVehicle" column="ConfigWhetherTheVehicleIsGovernmentVehicle" type="boolean" />
+			<property name="WhetherTheVehicleIsGovernmentVehicle" column="WhetherTheVehicleIsGovernmentVehicle" type="string" />
+			<property name="ConfigAdditionalLoadingForVehicles" column="ConfigAdditionalLoadingForVehicles" type="boolean" />
+			<property name="AdditionalLoadingForVehicles" column="AdditionalLoadingForVehicles" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolderName" column="ConfigPolicyHolderName" type="boolean" />
+			<property name="PolicyHolderName" column="PolicyHolderName" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigMemberDetail" column="ConfigMemberDetail" type="boolean" />
+			<property name="ConfigMemberAttributes" column="ConfigMemberAttributes" type="boolean" />
+			<property name="ConfigMemberAttachCoverages" column="ConfigMemberAttachCoverages" type="boolean" />
+			<property name="ConfigMemberRelations" column="ConfigMemberRelations" type="boolean" />
+			<property name="ConfigMemberPayments" column="ConfigMemberPayments" type="boolean" />
+			<property name="ConfigMemberDocument" column="ConfigMemberDocument" type="boolean" />
+			<property name="ConfigMemberSchedule" column="ConfigMemberSchedule" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigBackwardButton" column="ConfigBackwardButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

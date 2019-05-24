@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AccoScrollEntryEntity" table="AccoScrollEntryEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="DependencyForPolicyCollection" column="DependencyForPolicyCollection" type="string" />
+			<property name="ConfigScrollNumber" column="ConfigScrollNumber" type="boolean" />
+			<property name="ScrollNumber" column="ScrollNumber" type="string" />
+			<property name="ConfigBankAccCode" column="ConfigBankAccCode" type="boolean" />
+			<property name="BankAccCode" column="BankAccCode" type="string" />
+			<property name="ConfigScrollDate" column="ConfigScrollDate" type="boolean" />
+			<property name="ScrollDate" column="ScrollDate" type="string" />
+			<property name="ConfigNarration" column="ConfigNarration" type="boolean" />
+			<property name="Narration " column="Narration " type="string" />
+			<property name="ConfigReceivedFrom" column="ConfigReceivedFrom" type="boolean" />
+			<property name="ReceivedFrom" column="ReceivedFrom" type="string" />
+			<property name="ConfigBusinessSourceCode" column="ConfigBusinessSourceCode" type="boolean" />
+			<property name="BusinessSourceCode" column="BusinessSourceCode" type="string" />
+			<property name="ConfigAgentCode" column="ConfigAgentCode" type="boolean" />
+			<property name="AgentCode" column="AgentCode" type="string" />
+			<property name="ConfigPaymentMode" column="ConfigPaymentMode" type="boolean" />
+			<property name="PaymentMode" column="PaymentMode" type="string" />
+			<property name="ConfigInstrumentAmount" column="ConfigInstrumentAmount" type="boolean" />
+			<property name="InstrumentAmount" column="InstrumentAmount" type="string" />
+			<property name="ConfigInstrumentNumber" column="ConfigInstrumentNumber" type="boolean" />
+			<property name="InstrumentNumber" column="InstrumentNumber" type="string" />
+			<property name="ConfigChequeDate" column="ConfigChequeDate" type="boolean" />
+			<property name="ChequeDate" column="ChequeDate" type="string" />
+			<property name="ConfigChequeType" column="ConfigChequeType" type="boolean" />
+			<property name="ChequeType" column="ChequeType" type="string" />
+			<property name="ConfigDraweeBankName" column="ConfigDraweeBankName" type="boolean" />
+			<property name="DraweeBankName" column="DraweeBankName" type="string" />
+			<property name="ConfigMICRCode" column="ConfigMICRCode" type="boolean" />
+			<property name="MICRCode" column="MICRCode" type="string" />
+			<property name="ConfigIFSCCode" column="ConfigIFSCCode" type="boolean" />
+			<property name="IFSCCode" column="IFSCCode" type="string" />
+			<property name="ConfigBranchName" column="ConfigBranchName" type="boolean" />
+			<property name="BranchName" column="BranchName" type="string" />
+			<property name="ConfigBalanceAmount" column="ConfigBalanceAmount" type="boolean" />
+			<property name="BalanceAmount" column="BalanceAmount" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSearchButton" column="ConfigSearchButton" type="boolean" />
+			<property name="ConfigDepartmentDropdown" column="ConfigDepartmentDropdown" type="boolean" />
+			<property name="DepartmentDropdown" column="DepartmentDropdown" type="string" />
+			<property name="ConfigEngineNo" column="ConfigEngineNo" type="boolean" />
+			<property name="EngineNo" column="EngineNo" type="string" />
+			<property name="ConfigChasisNo" column="ConfigChasisNo" type="boolean" />
+			<property name="ChasisNo" column="ChasisNo" type="string" />
+			<property name="ConfigNewVehicleDropdown" column="ConfigNewVehicleDropdown" type="boolean" />
+			<property name="NewVehicleDropdown" column="NewVehicleDropdown" type="string" />
+			<property name="ConfigVehicleNo" column="ConfigVehicleNo" type="boolean" />
+			<property name="VehicleNo" column="VehicleNo" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigAddButton" column="ConfigAddButton" type="boolean" />
+			<property name="ConfigDeleteButton" column="ConfigDeleteButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

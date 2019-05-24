@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AttachCovAttribtCovDetEntity" table="AttachCovAttribtCovDetEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="NextPageTitle" column="NextPageTitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigAttachCovDetailsTab" column="ConfigAttachCovDetailsTab" type="boolean" />
+			<property name="ConfigAttachCovAttributesTab" column="ConfigAttachCovAttributesTab" type="boolean" />
+			<property name="ConfigAttachCovPremiumTab" column="ConfigAttachCovPremiumTab" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigPolicyholder" column="ConfigPolicyholder" type="boolean" />
+			<property name="Policyholder" column="Policyholder" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigCovergeCode" column="ConfigCovergeCode" type="boolean" />
+			<property name="CovergeCode" column="CovergeCode" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigCoverageName" column="ConfigCoverageName" type="boolean" />
+			<property name="CoverageName" column="CoverageName" type="string" />
+			<property name="ConfigNameOfCover" column="ConfigNameOfCover" type="boolean" />
+			<property name="NameOfCover" column="NameOfCover" type="string" />
+			<property name="ConfigAnyOneAccidentAOA" column="ConfigAnyOneAccidentAOA" type="boolean" />
+			<property name="AnyOneAccidentAOA" column="AnyOneAccidentAOA" type="string" />
+			<property name="ConfigAOAAOY" column="ConfigAOAAOY" type="boolean" />
+			<property name="AOAAOY" column="AOAAOY" type="string" />
+			<property name="ConfigAnyOneYearandintheAggregateAOY" column="ConfigAnyOneYearandintheAggregateAOY" type="boolean" />
+			<property name="AnyOneYearandintheAggregateAOY" column="AnyOneYearandintheAggregateAOY" type="string" />
+			<property name="ConfigPremiumRate" column="ConfigPremiumRate" type="boolean" />
+			<property name="PremiumRate" column="PremiumRate" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigExtensionOnePage" column="ConfigExtensionOnePage" type="boolean" />
+			<property name="ConfigExtensionTwoPage" column="ConfigExtensionTwoPage" type="boolean" />
+			<property name="ConfigExtensionThreePage" column="ConfigExtensionThreePage" type="boolean" />
+			<property name="ConfigNameOfAddOnCover" column="ConfigNameOfAddOnCover" type="boolean" />
+			<property name="NameOfAddOnCover" column="NameOfAddOnCover" type="string" />
+			<property name="ConfigOptionsforSubLimitofAddonCover" column="ConfigOptionsforSubLimitofAddonCover" type="boolean" />
+			<property name="OptionsforSubLimitofAddonCover" column="OptionsforSubLimitofAddonCover" type="string" />
+			<property name="ConfigSubLimitAmountofAddonCover" column="ConfigSubLimitAmountofAddonCover" type="boolean" />
+			<property name="SubLimitAmountofAddonCover" column="SubLimitAmountofAddonCover" type="string" />
+			<property name="ConfigSubLimitPercentageofAddonCover" column="ConfigSubLimitPercentageofAddonCover" type="boolean" />
+			<property name="SubLimitPercentageofAddonCover" column="SubLimitPercentageofAddonCover" type="string" />
+			<property name="ConfigOptionsForAddonCover" column="ConfigOptionsForAddonCover" type="boolean" />
+			<property name="OptionsForAddonCover" column="OptionsForAddonCover" type="string" />
+			<property name="ConfigLoadingAmountforAddonCover" column="ConfigLoadingAmountforAddonCover" type="boolean" />
+			<property name="LoadingAmountforAddonCover" column="LoadingAmountforAddonCover" type="string" />
+			<property name="ConfigLoadingPercentageforAddonCover" column="ConfigLoadingPercentageforAddonCover" type="boolean" />
+			<property name="LoadingPercentageforAddonCover" column="LoadingPercentageforAddonCover" type="string" />
+			<property name="ConfigSubLimitofAddonCover" column="ConfigSubLimitofAddonCover" type="boolean" />
+			<property name="SubLimitofAddonCover" column="SubLimitofAddonCover" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

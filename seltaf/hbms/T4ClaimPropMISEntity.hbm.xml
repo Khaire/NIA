@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.T4ClaimPropMISEntity" table="T4ClaimPropMISEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimInsurT4ClaimPropForITAttTitle" column="ClaimInsurT4ClaimPropForITAttTitle" type="string" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNoLabel" column="ConfigInsuredSerialNoLabel" type="boolean" />
+			<property name="InsuredSerialNoLabel" column="InsuredSerialNoLabel" type="string" />
+			<property name="ConfigInsuredItemCodeLabel" column="ConfigInsuredItemCodeLabel" type="boolean" />
+			<property name="InsuredItemCodeLabel" column="InsuredItemCodeLabel" type="string" />
+			<property name="ConfigUnderClaimsAttachAccidentalPollutionLiability2" column="ConfigUnderClaimsAttachAccidentalPollutionLiability2" type="boolean" />
+			<property name="UnderClaimsAttachAccidentalPollutionLiability2" column="UnderClaimsAttachAccidentalPollutionLiability2" type="string" />
+			<property name="ConfigSubLimitOfAttachAccidentalPollutionLiability" column="ConfigSubLimitOfAttachAccidentalPollutionLiability" type="boolean" />
+			<property name="SubLimitOfAttachAccidentalPollutionLiability" column="SubLimitOfAttachAccidentalPollutionLiability" type="string" />
+			<property name="ConfigExtensionClaimAmountOfAccidentalPollutionLiability2" column="ConfigExtensionClaimAmountOfAccidentalPollutionLiability2" type="boolean" />
+			<property name="ExtensionClaimAmountOfAccidentalPollutionLiability2" column="ExtensionClaimAmountOfAccidentalPollutionLiability2" type="string" />
+			<property name="ConfigUnderClaimsAttachTransportationLiability" column="ConfigUnderClaimsAttachTransportationLiability" type="boolean" />
+			<property name="UnderClaimsAttachTransportationLiability" column="UnderClaimsAttachTransportationLiability" type="string" />
+			<property name="ConfigSubLimitOfAttachTransportationLiability" column="ConfigSubLimitOfAttachTransportationLiability" type="boolean" />
+			<property name="SubLimitOfAttachTransportationLiability" column="SubLimitOfAttachTransportationLiability" type="string" />
+			<property name="ConfigExtensionClaimAmountOfTransportationLiability" column="ConfigExtensionClaimAmountOfTransportationLiability" type="boolean" />
+			<property name="ExtensionClaimAmountOfTransportationLiability" column="ExtensionClaimAmountOfTransportationLiability" type="string" />
+			<property name="ConfigUnderClaimsAttachActOfGOD" column="ConfigUnderClaimsAttachActOfGOD" type="boolean" />
+			<property name="UnderClaimsAttachActOfGOD" column="UnderClaimsAttachActOfGOD" type="string" />
+			<property name="ConfigSubLimitOfAttachActOfGOD" column="ConfigSubLimitOfAttachActOfGOD" type="boolean" />
+			<property name="SubLimitOfAttachActOfGOD" column="SubLimitOfAttachActOfGOD" type="string" />
+			<property name="ConfigExtensionClaimAmountOfActofGOD" column="ConfigExtensionClaimAmountOfActofGOD" type="boolean" />
+			<property name="ExtensionClaimAmountOfActofGOD" column="ExtensionClaimAmountOfActofGOD" type="string" />
+			<property name="ConfigUnderClaimsAttachInfringementOfCopyrightTrademarks" column="ConfigUnderClaimsAttachInfringementOfCopyrightTrademarks" type="boolean" />
+			<property name="UnderClaimsAttachInfringementOfCopyrightTrademarks" column="UnderClaimsAttachInfringementOfCopyrightTrademarks" type="string" />
+			<property name="ConfigSubLimitOfAttachInfringementOfCopyrightTrademarks" column="ConfigSubLimitOfAttachInfringementOfCopyrightTrademarks" type="boolean" />
+			<property name="SubLimitOfAttachInfringementOfCopyrightTrademarks" column="SubLimitOfAttachInfringementOfCopyrightTrademarks" type="string" />
+			<property name="ConfigExtensionClaimAmountOfInfringementOfCopyrightTrademarks" column="ConfigExtensionClaimAmountOfInfringementOfCopyrightTrademarks" type="boolean" />
+			<property name="ExtensionClaimAmountOfInfringementOfCopyrightTrademarks" column="ExtensionClaimAmountOfInfringementOfCopyrightTrademarks" type="string" />
+			<property name="ConfigUnderClaimsAttachConsultantsSubContractorsAgents" column="ConfigUnderClaimsAttachConsultantsSubContractorsAgents" type="boolean" />
+			<property name="UnderClaimsAttachConsultantsSubContractorsAgents" column="UnderClaimsAttachConsultantsSubContractorsAgents" type="string" />
+			<property name="ConfigSubLimitOfAttachConsultantsSubContractorsAgents" column="ConfigSubLimitOfAttachConsultantsSubContractorsAgents" type="boolean" />
+			<property name="SubLimitOfAttachConsultantsSubContractorsAgents" column="SubLimitOfAttachConsultantsSubContractorsAgents" type="string" />
+			<property name="ConfigExtensionClaimAmountOfConsultantsSubContractorsAgents" column="ConfigExtensionClaimAmountOfConsultantsSubContractorsAgents" type="boolean" />
+			<property name="ExtensionClaimAmountOfConsultantsSubContractorsAgents" column="ExtensionClaimAmountOfConsultantsSubContractorsAgents" type="string" />
+			<property name="ConfigUnderClaimsAttachJointVenture" column="ConfigUnderClaimsAttachJointVenture" type="boolean" />
+			<property name="UnderClaimsAttachJointVenture" column="UnderClaimsAttachJointVenture" type="string" />
+			<property name="ConfigExtensionClaimAmountOfJointVenture" column="ConfigExtensionClaimAmountOfJointVenture" type="boolean" />
+			<property name="ExtensionClaimAmountOfJointVenture" column="ExtensionClaimAmountOfJointVenture" type="string" />
+			<property name="ConfigUnderClaimsAttachOutgoingPrincipals" column="ConfigUnderClaimsAttachOutgoingPrincipals" type="boolean" />
+			<property name="UnderClaimsAttachOutgoingPrincipals" column="UnderClaimsAttachOutgoingPrincipals" type="string" />
+			<property name="ConfigSubLimitOfAttachOutgoingPrincipals" column="ConfigSubLimitOfAttachOutgoingPrincipals" type="boolean" />
+			<property name="SubLimitOfAttachOutgoingPrincipals" column="SubLimitOfAttachOutgoingPrincipals" type="string" />
+			<property name="ConfigExtensionClaimAmountOfOutgoingPrincipals" column="ConfigExtensionClaimAmountOfOutgoingPrincipals" type="boolean" />
+			<property name="ExtensionClaimAmountOfOutgoingPrincipals" column="ExtensionClaimAmountOfOutgoingPrincipals" type="string" />
+			<property name="ConfigUnderClaimsAttachUnauthorizedAccess" column="ConfigUnderClaimsAttachUnauthorizedAccess" type="boolean" />
+			<property name="UnderClaimsAttachUnauthorizedAccess" column="UnderClaimsAttachUnauthorizedAccess" type="string" />
+			<property name="ConfigSubLimitOfAttachUnauthorizedAccess" column="ConfigSubLimitOfAttachUnauthorizedAccess" type="boolean" />
+			<property name="SubLimitOfAttachUnauthorizedAccess" column="SubLimitOfAttachUnauthorizedAccess" type="string" />
+			<property name="ConfigExtensionClaimAmountOfUnauthorizedAccess" column="ConfigExtensionClaimAmountOfUnauthorizedAccess" type="boolean" />
+			<property name="ExtensionClaimAmountOfUnauthorizedAccess" column="ExtensionClaimAmountOfUnauthorizedAccess" type="string" />
+			<property name="ConfigUnderClaimsAttachExtendedClaimsReporting" column="ConfigUnderClaimsAttachExtendedClaimsReporting" type="boolean" />
+			<property name="UnderClaimsAttachExtendedClaimsReporting" column="UnderClaimsAttachExtendedClaimsReporting" type="string" />
+			<property name="ConfigSubLimitOfAttachExtendedClaimsReporting" column="ConfigSubLimitOfAttachExtendedClaimsReporting" type="boolean" />
+			<property name="SubLimitOfAttachExtendedClaimsReporting" column="SubLimitOfAttachExtendedClaimsReporting" type="string" />
+			<property name="ConfigExtensionClaimAmountOfExtendedClaimsReporting" column="ConfigExtensionClaimAmountOfExtendedClaimsReporting" type="boolean" />
+			<property name="ExtensionClaimAmountOfExtendedClaimsReporting" column="ExtensionClaimAmountOfExtendedClaimsReporting" type="string" />
+			<property name="ConfigUnderClaimsAttachDishonestyOfEmployees" column="ConfigUnderClaimsAttachDishonestyOfEmployees" type="boolean" />
+			<property name="UnderClaimsAttachDishonestyOfEmployees" column="UnderClaimsAttachDishonestyOfEmployees" type="string" />
+			<property name="ConfigSubLimitOfAttachDishonestyOfEmployees" column="ConfigSubLimitOfAttachDishonestyOfEmployees" type="boolean" />
+			<property name="SubLimitOfAttachDishonestyOfEmployees" column="SubLimitOfAttachDishonestyOfEmployees" type="string" />
+			<property name="ConfigExtensionClaimAmountOfDishonestyOfEmployees" column="ConfigExtensionClaimAmountOfDishonestyOfEmployees" type="boolean" />
+			<property name="ExtensionClaimAmountOfDishonestyOfEmployees" column="ExtensionClaimAmountOfDishonestyOfEmployees" type="string" />
+			<property name="ConfigUnderClaimsAttachLossOfDocuments" column="ConfigUnderClaimsAttachLossOfDocuments" type="boolean" />
+			<property name="UnderClaimsAttachLossOfDocuments" column="UnderClaimsAttachLossOfDocuments" type="string" />
+			<property name="ConfigSubLimitOfAttachLossOfDocuments" column="ConfigSubLimitOfAttachLossOfDocuments" type="boolean" />
+			<property name="SubLimitOfAttachLossOfDocuments" column="SubLimitOfAttachLossOfDocuments" type="string" />
+			<property name="ConfigExtensionClaimAmountOfLossOfDocuments" column="ConfigExtensionClaimAmountOfLossOfDocuments" type="boolean" />
+			<property name="ExtensionClaimAmountOfLossOfDocuments" column="ExtensionClaimAmountOfLossOfDocuments" type="string" />
+			<property name="ConfigUnderClaimsAttachOtherExtensions" column="ConfigUnderClaimsAttachOtherExtensions" type="boolean" />
+			<property name="UnderClaimsAttachOtherExtensions" column="UnderClaimsAttachOtherExtensions" type="string" />
+			<property name="ConfigSubLimitOfOtherExtensions" column="ConfigSubLimitOfOtherExtensions" type="boolean" />
+			<property name="SubLimitOfOtherExtensions" column="SubLimitOfOtherExtensions" type="string" />
+			<property name="ConfigExtensionClaimAmountOfOtherExtensions" column="ConfigExtensionClaimAmountOfOtherExtensions" type="boolean" />
+			<property name="ExtensionClaimAmountOfOtherExtensions" column="ExtensionClaimAmountOfOtherExtensions" type="string" />
+			<property name="ConfigProceedButton" column="ConfigProceedButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

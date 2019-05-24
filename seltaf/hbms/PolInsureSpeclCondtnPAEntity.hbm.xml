@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolInsureSpeclCondtnPAEntity" table="PolInsureSpeclCondtnPAEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolInsureSpeclCondtnPATitle" column="PolInsureSpeclCondtnPATitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigInsuredInterestDetailsTab" column="ConfigInsuredInterestDetailsTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttributesTab" column="ConfigInsuredInterestAttributesTab" type="boolean" />
+			<property name="ConfigInsuredInterestAttachCoveragesTab" column="ConfigInsuredInterestAttachCoveragesTab" type="boolean" />
+			<property name="ConfigInsuredInterestRelationsTab" column="ConfigInsuredInterestRelationsTab" type="boolean" />
+			<property name="ConfigInsuredInterestPaymentsTab" column="ConfigInsuredInterestPaymentsTab" type="boolean" />
+			<property name="ConfigInsuredInterestScheduleTab" column="ConfigInsuredInterestScheduleTab" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigPolicyHolder" column="ConfigPolicyHolder" type="boolean" />
+			<property name="PolicyHolder" column="PolicyHolder" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigExcess" column="ConfigExcess" type="boolean" />
+			<property name="Excess" column="Excess" type="string" />
+			<property name="ConfigDiscountForGoodFeatureInPercentage" column="ConfigDiscountForGoodFeatureInPercentage" type="boolean" />
+			<property name="DiscountForGoodFeatureInPercentage" column="DiscountForGoodFeatureInPercentage" type="string" />
+			<property name="ConfigDiscountForGoodClaimExperienceInPercentage" column="ConfigDiscountForGoodClaimExperienceInPercentage" type="boolean" />
+			<property name="DiscountForGoodClaimExperienceInPercentage" column="DiscountForGoodClaimExperienceInPercentage" type="string" />
+			<property name="ConfigDGMRMDiscretionaryDiscountInPercentage" column="ConfigDGMRMDiscretionaryDiscountInPercentage" type="boolean" />
+			<property name="DGMRMDiscretionaryDiscountInPercentage" column="DGMRMDiscretionaryDiscountInPercentage" type="string" />
+			<property name="ConfigOtherDiscountsInPercentage" column="ConfigOtherDiscountsInPercentage" type="boolean" />
+			<property name="OtherDiscountsInPercentage" column="OtherDiscountsInPercentage" type="string" />
+			<property name="ConfigGiveReasonForOtherDiscount" column="ConfigGiveReasonForOtherDiscount" type="boolean" />
+			<property name="GiveReasonForOtherDiscount" column="GiveReasonForOtherDiscount" type="string" />
+			<property name="ConfigAdverseClaimExperienceLoadingInPercentage" column="ConfigAdverseClaimExperienceLoadingInPercentage" type="boolean" />
+			<property name="AdverseClaimExperienceLoadingInPercentage" column="AdverseClaimExperienceLoadingInPercentage" type="string" />
+			<property name="ConfigOtherLoadingInPercentage" column="ConfigOtherLoadingInPercentage" type="boolean" />
+			<property name="OtherLoadingInPercentage" column="OtherLoadingInPercentage" type="string" />
+			<property name="ConfigGiveReasonForOtherLoading" column="ConfigGiveReasonForOtherLoading" type="boolean" />
+			<property name="GiveReasonForOtherLoading" column="GiveReasonForOtherLoading" type="string" />
+			<property name="ConfigSpecialConditions" column="ConfigSpecialConditions" type="boolean" />
+			<property name="SpecialConditions" column="SpecialConditions" type="string" />
+			<property name="ConfigTotalSumInsuredforPersonalAccident" column="ConfigTotalSumInsuredforPersonalAccident" type="boolean" />
+			<property name="TotalSumInsuredforPersonalAccident" column="TotalSumInsuredforPersonalAccident" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigPreviousButton" column="ConfigPreviousButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

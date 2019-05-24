@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AccountingBGOrCDSearchEntity" table="AccountingBGOrCDSearchEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="DependencyForCDAccountNumber" column="DependencyForCDAccountNumber" type="string" />
+			<property name="DependencyForSubCode" column="DependencyForSubCode" type="string" />
+			<property name="ConfigMaintainBgOrCDTab" column="ConfigMaintainBgOrCDTab" type="boolean" />
+			<property name="ConfigBGOrCDDropdown" column="ConfigBGOrCDDropdown" type="boolean" />
+			<property name="BGOrCDDropdown" column="BGOrCDDropdown" type="string" />
+			<property name="ConfigSearchOfficeCode" column="ConfigSearchOfficeCode" type="boolean" />
+			<property name="ConfigOfficeCode" column="ConfigOfficeCode" type="boolean" />
+			<property name="OfficeCode" column="OfficeCode" type="string" />
+			<property name="ConfigSearchOrganization" column="ConfigSearchOrganization" type="boolean" />
+			<property name="ConfigOrganization" column="ConfigOrganization" type="boolean" />
+			<property name="ConfigSearchPartyCode" column="ConfigSearchPartyCode" type="boolean" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="ConfigPartyCodeFindButton" column="ConfigPartyCodeFindButton" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigSearchBusinessSourceCode" column="ConfigSearchBusinessSourceCode" type="boolean" />
+			<property name="ConfigBusinessSourceCode" column="ConfigBusinessSourceCode" type="boolean" />
+			<property name="ConfigBusinessSourceCodeFindButton" column="ConfigBusinessSourceCodeFindButton" type="boolean" />
+			<property name="BusinessSourceCode" column="BusinessSourceCode" type="string" />
+			<property name="ConfigStakeholderFunctionCode" column="ConfigStakeholderFunctionCode" type="boolean" />
+			<property name="StakeholderFunctionCode" column="StakeholderFunctionCode" type="string" />
+			<property name="ConfigSearchAccountCode" column="ConfigSearchAccountCode" type="boolean" />
+			<property name="ConfigAccountCode" column="ConfigAccountCode" type="boolean" />
+			<property name="AccountCode" column="AccountCode" type="string" />
+			<property name="ConfigSearchDateOfIssue" column="ConfigSearchDateOfIssue" type="boolean" />
+			<property name="ConfigDateOfIssue" column="ConfigDateOfIssue" type="boolean" />
+			<property name="DateOfIssue" column="DateOfIssue" type="string" />
+			<property name="ConfigSearchDateOfExpiry" column="ConfigSearchDateOfExpiry" type="boolean" />
+			<property name="ConfigDateOfExpiry" column="ConfigDateOfExpiry" type="boolean" />
+			<property name="DateOfExpiry" column="DateOfExpiry" type="string" />
+			<property name="ConfigSearchGuaranteeAmount" column="ConfigSearchGuaranteeAmount" type="boolean" />
+			<property name="ConfigGuaranteeAmount" column="ConfigGuaranteeAmount" type="boolean" />
+			<property name="GuaranteeAmount" column="GuaranteeAmount" type="string" />
+			<property name="ConfigSearchOpeningDate" column="ConfigSearchOpeningDate" type="boolean" />
+			<property name="ConfigOpeningDate" column="ConfigOpeningDate" type="boolean" />
+			<property name="OpeningDate" column="OpeningDate" type="string" />
+			<property name="ConfigNewButton" column="ConfigNewButton" type="boolean" />
+			<property name="ConfigSearchButton" column="ConfigSearchButton" type="boolean" />
+			<property name="ConfigClearButton" column="ConfigClearButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigCreateOfficeCode" column="ConfigCreateOfficeCode" type="boolean" />
+			<property name="CreateOfficeCode" column="CreateOfficeCode" type="string" />
+			<property name="ConfigBankGuaranteeACCode" column="ConfigBankGuaranteeACCode" type="boolean" />
+			<property name="BankGuaranteeACCode" column="BankGuaranteeACCode" type="string" />
+			<property name="ConfigClientName" column="ConfigClientName" type="boolean" />
+			<property name="ClientName" column="ClientName" type="string" />
+			<property name="ConfigAddressOfTheParty" column="ConfigAddressOfTheParty" type="boolean" />
+			<property name="AddressOfTheParty" column="AddressOfTheParty" type="string" />
+			<property name="ConfigIssuingBank" column="ConfigIssuingBank" type="boolean" />
+			<property name="ConfigIssuingBankFindButton" column="ConfigIssuingBankFindButton" type="boolean" />
+			<property name="IssuingBank" column="IssuingBank" type="string" />
+			<property name="ConfigCreateDateOfIssue" column="ConfigCreateDateOfIssue" type="boolean" />
+			<property name="CreateDateOfIssue" column="CreateDateOfIssue" type="string" />
+			<property name="ConfigCreateDateOfExpiry" column="ConfigCreateDateOfExpiry" type="boolean" />
+			<property name="CreateDateOfExpiry" column="CreateDateOfExpiry" type="string" />
+			<property name="ConfigGuaranteeAmountRs" column="ConfigGuaranteeAmountRs" type="boolean" />
+			<property name="GuaranteeAmountRs" column="GuaranteeAmountRs" type="string" />
+			<property name="ConfigBalanceAmountRs" column="ConfigBalanceAmountRs" type="boolean" />
+			<property name="BalanceAmountRs" column="BalanceAmountRs" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigCloseBGAccountButton" column="ConfigCloseBGAccountButton" type="boolean" />
+			<property name="ConfigIssuingBankFindButtonBG" column="ConfigIssuingBankFindButtonBG" type="boolean" />
+			<property name="ConfigIssuingBankBG" column="ConfigIssuingBankBG" type="boolean" />
+			<property name="IssuingBankBG" column="IssuingBankBG" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

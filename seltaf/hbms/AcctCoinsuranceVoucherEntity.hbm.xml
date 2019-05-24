@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AcctCoinsuranceVoucherEntity" table="AcctCoinsuranceVoucherEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigMaintainAccountType" column="ConfigMaintainAccountType" type="boolean" />
+			<property name="ConfigMaintainGLSLAccount" column="ConfigMaintainGLSLAccount" type="boolean" />
+			<property name="ConfigMaintainTxnRule" column="ConfigMaintainTxnRule" type="boolean" />
+			<property name="ConfigMaintainTransaction" column="ConfigMaintainTransaction" type="boolean" />
+			<property name="ConfigExchangeRate" column="ConfigExchangeRate" type="boolean" />
+			<property name="ConfigDebitCreditNotes" column="ConfigDebitCreditNotes" type="boolean" />
+			<property name="ConfigCollection" column="ConfigCollection" type="boolean" />
+			<property name="ConfigMaintainBGCD" column="ConfigMaintainBGCD" type="boolean" />
+			<property name="ConfigMaintainScroll" column="ConfigMaintainScroll" type="boolean" />
+			<property name="ConfigCheckDishonour" column="ConfigCheckDishonour" type="boolean" />
+			<property name="ConfigCoinsuranceVoucherConsolidation" column="ConfigCoinsuranceVoucherConsolidation" type="boolean" />
+			<property name="ConfigHelp" column="ConfigHelp" type="boolean" />
+			<property name="ConfigSelectEventCode" column="ConfigSelectEventCode" type="boolean" />
+			<property name="SelectEventCode" column="SelectEventCode" type="string" />
+			<property name="ConfigRequestId" column="ConfigRequestId" type="boolean" />
+			<property name="RequestId" column="RequestId" type="string" />
+			<property name="ConfigCoinsurancePartyCode" column="ConfigCoinsurancePartyCode" type="boolean" />
+			<property name="CoinsurancePartyCode" column="CoinsurancePartyCode" type="string" />
+			<property name="ConfigCoinsuranceSiteCode" column="ConfigCoinsuranceSiteCode" type="boolean" />
+			<property name="CoinsuranceSiteCode" column="CoinsuranceSiteCode" type="string" />
+			<property name="ConfigDateFrom" column="ConfigDateFrom" type="boolean" />
+			<property name="DateFrom" column="DateFrom" type="string" />
+			<property name="ConfigDateTo" column="ConfigDateTo" type="boolean" />
+			<property name="DateTo" column="DateTo" type="string" />
+			<property name="ConfigCoinsuranceType" column="ConfigCoinsuranceType" type="boolean" />
+			<property name="CoinsuranceType" column="CoinsuranceType" type="string" />
+			<property name="ConfigDepartment" column="ConfigDepartment" type="boolean" />
+			<property name="Department" column="Department" type="string" />
+			<property name="ConfigProposalPolicy" column="ConfigProposalPolicy" type="boolean" />
+			<property name="ProposalPolicyNo " column="ProposalPolicyNo " type="string" />
+			<property name="ConfigOfficeCode" column="ConfigOfficeCode" type="boolean" />
+			<property name="OfficeCode" column="OfficeCode" type="string" />
+			<property name="ConfigInvoiceNumber" column="ConfigInvoiceNumber" type="boolean" />
+			<property name="InvoiceNumber" column="InvoiceNumber" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigSearchButton" column="ConfigSearchButton" type="boolean" />
+			<property name="ConfigClearButton" column="ConfigClearButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

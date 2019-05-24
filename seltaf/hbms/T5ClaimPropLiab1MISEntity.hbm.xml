@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.T5ClaimPropLiab1MISEntity" table="T5ClaimPropLiab1MISEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimMemberT1T2CLRAttTitle" column="ClaimMemberT1T2CLRAttTitle" type="string" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigAssessedAmountOfLoss" column="ConfigAssessedAmountOfLoss" type="boolean" />
+			<property name="AssessedAmountOfLoss" column="AssessedAmountOfLoss" type="string" />
+			<property name="ConfigCalculatedExcess" column="ConfigCalculatedExcess" type="boolean" />
+			<property name="CalculatedExcess" column="CalculatedExcess" type="string" />
+			<property name="ConfigClaimSettlementAmount" column="ConfigClaimSettlementAmount" type="boolean" />
+			<property name="ClaimSettlementAmount" column="ClaimSettlementAmount" type="string" />
+			<property name="ConfigTypeOfSettlement" column="ConfigTypeOfSettlement" type="boolean" />
+			<property name="TypeOfSettlement" column="TypeOfSettlement" type="string" />
+			<property name="ConfigFinalClaimSettledAmount" column="ConfigFinalClaimSettledAmount" type="boolean" />
+			<property name="FinalClaimSettledAmount" column="FinalClaimSettledAmount" type="string" />
+			<property name="ConfigUnderpercentageOfClaimSettlementAmount" column="ConfigUnderpercentageOfClaimSettlementAmount" type="boolean" />
+			<property name="UnderpercentageOfClaimSettlementAmount" column="UnderpercentageOfClaimSettlementAmount" type="string" />
+			<property name="ConfigEventCode" column="ConfigEventCode" type="boolean" />
+			<property name="EventCode" column="EventCode" type="string" />
+			<property name="ConfigNIAIsLeaderInCoInsuranceSo" column="ConfigNIAIsLeaderInCoInsuranceSo" type="boolean" />
+			<property name="NIAIsLeaderInCoInsuranceSo" column="NIAIsLeaderInCoInsuranceSo" type="string" />
+			<property name="ConfigProceedButton" column="ConfigProceedButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItem" column="ConfigInsuredItem" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigDateOfLossTextBox" column="ConfigDateOfLossTextBox" type="boolean" />
+			<property name="DateOfLoss" column="DateOfLoss" type="string" />
+			<property name="ConfigEstimatedAmountofLoss" column="ConfigEstimatedAmountofLoss" type="boolean" />
+			<property name="EstimatedAmountofLoss" column="EstimatedAmountofLoss" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

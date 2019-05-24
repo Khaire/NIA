@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyPaymDetailsCycleEntity" table="PolicyPaymDetailsCycleEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolicyPaymDetailsCycleTitle" column="PolicyPaymDetailsCycleTitle" type="string" />
+			<property name="ConfigPaymentCycleCheck" column="ConfigPaymentCycleCheck" type="boolean" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPaymentDetail" column="ConfigPaymentDetail" type="boolean" />
+			<property name="ConfigPaymentCycle" column="ConfigPaymentCycle" type="boolean" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolder" column="ConfigPolicyHolder" type="boolean" />
+			<property name="PolicyHolder" column="PolicyHolder" type="string" />
+			<property name="ConfigProductLabel" column="ConfigProductLabel" type="boolean" />
+			<property name="ProductLabel" column="ProductLabel" type="string" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigPartyFunction" column="ConfigPartyFunction" type="boolean" />
+			<property name="PartyFunction" column="PartyFunction" type="string" />
+			<property name="ConfigFunctionCode" column="ConfigFunctionCode" type="boolean" />
+			<property name="FunctionCode" column="FunctionCode" type="string" />
+			<property name="ConfigPaymentAmount" column="ConfigPaymentAmount" type="boolean" />
+			<property name="PaymentAmount" column="PaymentAmount" type="string" />
+			<property name="ConfigPurpose" column="ConfigPurpose" type="boolean" />
+			<property name="Purpose" column="Purpose" type="string" />
+			<property name="ConfigUnpaidAmount" column="ConfigUnpaidAmount" type="boolean" />
+			<property name="UnpaidAmount" column="UnpaidAmount" type="string" />
+			<property name="ConfigPaymentType" column="ConfigPaymentType" type="boolean" />
+			<property name="PaymentType" column="PaymentType" type="string" />
+			<property name="ConfigPaymentMode" column="ConfigPaymentMode" type="boolean" />
+			<property name="PaymentMode" column="PaymentMode" type="string" />
+			<property name="ConfigPaymentUnpaidNo" column="ConfigPaymentUnpaidNo" type="boolean" />
+			<property name="PaymentUnpaidNo" column="PaymentUnpaidNo" type="string" />
+			<property name="ConfigReferenceNo" column="ConfigReferenceNo" type="boolean" />
+			<property name="ReferenceNo" column="ReferenceNo" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

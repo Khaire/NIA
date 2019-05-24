@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.CLInsIntClaimDetIndivdEntity" table="CLInsIntClaimDetIndivdEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimDetailsforINDIVIDUALTitle " column="ClaimDetailsforINDIVIDUALTitle " type="string" />
+			<property name="ConfigClaimSubTab" column="ConfigClaimSubTab" type="boolean" />
+			<property name="ConfigClaimInsuredItemTab" column="ConfigClaimInsuredItemTab" type="boolean" />
+			<property name="ConfigClaimDocumentTab" column="ConfigClaimDocumentTab" type="boolean" />
+			<property name="ConfigClaimPartiesTab" column="ConfigClaimPartiesTab" type="boolean" />
+			<property name="ConfigClaimReserveTab" column="ConfigClaimReserveTab" type="boolean" />
+			<property name="ConfigClaimPaymentTab" column="ConfigClaimPaymentTab" type="boolean" />
+			<property name="ConfigClaimAttributesTab" column="ConfigClaimAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigCapitalSumInsured" column="ConfigCapitalSumInsured" type="boolean" />
+			<property name="CapitalSumInsured" column="CapitalSumInsured" type="string" />
+			<property name="ConfigSumInsuredfortableA" column="ConfigSumInsuredfortableA" type="boolean" />
+			<property name="SumInsuredfortableA" column="SumInsuredfortableA" type="string" />
+			<property name="ConfigSumInsuredfortableB" column="ConfigSumInsuredfortableB" type="boolean" />
+			<property name="SumInsuredfortableB" column="SumInsuredfortableB" type="string" />
+			<property name="ConfigSumInsuredfortableC" column="ConfigSumInsuredfortableC" type="boolean" />
+			<property name="SumInsuredfortableC" column="SumInsuredfortableC" type="string" />
+			<property name="ConfigSumInsuredfortableD" column="ConfigSumInsuredfortableD" type="boolean" />
+			<property name="SumInsuredfortableD" column="SumInsuredfortableD" type="string" />
+			<property name="ConfigTypeOfCause" column="ConfigTypeOfCause" type="boolean" />
+			<property name="TypeOfCause" column="TypeOfCause" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

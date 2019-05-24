@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PartyLocationEntity" table="PartyLocationEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="DependencyForLocationCode" column="DependencyForLocationCode" type="string" />
+			<property name="ConfigMaintainPartyTab" column="ConfigMaintainPartyTab" type="boolean" />
+			<property name="ConfigLocation" column="ConfigLocation" type="boolean" />
+			<property name="ConfigMaintainStakeholders" column="ConfigMaintainStakeholders" type="boolean" />
+			<property name="ConfigUpdateSurveyorContact" column="ConfigUpdateSurveyorContact" type="boolean" />
+			<property name="ConfigPartyProductMapping" column="ConfigPartyProductMapping" type="boolean" />
+			<property name="ConfigHelp" column="ConfigHelp" type="boolean" />
+			<property name="ConfigSearchLocationCode" column="ConfigSearchLocationCode" type="boolean" />
+			<property name="ConfigLocationCode" column="ConfigLocationCode" type="boolean" />
+			<property name="LocationCode" column="LocationCode" type="string" />
+			<property name="ConfigSearchLocationName" column="ConfigSearchLocationName" type="boolean" />
+			<property name="ConfigLocationName" column="ConfigLocationName" type="boolean" />
+			<property name="LocationName" column="LocationName" type="string" />
+			<property name="ConfigSearchTypeofLocation" column="ConfigSearchTypeofLocation" type="boolean" />
+			<property name="ConfigTypeofLocation" column="ConfigTypeofLocation" type="boolean" />
+			<property name="TypeofLocation" column="TypeofLocation" type="string" />
+			<property name="ConfigSearchParentLocationCode" column="ConfigSearchParentLocationCode" type="boolean" />
+			<property name="ConfigParentLocationCode" column="ConfigParentLocationCode" type="boolean" />
+			<property name="ParentLocationCode" column="ParentLocationCode" type="string" />
+			<property name="ConfigSearchParentLocationName" column="ConfigSearchParentLocationName" type="boolean" />
+			<property name="ConfigParentLocationName" column="ConfigParentLocationName" type="boolean" />
+			<property name="ParentLocationName" column="ParentLocationName" type="string" />
+			<property name="ConfigDescription" column="ConfigDescription" type="boolean" />
+			<property name="DescriptionText" column="DescriptionText" type="string" />
+			<property name="ConfigSearch" column="ConfigSearch" type="boolean" />
+			<property name="ConfigSave" column="ConfigSave" type="boolean" />
+			<property name="ConfigNew" column="ConfigNew" type="boolean" />
+			<property name="ConfigClear" column="ConfigClear" type="boolean" />
+			<property name="ConfigBack" column="ConfigBack" type="boolean" />
+			<property name="ConfigTree" column="ConfigTree" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

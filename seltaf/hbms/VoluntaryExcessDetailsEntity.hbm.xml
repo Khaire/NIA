@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.VoluntaryExcessDetailsEntity" table="VoluntaryExcessDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="VoluntaryExcessDetailsPageTitle" column="VoluntaryExcessDetailsPageTitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigConsignmentNotes" column="ConfigConsignmentNotes" type="boolean" />
+			<property name="ConsignmentNotes" column="ConsignmentNotes" type="string" />
+			<property name="ConfigPackingWeightOfGoods" column="ConfigPackingWeightOfGoods" type="boolean" />
+			<property name="PackingWeightOfGoods" column="PackingWeightOfGoods" type="string" />
+			<property name="ConfigStatutoryLegislationWaiver" column="ConfigStatutoryLegislationWaiver" type="boolean" />
+			<property name="StatutoryLegislationWaiver" column="StatutoryLegislationWaiver" type="string" />
+			<property name="ConfigOptionForVoluntaryExcess" column="ConfigOptionForVoluntaryExcess" type="boolean" />
+			<property name="OptionForVoluntaryExcess" column="OptionForVoluntaryExcess" type="string" />
+			<property name="ConfigVoluntaryExcess" column="ConfigVoluntaryExcess" type="boolean" />
+			<property name="VoluntaryExcess" column="VoluntaryExcess" type="string" />
+			<property name="ConfigDiscountPercentForVoluntaryExcess" column="ConfigDiscountPercentForVoluntaryExcess" type="boolean" />
+			<property name="DiscountPercentForVoluntaryExcess" column="DiscountPercentForVoluntaryExcess" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigDeductible" column="ConfigDeductible" type="boolean" />
+			<property name="Deductible" column="Deductible" type="string" />
+			<property name="ConfigLoadingOnAOY" column="ConfigLoadingOnAOY" type="boolean" />
+			<property name="LoadingOnAOY" column="LoadingOnAOY" type="string" />
+			<property name="ConfigCompulsoryExcess" column="ConfigCompulsoryExcess" type="boolean" />
+			<property name="CompulsoryExcess" column="CompulsoryExcess" type="string" />
+			<property name="ConfigLoadingforAdversefeature" column="ConfigLoadingforAdversefeature" type="boolean" />
+			<property name="LoadingforAdversefeature" column="LoadingforAdversefeature" type="string" />
+			<property name="ConfigSpecialConditionsOne" column="ConfigSpecialConditionsOne" type="boolean" />
+			<property name="SpecialConditionsOne" column="SpecialConditionsOne" type="string" />
+			<property name="ConfigSpecialConditionsTwo" column="ConfigSpecialConditionsTwo" type="boolean" />
+			<property name="SpecialConditionsTwo" column="SpecialConditionsTwo" type="string" />
+			<property name="ConfigDoYouWantToAttachOtherExtensions" column="ConfigDoYouWantToAttachOtherExtensions" type="boolean" />
+			<property name="DoYouWantToAttachOtherExtensions" column="DoYouWantToAttachOtherExtensions" type="string" />
+			<property name="ConfigListOfExtensions" column="ConfigListOfExtensions" type="boolean" />
+			<property name="ListOfExtensions" column="ListOfExtensions" type="string" />
+			<property name="ConfigSubLimitOfOtherExtensions" column="ConfigSubLimitOfOtherExtensions" type="boolean" />
+			<property name="SubLimitOfOtherExtensions" column="SubLimitOfOtherExtensions" type="string" />
+			<property name="ConfigOptionsForOtherExtensions" column="ConfigOptionsForOtherExtensions" type="boolean" />
+			<property name="OptionsForOtherExtensions" column="OptionsForOtherExtensions" type="string" />
+			<property name="ConfigPremiumRate" column="ConfigPremiumRate" type="boolean" />
+			<property name="PremiumRate" column="PremiumRate" type="string" />
+			<property name="ConfigExcess" column="ConfigExcess" type="boolean" />
+			<property name="Excess" column="Excess" type="string" />
+			<property name="ConfigSpecialConditionsWarranties" column="ConfigSpecialConditionsWarranties" type="boolean" />
+			<property name="SpecialConditionsWarranties" column="SpecialConditionsWarranties" type="string" />
+			<property name="ConfigDiscountPercentage" column="ConfigDiscountPercentage" type="boolean" />
+			<property name="DiscountPercentage" column="DiscountPercentage" type="string" />
+			<property name="ConfigLoadingPercentage" column="ConfigLoadingPercentage" type="boolean" />
+			<property name="LoadingPercentage" column="LoadingPercentage" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PartyContactsDetailsEntity" table="PartyContactsDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigPartyCode" column="ConfigPartyCode" type="boolean" />
+			<property name="PartyCode" column="PartyCode" type="string" />
+			<property name="ConfigPartyName" column="ConfigPartyName" type="boolean" />
+			<property name="PartyName" column="PartyName" type="string" />
+			<property name="ConfigSearchContactType" column="ConfigSearchContactType" type="boolean" />
+			<property name="ConfigContactType" column="ConfigContactType" type="boolean" />
+			<property name="ContactType" column="ContactType" type="string" />
+			<property name="ConfigAddress1" column="ConfigAddress1" type="boolean" />
+			<property name="Address1" column="Address1" type="string" />
+			<property name="ConfigAddress2" column="ConfigAddress2" type="boolean" />
+			<property name="Address2" column="Address2" type="string" />
+			<property name="ConfigAddressAlongWithCityName" column="ConfigAddressAlongWithCityName" type="boolean" />
+			<property name="AddressAlongWithCityName" column="AddressAlongWithCityName" type="string" />
+			<property name="ConfigCityCode" column="ConfigCityCode" type="boolean" />
+			<property name="CityCode" column="CityCode" type="string" />
+			<property name="ConfigCityName" column="ConfigCityName" type="boolean" />
+			<property name="CityName" column="CityName" type="string" />
+			<property name="ConfigStateCode" column="ConfigStateCode" type="boolean" />
+			<property name="StateCode" column="StateCode" type="string" />
+			<property name="ConfigStateName" column="ConfigStateName" type="boolean" />
+			<property name="StateName" column="StateName" type="string" />
+			<property name="ConfigCountryCode" column="ConfigCountryCode" type="boolean" />
+			<property name="CountryCode" column="CountryCode" type="string" />
+			<property name="ConfigCountryName" column="ConfigCountryName" type="boolean" />
+			<property name="CountryName" column="CountryName" type="string" />
+			<property name="ConfigPinCode" column="ConfigPinCode" type="boolean" />
+			<property name="PinCode" column="PinCode" type="string" />
+			<property name="ConfigTelephoneNo1" column="ConfigTelephoneNo1" type="boolean" />
+			<property name="TelephoneNo1" column="TelephoneNo1" type="string" />
+			<property name="ConfigTelephoneNo2" column="ConfigTelephoneNo2" type="boolean" />
+			<property name="TelephoneNo2" column="TelephoneNo2" type="string" />
+			<property name="ConfigMobileNo" column="ConfigMobileNo" type="boolean" />
+			<property name="MobileNo" column="MobileNo" type="string" />
+			<property name="ConfigFaxNo1" column="ConfigFaxNo1" type="boolean" />
+			<property name="FaxNo1" column="FaxNo1" type="string" />
+			<property name="ConfigFaxNo2" column="ConfigFaxNo2" type="boolean" />
+			<property name="FaxNo2" column="FaxNo2" type="string" />
+			<property name="ConfigEmailid1" column="ConfigEmailid1" type="boolean" />
+			<property name="Emailid1" column="Emailid1" type="string" />
+			<property name="ConfigEmailid2" column="ConfigEmailid2" type="boolean" />
+			<property name="Emailid2" column="Emailid2" type="string" />
+			<property name="ConfigPartyTab" column="ConfigPartyTab" type="boolean" />
+			<property name="ConfigPartyRoleTab" column="ConfigPartyRoleTab" type="boolean" />
+			<property name="ConfigRelatedPartyTab" column="ConfigRelatedPartyTab" type="boolean" />
+			<property name="ConfigContactsTab" column="ConfigContactsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigHierarchyTab" column="ConfigHierarchyTab" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

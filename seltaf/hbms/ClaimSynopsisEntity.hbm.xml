@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimSynopsisEntity" table="ClaimSynopsisEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimSynopsisTitle" column="ClaimSynopsisTitle" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigPolicyHolder" column="ConfigPolicyHolder" type="boolean" />
+			<property name="PolicyHolder" column="PolicyHolder" type="string" />
+			<property name="ConfigClaimSynopsisTable" column="ConfigClaimSynopsisTable" type="boolean" />
+			<property name="TableRowNumber" column="TableRowNumber" type="integer" />
+			<property name="ConfigSlNo" column="ConfigSlNo" type="boolean" />
+			<property name="SlNo" column="SlNo" type="string" />
+			<property name="ConfigClaimNo" column="ConfigClaimNo" type="boolean" />
+			<property name="ClaimNo" column="ClaimNo" type="string" />
+			<property name="ConfigStatusTable" column="ConfigStatusTable" type="boolean" />
+			<property name="StatusTable" column="StatusTable" type="string" />
+			<property name="ConfigTypeOfClaim" column="ConfigTypeOfClaim" type="boolean" />
+			<property name="TypeOfClaim" column="TypeOfClaim" type="string" />
+			<property name="ConfigClaimEstimatedAmount" column="ConfigClaimEstimatedAmount" type="boolean" />
+			<property name="ClaimEstimatedAmount" column="ClaimEstimatedAmount" type="string" />
+			<property name="ConfigClaimSettledAmount" column="ConfigClaimSettledAmount" type="boolean" />
+			<property name="ClaimSettledAmount" column="ClaimSettledAmount" type="string" />
+			<property name="ConfigRecoveryAmount" column="ConfigRecoveryAmount" type="boolean" />
+			<property name="RecoveryAmount" column="RecoveryAmount" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigTotal" column="ConfigTotal" type="boolean" />
+			<property name="ConfigTotalClaimEstimatedAmount" column="ConfigTotalClaimEstimatedAmount" type="boolean" />
+			<property name="TotalClaimEstimatedAmount" column="TotalClaimEstimatedAmount" type="string" />
+			<property name="ConfigTotalClaimSettledAmount" column="ConfigTotalClaimSettledAmount" type="boolean" />
+			<property name="TotalClaimSettledAmount" column="TotalClaimSettledAmount" type="string" />
+			<property name="ConfigTotalRecoveryAmount" column="ConfigTotalRecoveryAmount" type="boolean" />
+			<property name="TotalRecoveryAmount" column="TotalRecoveryAmount" type="string" />
+			<property name="ConfigGrandTotal" column="ConfigGrandTotal" type="boolean" />
+			<property name="ConfigGrandTotalClaimEstimatedAmount" column="ConfigGrandTotalClaimEstimatedAmount" type="boolean" />
+			<property name="GrandTotalClaimEstimatedAmount" column="GrandTotalClaimEstimatedAmount" type="string" />
+			<property name="ConfigGrandTotalClaimSettledAmount" column="ConfigGrandTotalClaimSettledAmount" type="boolean" />
+			<property name="GrandTotalClaimSettledAmount" column="GrandTotalClaimSettledAmount" type="string" />
+			<property name="ConfigGrandTotalRecoveryAmount" column="ConfigGrandTotalRecoveryAmount" type="boolean" />
+			<property name="GrandTotalRecoveryAmount" column="GrandTotalRecoveryAmount" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

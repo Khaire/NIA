@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.SumInsforLibMotorEntity" table="SumInsforLibMotorEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="PolicyInsuredCoverageAttributesTitle" column="PolicyInsuredCoverageAttributesTitle" type="string" />
+			<property name="ConfigDoYouwanttoreduceTPPDcover" column="ConfigDoYouwanttoreduceTPPDcover" type="boolean" />
+			<property name="DoYouwanttoreduceTPPDcover" column="DoYouwanttoreduceTPPDcover" type="string" />
+			<property name="ConfigSumInsuredforPAtoOwnerDriver" column="ConfigSumInsuredforPAtoOwnerDriver" type="boolean" />
+			<property name="SumInsuredforPAtoOwnerDriver" column="SumInsuredforPAtoOwnerDriver" type="string" />
+			<property name="ConfigSumInsuredforPAcover" column="ConfigSumInsuredforPAcover" type="boolean" />
+			<property name="SumInsuredforPAcover" column="SumInsuredforPAcover" type="string" />
+			<property name="ConfigLLunderWCAforcarriagemorethansixemployees" column="ConfigLLunderWCAforcarriagemorethansixemployees" type="boolean" />
+			<property name="LLunderWCAforcarriagemorethansixemployees" column="LLunderWCAforcarriagemorethansixemployees" type="string" />
+			<property name="ConfigNumberofAdditionalLLEmployees" column="ConfigNumberofAdditionalLLEmployees" type="boolean" />
+			<property name="NumberofAdditionalLLEmployees" column="NumberofAdditionalLLEmployees" type="string" />
+			<property name="ConfigLLtopersonsemployedforopnmaint" column="ConfigLLtopersonsemployedforopnmaint" type="boolean" />
+			<property name="LLtopersonsemployedforopnmaint" column="LLtopersonsemployedforopnmaint" type="string" />
+			<property name="ConfigLLtoNonfarePayingPassengersOwnerofgoods" column="ConfigLLtoNonfarePayingPassengersOwnerofgoods" type="boolean" />
+			<property name="LLtoNonfarePayingPassengersOwnerofgoods" column="LLtoNonfarePayingPassengersOwnerofgoods" type="string" />
+			<property name="ConfigLLtoNonfarePayingPassengers" column="ConfigLLtoNonfarePayingPassengers" type="boolean" />
+			<property name="LLtoNonfarePayingPassengers" column="LLtoNonfarePayingPassengers" type="string" />
+			<property name="ConfigDouwishincludePACoverforPaidDriversCleanerConductor" column="ConfigDouwishincludePACoverforPaidDriversCleanerConductor" type="boolean" />
+			<property name="DouwishincludePACoverforPaidDriversCleanerConductor" column="DouwishincludePACoverforPaidDriversCleanerConductor" type="string" />
+			<property name="ConfigDoyouwanttoincludePAcoverforNamedPerson" column="ConfigDoyouwanttoincludePAcoverforNamedPerson" type="boolean" />
+			<property name="DoyouwanttoincludePAcoverforNamedPerson" column="DoyouwanttoincludePAcoverforNamedPerson" type="string" />
+			<property name="ConfigDoyouwishtoincludePACoverforPaidDrivers" column="ConfigDoyouwishtoincludePACoverforPaidDrivers" type="boolean" />
+			<property name="DoyouwishtoincludePACoverforPaidDrivers" column="DoyouwishtoincludePACoverforPaidDrivers" type="string" />
+			<property name="ConfigLLtopaiddriverscleaneropnunderWCA" column="ConfigLLtopaiddriverscleaneropnunderWCA" type="boolean" />
+			<property name="LLtopaiddriverscleaneropnunderWCA" column="LLtopaiddriverscleaneropnunderWCA" type="string" />
+			<property name="ConfigLLtoEmployeesofInsuredtraveling" column="ConfigLLtoEmployeesofInsuredtraveling" type="boolean" />
+			<property name="LLtoEmployeesofInsuredtraveling" column="LLtoEmployeesofInsuredtraveling" type="string" />
+			<property name="ConfigLLtoSoldiersSailorsAirmenDrivers" column="ConfigLLtoSoldiersSailorsAirmenDrivers" type="boolean" />
+			<property name="LLtoSoldiersSailorsAirmenDrivers" column="LLtoSoldiersSailorsAirmenDrivers" type="string" />
+			<property name="ConfigDouwanttoincludePAcoverforunnamedperson" column="ConfigDouwanttoincludePAcoverforunnamedperson" type="boolean" />
+			<property name="DouwanttoincludePAcoverforunnamedperson" column="DouwanttoincludePAcoverforunnamedperson" type="string" />
+			<property name="ConfigNoOfPaidDrivers" column="ConfigNoOfPaidDrivers" type="boolean" />
+			<property name="NoOfPaidDrivers" column="NoOfPaidDrivers" type="string" />
+			<property name="ConfigNoOfCleaners" column="ConfigNoOfCleaners" type="boolean" />
+			<property name="NoOfCleaners" column="NoOfCleaners" type="string" />
+			<property name="ConfigNoOfConductors" column="ConfigNoOfConductors" type="boolean" />
+			<property name="NoOfConductors" column="NoOfConductors" type="string" />
+			<property name="ConfigCapitalSIForDriverCleanerConductorPerPerson" column="ConfigCapitalSIForDriverCleanerConductorPerPerson" type="boolean" />
+			<property name="CapitalSIForDriverCleanerConductorPerPerson" column="CapitalSIForDriverCleanerConductorPerPerson" type="string" />
+			<property name="ConfigDoYouWantToIncludePACoverForUnnamedPerson" column="ConfigDoYouWantToIncludePACoverForUnnamedPerson" type="boolean" />
+			<property name="DoYouWantToIncludePACoverForUnnamedPerson" column="DoYouWantToIncludePACoverForUnnamedPerson" type="string" />
+			<property name="ConfigLLtoPaidDriverAndOrConductorAndOrCleaner" column="ConfigLLtoPaidDriverAndOrConductorAndOrCleaner" type="boolean" />
+			<property name="LLtoPaidDriverAndOrConductorAndOrCleaner" column="LLtoPaidDriverAndOrConductorAndOrCleaner" type="string" />
+			<property name="ConfigTypeOfCoverage" column="ConfigTypeOfCoverage" type="boolean" />
+			<property name="TypeOfCoverage" column="TypeOfCoverage" type="string" />
+			<property name="ConfigDeclinedRiskConditions" column="ConfigDeclinedRiskConditions" type="boolean" />
+			<property name="DeclinedRiskConditions" column="DeclinedRiskConditions" type="string" />
+			<property name="ConfigBasisOfRoadTransit" column="ConfigBasisOfRoadTransit" type="boolean" />
+			<property name="BasisOfRoadTransit" column="BasisOfRoadTransit" type="string" />
+			<property name="ConfigNoOfNamedDrivers" column="ConfigNoOfNamedDrivers" type="boolean" />
+			<property name="NoOfNamedDrivers" column="NoOfNamedDrivers" type="string" />
+			<property name="ConfigTotalTradeCertificateValue" column="ConfigTotalTradeCertificateValue" type="boolean" />
+			<property name="TotalTradeCertificateValue" column="TotalTradeCertificateValue" type="string" />
+			<property name="ConfigLlOfCooliesCleanersHelpers" column="ConfigLlOfCooliesCleanersHelpers" type="boolean" />
+			<property name="LlOfCooliesCleanersHelpers" column="LlOfCooliesCleanersHelpers" type="string" />
+			<property name="ConfigLlForNonFarePayingPassengerOfCoverage" column="ConfigLlForNonFarePayingPassengerOfCoverage" type="boolean" />
+			<property name="LlForNonFarePayingPassengerOfCoverage" column="LlForNonFarePayingPassengerOfCoverage" type="string" />
+			<property name="ConfigPrivateUseExtnRequired" column="ConfigPrivateUseExtnRequired" type="boolean" />
+			<property name="PrivateUseExtnRequired" column="PrivateUseExtnRequired" type="string" />
+			<property name="ConfigDemonstrationRequired" column="ConfigDemonstrationRequired" type="boolean" />
+			<property name="DemonstrationRequired" column="DemonstrationRequired" type="string" />
+			<property name="ConfigDrivingTutionExtnRequired" column="ConfigDrivingTutionExtnRequired" type="boolean" />
+			<property name="DrivingTutionExtnRequired" column="DrivingTutionExtnRequired" type="string" />
+			<property name="ConfigInsertionOfIMT62" column="ConfigInsertionOfIMT62" type="boolean" />
+			<property name="InsertionOfIMT62" column="InsertionOfIMT62" type="string" />
+			<property name="ConfigLoanOrHireOfVehiclesToCustomerByyMotorDealers" column="ConfigLoanOrHireOfVehiclesToCustomerByyMotorDealers" type="boolean" />
+			<property name="LoanOrHireOfVehiclesToCustomerByyMotorDealers" column="LoanOrHireOfVehiclesToCustomerByyMotorDealers" type="string" />
+			<property name="ConfigNoOfDaysOfHire" column="ConfigNoOfDaysOfHire" type="boolean" />
+			<property name="NoOfDaysOfHire" column="NoOfDaysOfHire" type="string" />
+			<property name="ConfigDoYouWantToReduceTPPD" column="ConfigDoYouWantToReduceTPPD" type="boolean" />
+			<property name="DoYouWantToReduceTPPD" column="DoYouWantToReduceTPPD" type="string" />
+			<property name="ConfigNumberOfLLPaidDriver" column="ConfigNumberOfLLPaidDriver" type="boolean" />
+			<property name="NumberOfLLPaidDriver" column="NumberOfLLPaidDriver" type="string" />
+			<property name="ConfigNamedDrivers1" column="ConfigNamedDrivers1" type="boolean" />
+			<property name="NamedDrivers1" column="NamedDrivers1" type="string" />
+			<property name="ConfigAge" column="ConfigAge" type="boolean" />
+			<property name="Age" column="Age" type="string" />
+			<property name="ConfigDrivingLicenceNo" column="ConfigDrivingLicenceNo" type="boolean" />
+			<property name="DrivingLicenceNo" column="DrivingLicenceNo" type="string" />
+			<property name="ConfigSalaryOfTheDriver" column="ConfigSalaryOfTheDriver" type="boolean" />
+			<property name="SalaryOfTheDriver" column="SalaryOfTheDriver" type="string" />
+			<property name="ConfigTradeCertificateValue1" column="ConfigTradeCertificateValue1" type="boolean" />
+			<property name="TradeCertificateValue1" column="TradeCertificateValue1" type="string" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigEstimatedWageBill" column="ConfigEstimatedWageBill" type="boolean" />
+			<property name="EstimatedWageBill" column="EstimatedWageBill" type="string" />
+			<property name="ConfigDateOfConstruction" column="ConfigDateOfConstruction" type="boolean" />
+			<property name="DateOfConstruction" column="DateOfConstruction" type="string" />
+			<property name="ConfigUseText" column="ConfigUseText" type="boolean" />
+			<property name="UseText" column="UseText" type="string" />
+			<property name="ConfigAreaOfOpenCarParks" column="ConfigAreaOfOpenCarParks" type="boolean" />
+			<property name="AreaOfOpenCarParks" column="AreaOfOpenCarParks" type="string" />
+			<property name="ConfigNoOfPremises" column="ConfigNoOfPremises" type="boolean" />
+			<property name="NoOfPremises" column="NoOfPremises" type="string" />
+			<property name="ConfigTwTypeOfCoverage" column="ConfigTwTypeOfCoverage" type="boolean" />
+			<property name="TwTypeOfCoverage" column="TwTypeOfCoverage" type="string" />
+			<property name="ConfigTypeOfPCCoverage" column="ConfigTypeOfPCCoverage" type="boolean" />
+			<property name="TypeOfPCCoverage" column="TypeOfPCCoverage" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

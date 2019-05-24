@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimAttrOtherDetailsEntity" table="ClaimAttrOtherDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ClaimOtherDetailsTitle" column="ClaimOtherDetailsTitle" type="string" />
+			<property name="ClaimOtherPropertyTwoTitle" column="ClaimOtherPropertyTwoTitle" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigSurveyorsRecommsObserAsToLiability" column="ConfigSurveyorsRecommsObserAsToLiability" type="boolean" />
+			<property name="SurveyorsRecommsObserAsToLiability" column="SurveyorsRecommsObserAsToLiability" type="string" />
+			<property name="ConfigDepartmentOfficeObserRecomme" column="ConfigDepartmentOfficeObserRecomme" type="boolean" />
+			<property name="DepartmentOfficeObserRecomme" column="DepartmentOfficeObserRecomme" type="string" />
+			<property name="ConfigAssesOfDamageIndigenousAmtRecomByOfficeDept" column="ConfigAssesOfDamageIndigenousAmtRecomByOfficeDept" type="boolean" />
+			<property name="AssesOfDamageIndigenousAmtRecomByOfficeDept" column="AssesOfDamageIndigenousAmtRecomByOfficeDept" type="string" />
+			<property name="ConfigAssesOfDamageImportAmtRecommByOfficeDept" column="ConfigAssesOfDamageImportAmtRecommByOfficeDept" type="boolean" />
+			<property name="AssesOfDamageImportAmtRecommByOfficeDept" column="AssesOfDamageImportAmtRecommByOfficeDept" type="string" />
+			<property name="ConfigAssesOfDamageCivilAmtRecomByOfficeDept" column="ConfigAssesOfDamageCivilAmtRecomByOfficeDept" type="boolean" />
+			<property name="AssesOfDamageCivilAmtRecomByOfficeDept" column="AssesOfDamageCivilAmtRecomByOfficeDept" type="string" />
+			<property name="ConfigAsseOfDamageAddOnAmtRecomByOfficeDept" column="ConfigAsseOfDamageAddOnAmtRecomByOfficeDept" type="boolean" />
+			<property name="AsseOfDamageAddOnAmtRecomByOfficeDept" column="AsseOfDamageAddOnAmtRecomByOfficeDept" type="string" />
+			<property name="ConfigSalvageAmount" column="ConfigSalvageAmount" type="boolean" />
+			<property name="SalvageAmount" column="SalvageAmount" type="string" />
+			<property name="ConfigUnderinsuranceEngIfAny" column="ConfigUnderinsuranceEngIfAny" type="boolean" />
+			<property name="UnderinsuranceEngIfAny" column="UnderinsuranceEngIfAny" type="string" />
+			<property name="ConfigExcessDurationPolicy" column="ConfigExcessDurationPolicy" type="boolean" />
+			<property name="ExcessDurationPolicy" column="ExcessDurationPolicy" type="string" />
+			<property name="ConfigSpecificExcessIfAny" column="ConfigSpecificExcessIfAny" type="boolean" />
+			<property name="SpecificExcessIfAny" column="SpecificExcessIfAny" type="string" />
+			<property name="ConfigTotalAssementAmtRecomByOfficeDept" column="ConfigTotalAssementAmtRecomByOfficeDept" type="boolean" />
+			<property name="TotalAssementAmtRecomByOfficeDept" column="TotalAssementAmtRecomByOfficeDept" type="string" />
+			<property name="ConfigOnAccountPaidIfAny" column="ConfigOnAccountPaidIfAny" type="boolean" />
+			<property name="OnAccountPaidIfAny" column="OnAccountPaidIfAny" type="string" />
+			<property name="ConfigPaymentNowRecommended" column="ConfigPaymentNowRecommended" type="boolean" />
+			<property name="PaymentNowRecommended" column="PaymentNowRecommended" type="string" />
+			<property name="ConfigAmtIfAnyToBeRetaiPendClarifTheInsSurveyors" column="ConfigAmtIfAnyToBeRetaiPendClarifTheInsSurveyors" type="boolean" />
+			<property name="AmtIfAnyToBeRetaiPendClarifTheInsSurveyors" column="AmtIfAnyToBeRetaiPendClarifTheInsSurveyors" type="string" />
+			<property name="ConfigReasonForRetentionOfClaimAmount" column="ConfigReasonForRetentionOfClaimAmount" type="boolean" />
+			<property name="ReasonForRetentionOfClaimAmount" column="ReasonForRetentionOfClaimAmount" type="string" />
+			<property name="ConfigOutstandingClaimsProvisionsAsOn31StMarch" column="ConfigOutstandingClaimsProvisionsAsOn31StMarch" type="boolean" />
+			<property name="OutstandingClaimsProvisionsAsOn31StMarch" column="OutstandingClaimsProvisionsAsOn31StMarch" type="string" />
+			<property name="ConfigOccurrenceDescription" column="ConfigOccurrenceDescription" type="boolean" />
+			<property name="OccurrenceDescription" column="OccurrenceDescription" type="string" />
+			<property name="ConfigModeOfRepairsReplacements" column="ConfigModeOfRepairsReplacements" type="boolean" />
+			<property name="ModeOfRepairsReplacements" column="ModeOfRepairsReplacements" type="string" />
+			<property name="ConfigDepartmentsObserAndRecommen" column="ConfigDepartmentsObserAndRecommen" type="boolean" />
+			<property name="DepartmentsObserAndRecommen" column="DepartmentsObserAndRecommen" type="string" />
+			<property name="ConfigProceedButton" column="ConfigProceedButton" type="boolean" />
+			<property name="ConfigClaimPropertyTwo" column="ConfigClaimPropertyTwo" type="boolean" />
+			<property name="ConfigIsReinstatementRequired" column="ConfigIsReinstatementRequired" type="boolean" />
+			<property name="IsReinstatementRequired" column="IsReinstatementRequired" type="string" />
+			<property name="ConfigReinstatementPremium" column="ConfigReinstatementPremium" type="boolean" />
+			<property name="ReinstatementPremium" column="ReinstatementPremium" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigTOneCLMBP" column="ConfigTOneCLMBP" type="boolean" />
+			<property name="TOneCLMBP" column="TOneCLMBP" type="string" />
+			<property name="ConfigTotalSI" column="ConfigTotalSI" type="boolean" />
+			<property name="TotalSI" column="TotalSI" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

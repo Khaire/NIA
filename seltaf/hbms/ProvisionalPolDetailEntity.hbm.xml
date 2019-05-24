@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ProvisionalPolDetailEntity" table="ProvisionalPolDetailEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="PolicyNextPageTitle" column="PolicyNextPageTitle" type="string" />
+			<property name="ConfigSchemeNo" column="ConfigSchemeNo" type="boolean" />
+			<property name="SchemeNo" column="SchemeNo" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolderName" column="ConfigPolicyHolderName" type="boolean" />
+			<property name="PolicyHolderName" column="PolicyHolderName" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigDetailUnderwritingRequiredDropDown" column="ConfigDetailUnderwritingRequiredDropDown" type="boolean" />
+			<property name="DetailsUnderwritingRequiredDropdown" column="DetailsUnderwritingRequiredDropdown" type="string" />
+			<property name="ConfigDetailUnderwritingRequired" column="ConfigDetailUnderwritingRequired" type="boolean" />
+			<property name="DetailUnderwritingRequired" column="DetailUnderwritingRequired" type="string" />
+			<property name="ConfigPolicySumInsured" column="ConfigPolicySumInsured" type="boolean" />
+			<property name="PolicySumInsured" column="PolicySumInsured" type="string" />
+			<property name="ConfigTotalPremium" column="ConfigTotalPremium" type="boolean" />
+			<property name="TotalPremium" column="TotalPremium" type="string" />
+			<property name="ConfigTerrorismPremium" column="ConfigTerrorismPremium" type="boolean" />
+			<property name="TerrorismPremium" column="TerrorismPremium" type="string" />
+			<property name="ConfigOtherPolicyDetails" column="ConfigOtherPolicyDetails" type="boolean" />
+			<property name="OtherPolicyDetails" column="OtherPolicyDetails" type="string" />
+			<property name="ConfigAnyPolicyNumberReference" column="ConfigAnyPolicyNumberReference" type="boolean" />
+			<property name="AnyPolicyNumberReference" column="AnyPolicyNumberReference" type="string" />
+			<property name="ConfigLocationDetails1" column="ConfigLocationDetails1" type="boolean" />
+			<property name="LocationDetails1" column="LocationDetails1" type="string" />
+			<property name="ConfigLocationDetails2" column="ConfigLocationDetails2" type="boolean" />
+			<property name="LocationDetails2" column="LocationDetails2" type="string" />
+			<property name="ConfigLocationDetails3" column="ConfigLocationDetails3" type="boolean" />
+			<property name="LocationDetails3" column="LocationDetails3" type="string" />
+			<property name="ConfigLocationDetails4" column="ConfigLocationDetails4" type="boolean" />
+			<property name="LocationDetails4" column="LocationDetails4" type="string" />
+			<property name="ConfigAddOnCoverDetails1" column="ConfigAddOnCoverDetails1" type="boolean" />
+			<property name="AddOnCoverDetails1" column="AddOnCoverDetails1" type="string" />
+			<property name="ConfigAddOnCoverDetails2" column="ConfigAddOnCoverDetails2" type="boolean" />
+			<property name="AddOnCoverDetails2" column="AddOnCoverDetails2" type="string" />
+			<property name="ConfigAddOnCoverDetails3" column="ConfigAddOnCoverDetails3" type="boolean" />
+			<property name="AddOnCoverDetails3" column="AddOnCoverDetails3" type="string" />
+			<property name="ConfigAddOnCoverDetails4" column="ConfigAddOnCoverDetails4" type="boolean" />
+			<property name="AddOnCoverDetails4" column="AddOnCoverDetails4" type="string" />
+			<property name="ConfigExcessForProvisionalPolicy" column="ConfigExcessForProvisionalPolicy" type="boolean" />
+			<property name="ExcessForProvisionalPolicy" column="ExcessForProvisionalPolicy" type="string" />
+			<property name="ConfigSpecialConditions1" column="ConfigSpecialConditions1" type="boolean" />
+			<property name="SpecialConditions1" column="SpecialConditions1" type="string" />
+			<property name="ConfigSpecialConditions2" column="ConfigSpecialConditions2" type="boolean" />
+			<property name="SpecialConditions2" column="SpecialConditions2" type="string" />
+			<property name="ConfigSpecialConditions3" column="ConfigSpecialConditions3" type="boolean" />
+			<property name="SpecialConditions3" column="SpecialConditions3" type="string" />
+			<property name="ConfigSpecialConditions4" column="ConfigSpecialConditions4" type="boolean" />
+			<property name="SpecialConditions4" column="SpecialConditions4" type="string" />
+			<property name="ConfigForwordButton" column="ConfigForwordButton" type="boolean" />
+			<property name="ConfigEndorse" column="ConfigEndorse" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

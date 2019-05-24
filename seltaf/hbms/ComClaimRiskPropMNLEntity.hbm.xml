@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ComClaimRiskPropMNLEntity" table="ComClaimRiskPropMNLEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="CommonClaimRiskPropertyTitle" column="CommonClaimRiskPropertyTitle" type="string" />
+			<property name="ConfigPrimaryInformation" column="ConfigPrimaryInformation" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigClaim" column="ConfigClaim" type="boolean" />
+			<property name="Claim" column="Claim" type="string" />
+			<property name="ConfigTotalAssessedLossAmount" column="ConfigTotalAssessedLossAmount" type="boolean" />
+			<property name="TotalAssessedLossAmount" column="TotalAssessedLossAmount" type="string" />
+			<property name="ConfigIsUnderlnsuranceApplicable" column="ConfigIsUnderlnsuranceApplicable" type="boolean" />
+			<property name="IsUnderlnsuranceApplicable" column="IsUnderlnsuranceApplicable" type="string" />
+			<property name="ConfigExcess" column="ConfigExcess" type="boolean" />
+			<property name="Excess" column="Excess" type="string" />
+			<property name="ConfigNetClaimAmount" column="ConfigNetClaimAmount" type="boolean" />
+			<property name="NetClaimAmount" column="NetClaimAmount" type="string" />
+			<property name="ConfigReasonForReopen" column="ConfigReasonForReopen" type="boolean" />
+			<property name="ReasonForReopen" column="ReasonForReopen" type="string" />
+			<property name="ConfigDistrictStateNational" column="ConfigDistrictStateNational" type="boolean" />
+			<property name="DistrictStateNational" column="DistrictStateNational" type="string" />
+			<property name="ConfigDistrictCourtSupremeCourtHighCourtSLP" column="ConfigDistrictCourtSupremeCourtHighCourtSLP" type="boolean" />
+			<property name="DistrictCourtSupremeCourtHighCourtSLP" column="DistrictCourtSupremeCourtHighCourtSLP" type="string" />
+			<property name="ConfigUnderInsuranceType" column="ConfigUnderInsuranceType" type="boolean" />
+			<property name="UnderInsuranceType" column="UnderInsuranceType" type="string" />
+			<property name="ConfigUnderInsuranceAmount" column="ConfigUnderInsuranceAmount" type="boolean" />
+			<property name="UnderInsuranceAmount" column="UnderInsuranceAmount" type="string" />
+			<property name="ConfigClaimLossAfterUnderInsurance" column="ConfigClaimLossAfterUnderInsurance" type="boolean" />
+			<property name="ClaimLossAfterUnderInsurance" column="ClaimLossAfterUnderInsurance" type="string" />
+			<property name="ConfigIsTerrorismCoverRequired" column="ConfigIsTerrorismCoverRequired" type="boolean" />
+			<property name="IsTerrorismCoverRequired" column="IsTerrorismCoverRequired" type="string" />
+			<property name="ConfigSumInsuredForTerrorism" column="ConfigSumInsuredForTerrorism" type="boolean" />
+			<property name="SumInsuredForTerrorism" column="SumInsuredForTerrorism" type="string" />
+			<property name="ConfigAssessedLossAmountOfTerrorismCover" column="ConfigAssessedLossAmountOfTerrorismCover" type="boolean" />
+			<property name="AssessedLossAmountOfTerrorismCover" column="AssessedLossAmountOfTerrorismCover" type="string" />
+			<property name="ConfigClaimAmountOfTerrorismCover" column="ConfigClaimAmountOfTerrorismCover" type="boolean" />
+			<property name="ClaimAmountOfTerrorismCover" column="ClaimAmountOfTerrorismCover" type="string" />
+			<property name="ConfigIsMoneyInATMCoverRequired" column="ConfigIsMoneyInATMCoverRequired" type="boolean" />
+			<property name="IsMoneyInATMCoverRequired" column="IsMoneyInATMCoverRequired" type="string" />
+			<property name="ConfigSumInsured" column="ConfigSumInsured" type="boolean" />
+			<property name="SumInsured" column="SumInsured" type="string" />
+			<property name="ConfigAssessedLossAmountOfMoneyInATMCover" column="ConfigAssessedLossAmountOfMoneyInATMCover" type="boolean" />
+			<property name="AssessedLossAmountOfMoneyInATMCover" column="AssessedLossAmountOfMoneyInATMCover" type="string" />
+			<property name="ConfigClaimAmountOfMoneyInATMCover" column="ConfigClaimAmountOfMoneyInATMCover" type="boolean" />
+			<property name="ClaimAmountOfMoneyInATMCover" column="ClaimAmountOfMoneyInATMCover" type="string" />
+			<property name="ConfigIsEarthquakeCoverRequired" column="ConfigIsEarthquakeCoverRequired" type="boolean" />
+			<property name="IsEarthquakeCoverRequired" column="IsEarthquakeCoverRequired" type="string" />
+			<property name="ConfigIsSTFICoverRequired" column="ConfigIsSTFICoverRequired" type="boolean" />
+			<property name="IsSTFICoverRequired" column="IsSTFICoverRequired" type="string" />
+			<property name="ConfigSumInsuredForSTFICover" column="ConfigSumInsuredForSTFICover" type="boolean" />
+			<property name="SumInsuredForSTFICover" column="SumInsuredForSTFICover" type="string" />
+			<property name="ConfigAssessedLossAmountOfSTFICover" column="ConfigAssessedLossAmountOfSTFICover" type="boolean" />
+			<property name="AssessedLossAmountOfSTFICover" column="AssessedLossAmountOfSTFICover" type="string" />
+			<property name="ConfigClaimAmountOfSTFICover" column="ConfigClaimAmountOfSTFICover" type="boolean" />
+			<property name="ClaimAmountOfSTFICover" column="ClaimAmountOfSTFICover" type="string" />
+			<property name="ConfigEarthquakeRequired" column="ConfigEarthquakeRequired" type="boolean" />
+			<property name="EarthquakeRequired" column="EarthquakeRequired" type="string" />
+			<property name="ConfigSumInsuredForEarthquake" column="ConfigSumInsuredForEarthquake" type="boolean" />
+			<property name="SumInsuredForEarthquake" column="SumInsuredForEarthquake" type="string" />
+			<property name="ConfigAssessedLossAmountOfEarthquakeCover" column="ConfigAssessedLossAmountOfEarthquakeCover" type="boolean" />
+			<property name="AssessedLossAmountOfEarthquakeCover" column="AssessedLossAmountOfEarthquakeCover" type="string" />
+			<property name="ConfigClaimAmountOfEarthquakeCover" column="ConfigClaimAmountOfEarthquakeCover" type="boolean" />
+			<property name="ClaimAmountOfEarthquakeCover" column="ClaimAmountOfEarthquakeCover" type="string" />
+			<property name="ConfigTerrorismRequired" column="ConfigTerrorismRequired" type="boolean" />
+			<property name="TerrorismRequired" column="TerrorismRequired" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigPreviousButton" column="ConfigPreviousButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigRedirectNextPage" column="ConfigRedirectNextPage" type="boolean" />
+			<property name="ConfigUnderInsurancePercent" column="ConfigUnderInsurancePercent" type="boolean" />
+			<property name="UnderInsurancePercent" column="UnderInsurancePercent" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

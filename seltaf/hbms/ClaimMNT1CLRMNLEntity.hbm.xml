@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimMNT1CLRMNLEntity" table="ClaimMNT1CLRMNLEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="NextPageTitle" column="NextPageTitle" type="string" />
+			<property name="ConfigPrimaryInformation" column="ConfigPrimaryInformation" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigInsuredName" column="ConfigInsuredName" type="boolean" />
+			<property name="InsuredName" column="InsuredName" type="string" />
+			<property name="ConfigValidSumInsured" column="ConfigValidSumInsured" type="boolean" />
+			<property name="ValidSumInsured" column="ValidSumInsured" type="string" />
+			<property name="ConfigNameOfWitness" column="ConfigNameOfWitness" type="boolean" />
+			<property name="NameOfWitness" column="NameOfWitness" type="string" />
+			<property name="ConfigAddressOfWitness" column="ConfigAddressOfWitness" type="boolean" />
+			<property name="AddressOfWitness" column="AddressOfWitness" type="string" />
+			<property name="ConfigCapitalSumInsured" column="ConfigCapitalSumInsured" type="boolean" />
+			<property name="CapitalSumInsured" column="CapitalSumInsured" type="string" />
+			<property name="ConfigSumInsuredForTableA" column="ConfigSumInsuredForTableA" type="boolean" />
+			<property name="SumInsuredForTableA" column="SumInsuredForTableA" type="string" />
+			<property name="ConfigSumInsuredForTableB" column="ConfigSumInsuredForTableB" type="boolean" />
+			<property name="SumInsuredForTableB" column="SumInsuredForTableB" type="string" />
+			<property name="ConfigSumInsuredForTableC" column="ConfigSumInsuredForTableC" type="boolean" />
+			<property name="SumInsuredForTableC" column="SumInsuredForTableC" type="string" />
+			<property name="ConfigSumInsuredForTableD" column="ConfigSumInsuredForTableD" type="boolean" />
+			<property name="SumInsuredForTableD" column="SumInsuredForTableD" type="string" />
+			<property name="ConfigTypeOfCause" column="ConfigTypeOfCause" type="boolean" />
+			<property name="TypeOfCause" column="TypeOfCause" type="string" />
+			<property name="ConfigTotalSumInsured" column="ConfigTotalSumInsured" type="boolean" />
+			<property name="TotalSumInsured" column="TotalSumInsured" type="string" />
+			<property name="ConfigFirstLossRequired" column="ConfigFirstLossRequired" type="boolean" />
+			<property name="FirstLossRequired" column="FirstLossRequired" type="string" />
+			<property name="ConfigFirstLossPercentage" column="ConfigFirstLossPercentage" type="boolean" />
+			<property name="FirstLossPercentage" column="FirstLossPercentage" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigEmployeeNumberOfTheInsuredPerson" column="ConfigEmployeeNumberOfTheInsuredPerson" type="boolean" />
+			<property name="EmployeeNumberOfTheInsuredPerson" column="EmployeeNumberOfTheInsuredPerson" type="string" />
+			<property name="ConfigAddressOftheBuilding" column="ConfigAddressOftheBuilding" type="boolean" />
+			<property name="AddressOftheBuilding" column="AddressOftheBuilding" type="string" />
+			<property name="ConfigValidSumInsuredForGS" column="ConfigValidSumInsuredForGS" type="boolean" />
+			<property name="ValidSumInsuredForGS" column="ValidSumInsuredForGS" type="string" />
+			<property name="ConfigSectionOneRequired" column="ConfigSectionOneRequired" type="boolean" />
+			<property name="SectionOneRequired" column="SectionOneRequired" type="string" />
+			<property name="ConfigSectiontwoRequired" column="ConfigSectiontwoRequired" type="boolean" />
+			<property name="SectiontwoRequired" column="SectiontwoRequired" type="string" />
+			<property name="ConfigSectionthreeRequired" column="ConfigSectionthreeRequired" type="boolean" />
+			<property name="SectionthreeRequired" column="SectionthreeRequired" type="string" />
+			<property name="ConfigSectionFourRequired" column="ConfigSectionFourRequired" type="boolean" />
+			<property name="SectionFourRequired" column="SectionFourRequired" type="string" />
+			<property name="ConfigSectionFiveRequired" column="ConfigSectionFiveRequired" type="boolean" />
+			<property name="SectionFiveRequired" column="SectionFiveRequired" type="string" />
+			<property name="ConfigSectionSixRequired" column="ConfigSectionSixRequired" type="boolean" />
+			<property name="SectionSixRequired" column="SectionSixRequired" type="string" />
+			<property name="ConfigNetClaimAmount" column="ConfigNetClaimAmount" type="boolean" />
+			<property name="NetClaimAmount" column="NetClaimAmount" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.AccountingAccDetailsEntity" table="AccountingAccDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigAccountDetailsTab" column="ConfigAccountDetailsTab" type="boolean" />
+			<property name="ConfigAnnualBalanceDetailsTab" column="ConfigAnnualBalanceDetailsTab" type="boolean" />
+			<property name="ConfigAccountType" column="ConfigAccountType" type="boolean" />
+			<property name="AccountType" column="AccountType" type="string" />
+			<property name="ConfigCompany" column="ConfigCompany" type="boolean" />
+			<property name="Company" column="Company" type="string" />
+			<property name="ConfigBranchCode" column="ConfigBranchCode" type="boolean" />
+			<property name="BranchCode" column="BranchCode" type="string" />
+			<property name="ConfigDepartment" column="ConfigDepartment" type="boolean" />
+			<property name="Department" column="Department" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigGlSlCode" column="ConfigGlSlCode" type="boolean" />
+			<property name="GlSlCode" column="GlSlCode" type="string" />
+			<property name="ConfigGlDescription" column="ConfigGlDescription" type="boolean" />
+			<property name="GlDescription" column="GlDescription" type="string" />
+			<property name="ConfigCurrency" column="ConfigCurrency" type="boolean" />
+			<property name="Currency" column="Currency" type="string" />
+			<property name="ConfigOpDbBalance " column="ConfigOpDbBalance " type="boolean" />
+			<property name="OpDbBalance " column="OpDbBalance " type="string" />
+			<property name="ConfigOpCrBalance" column="ConfigOpCrBalance" type="boolean" />
+			<property name="OpCrBalance" column="OpCrBalance" type="string" />
+			<property name="ConfigCurDbBalance" column="ConfigCurDbBalance" type="boolean" />
+			<property name="CurDbBalance" column="CurDbBalance" type="string" />
+			<property name="ConfigCurCrBalance" column="ConfigCurCrBalance" type="boolean" />
+			<property name="CurCrBalance" column="CurCrBalance" type="string" />
+			<property name="ConfigOpDbBalanceOrgCur" column="ConfigOpDbBalanceOrgCur" type="boolean" />
+			<property name="OpDbBalanceOrgCur" column="OpDbBalanceOrgCur" type="string" />
+			<property name="ConfigOpCrBalanceOrgCur" column="ConfigOpCrBalanceOrgCur" type="boolean" />
+			<property name="OpCrBalanceOrgCur" column="OpCrBalanceOrgCur" type="string" />
+			<property name="ConfigCurDbBalanceOrgCur" column="ConfigCurDbBalanceOrgCur" type="boolean" />
+			<property name="CurDbBalanceOrgCur" column="CurDbBalanceOrgCur" type="string" />
+			<property name="ConfigCurCrBalanceOrgCur" column="ConfigCurCrBalanceOrgCur" type="boolean" />
+			<property name="CurCrBalanceOrgCur" column="CurCrBalanceOrgCur" type="string" />
+			<property name="ConfigYearlyBudget " column="ConfigYearlyBudget " type="boolean" />
+			<property name="YearlyBudget" column="YearlyBudget" type="string" />
+			<property name="ConfigMonthlyBudget" column="ConfigMonthlyBudget" type="boolean" />
+			<property name="MonthlyBudget" column="MonthlyBudget" type="string" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigUpdateGlButton" column="ConfigUpdateGlButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.RiskDetailsMCEntity" table="RiskDetailsMCEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ConfigBillType" column="ConfigBillType" type="boolean" />
+			<property name="BillType" column="BillType" type="string" />
+			<property name="ConfigBillDate" column="ConfigBillDate" type="boolean" />
+			<property name="BillDate" column="BillDate" type="string" />
+			<property name="ConfigBillNumber" column="ConfigBillNumber" type="boolean" />
+			<property name="BillNumber" column="BillNumber" type="string" />
+			<property name="ConfigInvoiceNumber" column="ConfigInvoiceNumber" type="boolean" />
+			<property name="InvoiceNumber" column="InvoiceNumber" type="string" />
+			<property name="ConfigInvoiceDate" column="ConfigInvoiceDate" type="boolean" />
+			<property name="InvoiceDate" column="InvoiceDate" type="string" />
+			<property name="ConfigMarkNumber" column="ConfigMarkNumber" type="boolean" />
+			<property name="MarkNumber" column="MarkNumber" type="string" />
+			<property name="ConfigConsigneeName" column="ConfigConsigneeName" type="boolean" />
+			<property name="ConsigneeName" column="ConsigneeName" type="string" />
+			<property name="ConfigConsigneeAddress" column="ConfigConsigneeAddress" type="boolean" />
+			<property name="ConsigneeAddress" column="ConsigneeAddress" type="string" />
+			<property name="ConfigFromPlace" column="ConfigFromPlace" type="boolean" />
+			<property name="FromPlace" column="FromPlace" type="string" />
+			<property name="ConfigToPlace" column="ConfigToPlace" type="boolean" />
+			<property name="ToPlace" column="ToPlace" type="string" />
+			<property name="ConfigCommodityType" column="ConfigCommodityType" type="boolean" />
+			<property name="CommodityType" column="CommodityType" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigsaveButton" column="ConfigsaveButton" type="boolean" />
+			<property name="ConfigClaimAmount" column="ConfigClaimAmount" type="boolean" />
+			<property name="ClaimAmount" column="ClaimAmount" type="string" />
+			<property name="ConfigSalvage" column="ConfigSalvage" type="boolean" />
+			<property name="Salvage" column="Salvage" type="string" />
+			<property name="ConfigNetPayableAmount" column="ConfigNetPayableAmount" type="boolean" />
+			<property name="NetPayableAmount" column="NetPayableAmount" type="string" />
+			<property name="ConfigLossLocationAt" column="ConfigLossLocationAt" type="boolean" />
+			<property name="LossLocationAt" column="LossLocationAt" type="string" />
+			<property name="ConfigUnderInsuranceAmount" column="ConfigUnderInsuranceAmount" type="boolean" />
+			<property name="UnderInsuranceAmount" column="UnderInsuranceAmount" type="string" />
+			<property name="ConfigTypeoftheBill" column="ConfigTypeoftheBill" type="boolean" />
+			<property name="TypeoftheBill" column="TypeoftheBill" type="string" />
+			<property name="ConfigCargoSumInsured" column="ConfigCargoSumInsured" type="boolean" />
+			<property name="CargoSumInsured" column="CargoSumInsured" type="string" />
+			<property name="ConfigDutyInsuranceValue" column="ConfigDutyInsuranceValue" type="boolean" />
+			<property name="DutyInsuranceValue" column="DutyInsuranceValue" type="string" />
+			<property name="ConfigIncreasedValueSumInsured" column="ConfigIncreasedValueSumInsured" type="boolean" />
+			<property name="IncreasedValueSumInsured" column="IncreasedValueSumInsured" type="string" />
+			<property name="ConfigAssociateInvoiceForClaim" column="ConfigAssociateInvoiceForClaim" type="boolean" />
+			<property name="AssociateInvoiceForClaim" column="AssociateInvoiceForClaim" type="string" />
+			<property name="ConfigDeclarationDate" column="ConfigDeclarationDate" type="boolean" />
+			<property name="DeclarationDate" column="DeclarationDate" type="string" />
+			<property name="ConfigOPAmount" column="ConfigOPAmount" type="boolean" />
+			<property name="OPAmount" column="OPAmount" type="string" />
+			<property name="ConfigBalanceSumInsured" column="ConfigBalanceSumInsured" type="boolean" />
+			<property name="BalanceSumInsured" column="BalanceSumInsured" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

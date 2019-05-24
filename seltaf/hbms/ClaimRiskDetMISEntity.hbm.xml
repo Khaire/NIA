@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimRiskDetMISEntity" table="ClaimRiskDetMISEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimMemberT1T2CLRAttTitle" column="ClaimMemberT1T2CLRAttTitle" type="string" />
+			<property name="ClaimT3PropertyForST" column="ClaimT3PropertyForST" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigpolicyNumber" column="ConfigpolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigclaimDate" column="ConfigclaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigRetroactiveDate" column="ConfigRetroactiveDate" type="boolean" />
+			<property name="RetroactiveDate" column="RetroactiveDate" type="string" />
+			<property name="ConfigGeographicalJurisdiction" column="ConfigGeographicalJurisdiction" type="boolean" />
+			<property name="GeographicalJurisdiction" column="GeographicalJurisdiction" type="string" />
+			<property name="ConfigAnyOneAccident" column="ConfigAnyOneAccident" type="boolean" />
+			<property name="AnyOneAccident" column="AnyOneAccident" type="string" />
+			<property name="ConfigAnyOneYearAndInTheAggregate" column="ConfigAnyOneYearAndInTheAggregate" type="boolean" />
+			<property name="AnyOneYearAndInTheAggregate" column="AnyOneYearAndInTheAggregate" type="string" />
+			<property name="ConfigDeductibleForIndia" column="ConfigDeductibleForIndia" type="boolean" />
+			<property name="DeductibleForIndia" column="DeductibleForIndia" type="string" />
+			<property name="ConfigDeductibleForWorldwideExcludingUSAAndCanada" column="ConfigDeductibleForWorldwideExcludingUSAAndCanada" type="boolean" />
+			<property name="DeductibleForWorldwideExcludingUSAAndCanada" column="DeductibleForWorldwideExcludingUSAAndCanada" type="string" />
+			<property name="ConfigDeductibleForWorldwideIncludingUSAAndCanada" column="ConfigDeductibleForWorldwideIncludingUSAAndCanada" type="boolean" />
+			<property name="DeductibleForWorldwideIncludingUSAAndCanada" column="DeductibleForWorldwideIncludingUSAAndCanada" type="string" />
+			<property name="ConfigVoluntaryExcess" column="ConfigVoluntaryExcess" type="boolean" />
+			<property name="VoluntaryExcess" column="VoluntaryExcess" type="string" />
+			<property name="ConfigNameOftheInjuredWorkmen" column="ConfigNameOftheInjuredWorkmen" type="boolean" />
+			<property name="NameOftheInjuredWorkmen" column="NameOftheInjuredWorkmen" type="string" />
+			<property name="ConfigAgeOrDateOfBirth" column="ConfigAgeOrDateOfBirth" type="boolean" />
+			<property name="AgeOrDateOfBirth" column="AgeOrDateOfBirth" type="string" />
+			<property name="ConfigNatureOfjobOrDuties" column="ConfigNatureOfjobOrDuties" type="boolean" />
+			<property name="NatureOfjobOrDuties" column="NatureOfjobOrDuties" type="string" />
+			<property name="ConfigDescriptionOfLossOrInjury" column="ConfigDescriptionOfLossOrInjury" type="boolean" />
+			<property name="DescriptionOfLossOrInjury" column="DescriptionOfLossOrInjury" type="string" />
+			<property name="ConfigProceedButton" column="ConfigProceedButton" type="boolean" />
+			<property name="ConfigNextButton" column="ConfigNextButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigDateOfLoss" column="ConfigDateOfLoss" type="boolean" />
+			<property name="DateOfLoss" column="DateOfLoss" type="string" />
+			<property name="ConfigNoofdaysofdisablement" column="ConfigNoofdaysofdisablement" type="boolean" />
+			<property name="Noofdaysofdisablement" column="Noofdaysofdisablement" type="string" />
+			<property name="ConfigPercentofdisablement" column="ConfigPercentofdisablement" type="boolean" />
+			<property name="Percentofdisablement" column="Percentofdisablement" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

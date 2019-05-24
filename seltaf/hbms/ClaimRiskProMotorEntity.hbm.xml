@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimRiskProMotorEntity" table="ClaimRiskProMotorEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimRiskPropertyTitle" column="ClaimRiskPropertyTitle" type="string" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigInsuredName" column="ConfigInsuredName" type="boolean" />
+			<property name="InsuredName" column="InsuredName" type="string" />
+			<property name="ConfigRegistrationNo" column="ConfigRegistrationNo" type="boolean" />
+			<property name="RegistrationNo" column="RegistrationNo" type="string" />
+			<property name="ConfigMake" column="ConfigMake" type="boolean" />
+			<property name="Make" column="Make" type="string" />
+			<property name="ConfigModel" column="ConfigModel" type="boolean" />
+			<property name="Model" column="Model" type="string" />
+			<property name="ConfigChassisNo" column="ConfigChassisNo" type="boolean" />
+			<property name="ChassisNo" column="ChassisNo" type="string" />
+			<property name="ConfigTypeOfVehicleInsured" column="ConfigTypeOfVehicleInsured" type="boolean" />
+			<property name="TypeOfVehicleInsured" column="TypeOfVehicleInsured" type="string" />
+			<property name="ConfigEngineNo" column="ConfigEngineNo" type="boolean" />
+			<property name="EngineNo" column="EngineNo" type="string" />
+			<property name="ConfigTrailerOptedOrNot" column="ConfigTrailerOptedOrNot" type="boolean" />
+			<property name="TrailerOptedOrNot" column="TrailerOptedOrNot" type="string" />
+			<property name="ConfigRegisteredLadenWeight" column="ConfigRegisteredLadenWeight" type="boolean" />
+			<property name="RegisteredLadenWeight" column="RegisteredLadenWeight" type="string" />
+			<property name="ConfigUnladenWeight" column="ConfigUnladenWeight" type="boolean" />
+			<property name="UnladenWeight" column="UnladenWeight" type="string" />
+			<property name="ConfigWeightOfGoodsCarried" column="ConfigWeightOfGoodsCarried" type="boolean" />
+			<property name="WeightOfGoodsCarried" column="WeightOfGoodsCarried" type="string" />
+			<property name="ConfigNatureOfPermit" column="ConfigNatureOfPermit" type="boolean" />
+			<property name="NatureOfPermit" column="NatureOfPermit" type="string" />
+			<property name="ConfigNatureOfGoodsCarried" column="ConfigNatureOfGoodsCarried" type="boolean" />
+			<property name="NatureOfGoodsCarried" column="NatureOfGoodsCarried" type="string" />
+			<property name="ConfigVehiclePlyingForHire" column="ConfigVehiclePlyingForHire" type="boolean" />
+			<property name="VehiclePlyingForHire" column="VehiclePlyingForHire" type="string" />
+			<property name="ConfigNumberOfPassengersCarried" column="ConfigNumberOfPassengersCarried" type="boolean" />
+			<property name="NumberOfPassengersCarried" column="NumberOfPassengersCarried" type="string" />
+			<property name="ConfigNumberOfPassengerAsPerPermit" column="ConfigNumberOfPassengerAsPerPermit" type="boolean" />
+			<property name="NumberOfPassengerAsPerPermit" column="NumberOfPassengerAsPerPermit" type="string" />
+			<property name="ConfigNumberOfPersonsDead" column="ConfigNumberOfPersonsDead" type="boolean" />
+			<property name="NumberOfPersonsDead" column="NumberOfPersonsDead" type="string" />
+			<property name="ConfigNumberOfPersonsInjured" column="ConfigNumberOfPersonsInjured" type="boolean" />
+			<property name="NumberOfPersonsInjured" column="NumberOfPersonsInjured" type="string" />
+			<property name="ConfigNumberOfPersonsForTPPD" column="ConfigNumberOfPersonsForTPPD" type="boolean" />
+			<property name="NumberOfPersonsForTPPD" column="NumberOfPersonsForTPPD" type="string" />
+			<property name="ConfigTotalNoOfClaimForSameClaimEvent" column="ConfigTotalNoOfClaimForSameClaimEvent" type="boolean" />
+			<property name="TotalNoOfClaimForSameClaimEvent" column="TotalNoOfClaimForSameClaimEvent" type="string" />
+			<property name="ConfigTotalNoOfCasesOfThirdPartyClaim" column="ConfigTotalNoOfCasesOfThirdPartyClaim" type="boolean" />
+			<property name="TotalNoOfCasesOfThirdPartyClaim" column="TotalNoOfCasesOfThirdPartyClaim" type="string" />
+			<property name="ConfigNameOfWitness" column="ConfigNameOfWitness" type="boolean" />
+			<property name="NameOfWitness" column="NameOfWitness" type="string" />
+			<property name="ConfigAddressOfWitness" column="ConfigAddressOfWitness" type="boolean" />
+			<property name="AddressOfWitness" column="AddressOfWitness" type="string" />
+			<property name="ConfigPurposeOfUsingVehicle" column="ConfigPurposeOfUsingVehicle" type="boolean" />
+			<property name="PurposeOfUsingVehicle" column="PurposeOfUsingVehicle" type="string" />
+			<property name="ConfigVehicleRoadworthyCondition" column="ConfigVehicleRoadworthyCondition" type="boolean" />
+			<property name="VehicleRoadworthyCondition" column="VehicleRoadworthyCondition" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigClaimRiskForward" column="ConfigClaimRiskForward" type="boolean" />
+			<property name="ConfigAnyTpClaimOccured" column="ConfigAnyTpClaimOccured" type="boolean" />
+			<property name="AnyTpClaimOccured" column="AnyTpClaimOccured" type="string" />
+			<property name="ConfigTPClaimRiskForward" column="ConfigTPClaimRiskForward" type="boolean" />
+			<property name="ConfigCloseWindowButton" column="ConfigCloseWindowButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

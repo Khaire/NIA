@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimExcessEngEntity" table="ClaimExcessEngEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="ClaimDeatilsExcessTitle" column="ClaimDeatilsExcessTitle" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributeTab" column="ConfigInsuredItemAttributeTab" type="boolean" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigExcessAmount" column="ConfigExcessAmount" type="boolean" />
+			<property name="ExcessAmount" column="ExcessAmount" type="string" />
+			<property name="ConfigPolicyNoCertificateNo3" column="ConfigPolicyNoCertificateNo3" type="boolean" />
+			<property name="PolicyNoCertificateNo3" column="PolicyNoCertificateNo3" type="string" />
+			<property name="ConfigSumInsured3" column="ConfigSumInsured3" type="boolean" />
+			<property name="SumInsured3" column="SumInsured3" type="string" />
+			<property name="ConfigMarineCargoClaimNo3" column="ConfigMarineCargoClaimNo3" type="boolean" />
+			<property name="MarineCargoClaimNo3" column="MarineCargoClaimNo3" type="string" />
+			<property name="ConfigMarineCargoPolicyNoCertificateNo3" column="ConfigMarineCargoPolicyNoCertificateNo3" type="boolean" />
+			<property name="MarineCargoPolicyNoCertificateNo3" column="MarineCargoPolicyNoCertificateNo3" type="string" />
+			<property name="ConfigNatureOfLoss3" column="ConfigNatureOfLoss3" type="boolean" />
+			<property name="NatureOfLoss3" column="NatureOfLoss3" type="string" />
+			<property name="ConfigCauseOfLoss3" column="ConfigCauseOfLoss3" type="boolean" />
+			<property name="CauseOfLoss3" column="CauseOfLoss3" type="string" />
+			<property name="ConfigDateOfLoss3" column="ConfigDateOfLoss3" type="boolean" />
+			<property name="DateOfLoss3" column="DateOfLoss3" type="string" />
+			<property name="ConfigComments3" column="ConfigComments3" type="boolean" />
+			<property name="Comments3" column="Comments3" type="string" />
+			<property name="ConfigDateOfIntimation3" column="ConfigDateOfIntimation3" type="boolean" />
+			<property name="DateOfIntimation3" column="DateOfIntimation3" type="string" />
+			<property name="ConfigTimeOfLoss3" column="ConfigTimeOfLoss3" type="boolean" />
+			<property name="TimeOfLoss3" column="TimeOfLoss3" type="string" />
+			<property name="ConfigPolicyNoCertificateNo4" column="ConfigPolicyNoCertificateNo4" type="boolean" />
+			<property name="PolicyNoCertificateNo4" column="PolicyNoCertificateNo4" type="string" />
+			<property name="ConfigSumInsured4" column="ConfigSumInsured4" type="boolean" />
+			<property name="SumInsured4" column="SumInsured4" type="string" />
+			<property name="ConfigMarineCargoClaimNo4" column="ConfigMarineCargoClaimNo4" type="boolean" />
+			<property name="MarineCargoClaimNo4" column="MarineCargoClaimNo4" type="string" />
+			<property name="ConfigMarineCargoPolicyNoCertificateNo4" column="ConfigMarineCargoPolicyNoCertificateNo4" type="boolean" />
+			<property name="MarineCargoPolicyNoCertificateNo4" column="MarineCargoPolicyNoCertificateNo4" type="string" />
+			<property name="ConfigNatureOfLoss4" column="ConfigNatureOfLoss4" type="boolean" />
+			<property name="NatureOfLoss4" column="NatureOfLoss4" type="string" />
+			<property name="ConfigCauseOfLoss4" column="ConfigCauseOfLoss4" type="boolean" />
+			<property name="CauseOfLoss4" column="CauseOfLoss4" type="string" />
+			<property name="ConfigDateOfLoss4" column="ConfigDateOfLoss4" type="boolean" />
+			<property name="DateOfLoss4" column="DateOfLoss4" type="string" />
+			<property name="ConfigComments4" column="ConfigComments4" type="boolean" />
+			<property name="Comments4" column="Comments4" type="string" />
+			<property name="ConfigDateOfIntimation4" column="ConfigDateOfIntimation4" type="boolean" />
+			<property name="DateOfIntimation4" column="DateOfIntimation4" type="string" />
+			<property name="ConfigTimeOfLoss4" column="ConfigTimeOfLoss4" type="boolean" />
+			<property name="TimeOfLoss4" column="TimeOfLoss4" type="string" />
+			<property name="ConfigCalculatedExcessCPM" column="ConfigCalculatedExcessCPM" type="boolean" />
+			<property name="CalculatedExcessCPM" column="CalculatedExcessCPM" type="string" />
+			<property name="ConfigCalculatedExcessDS" column="ConfigCalculatedExcessDS" type="boolean" />
+			<property name="CalculatedExcessDS" column="CalculatedExcessDS" type="string" />
+			<property name="ConfigCalculatedExcessWP" column="ConfigCalculatedExcessWP" type="boolean" />
+			<property name="CalculatedExcessWP" column="CalculatedExcessWP" type="string" />
+			<property name="ConfigCalculatedExcessEC" column="ConfigCalculatedExcessEC" type="boolean" />
+			<property name="CalculatedExcessEC" column="CalculatedExcessEC" type="string" />
+			<property name="ConfigCalculatedExcessEI" column="ConfigCalculatedExcessEI" type="boolean" />
+			<property name="CalculatedExcessEI" column="CalculatedExcessEI" type="string" />
+			<property name="ConfigCalculatedExcessMB" column="ConfigCalculatedExcessMB" type="boolean" />
+			<property name="CalculatedExcessMB" column="CalculatedExcessMB" type="string" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

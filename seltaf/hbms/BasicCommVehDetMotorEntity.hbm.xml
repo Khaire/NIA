@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.BasicCommVehDetMotorEntity" table="BasicCommVehDetMotorEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="ConfigLoadingAmountForOD" column="ConfigLoadingAmountForOD" type="boolean" />
+			<property name="LoadingAmountForOD" column="LoadingAmountForOD" type="string" />
+			<property name="ConfigCorrectionInPremiumInViewOfCourtOrderWithoutPrejudice" column="ConfigCorrectionInPremiumInViewOfCourtOrderWithoutPrejudice" type="boolean" />
+			<property name="CorrectionInPremiumInViewOfCourtOrderWithoutPrejudice" column="CorrectionInPremiumInViewOfCourtOrderWithoutPrejudice" type="string" />
+			<property name="ConfigExtensionofGeographicalArearequired" column="ConfigExtensionofGeographicalArearequired" type="boolean" />
+			<property name="ExtensionofGeographicalArearequired" column="ExtensionofGeographicalArearequired" type="string" />
+			<property name="ConfigExtensionofGeographicalAreatoBangladesh" column="ConfigExtensionofGeographicalAreatoBangladesh" type="boolean" />
+			<property name="ExtensionofGeographicalAreatoBangladesh" column="ExtensionofGeographicalAreatoBangladesh" type="string" />
+			<property name="ConfigExtensionofGeographicalAreatoBhutan" column="ConfigExtensionofGeographicalAreatoBhutan" type="boolean" />
+			<property name="ExtensionofGeographicalAreatoBhutan" column="ExtensionofGeographicalAreatoBhutan" type="string" />
+			<property name="ConfigExtensionofGeographicalAreatoNepal" column="ConfigExtensionofGeographicalAreatoNepal" type="boolean" />
+			<property name="ExtensionofGeographicalAreatoNepal" column="ExtensionofGeographicalAreatoNepal" type="string" />
+			<property name="ConfigExtensionofGeographicalAreatoPakistan" column="ConfigExtensionofGeographicalAreatoPakistan" type="boolean" />
+			<property name="ExtensionofGeographicalAreatoPakistan" column="ExtensionofGeographicalAreatoPakistan" type="string" />
+			<property name="ConfigExtensionofGeographicalAreatoSriLanka" column="ConfigExtensionofGeographicalAreatoSriLanka" type="boolean" />
+			<property name="ExtensionofGeographicalAreatoSriLanka" column="ExtensionofGeographicalAreatoSriLanka" type="string" />
+			<property name="ConfigExtensionofGeographicalAreatoMaldives" column="ConfigExtensionofGeographicalAreatoMaldives" type="boolean" />
+			<property name="ExtensionofGeographicalAreatoMaldives" column="ExtensionofGeographicalAreatoMaldives" type="string" />
+			<property name="ConfigVehicleRequisitionedbyGovernment" column="ConfigVehicleRequisitionedbyGovernment" type="boolean" />
+			<property name="VehicleRequisitionedbyGovernment" column="VehicleRequisitionedbyGovernment" type="string" />
+			<property name="ConfigPolicyExcessRs" column="ConfigPolicyExcessRs" type="boolean" />
+			<property name="PolicyExcessRs" column="PolicyExcessRs" type="string" />
+			<property name="ConfigImposedExcessRs" column="ConfigImposedExcessRs" type="boolean" />
+			<property name="ImposedExcessRs" column="ImposedExcessRs" type="string" />
+			<property name="ConfigPreExistingDamageDetails" column="ConfigPreExistingDamageDetails" type="boolean" />
+			<property name="PreExistingDamageDetails" column="PreExistingDamageDetails" type="string" />
+			<property name="ConfigODDiscountPercent" column="ConfigODDiscountPercent" type="boolean" />
+			<property name="ODDiscountPercent" column="ODDiscountPercent" type="string" />
+			<property name="ConfigVoluntaryExcessforPc" column="ConfigVoluntaryExcessforPc" type="boolean" />
+			<property name="VoluntaryExcessforPc" column="VoluntaryExcessforPc" type="string" />
+			<property name="ConfigVoluntaryExcessForTW" column="ConfigVoluntaryExcessForTW" type="boolean" />
+			<property name="VoluntaryExcessForTW" column="VoluntaryExcessForTW" type="string" />
+			<property name="ConfigLoadingAmountForTP" column="ConfigLoadingAmountForTP" type="boolean" />
+			<property name="LoadingAmountForTP" column="LoadingAmountForTP" type="string" />
+			<property name="ConfigQuoteNo" column="ConfigQuoteNo" type="boolean" />
+			<property name="QuoteNo" column="QuoteNo" type="string" />
+			<property name="ConfigStatus" column="ConfigStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigPolicyHolderName" column="ConfigPolicyHolderName" type="boolean" />
+			<property name="PolicyHolderName" column="PolicyHolderName" type="string" />
+			<property name="ConfigProductName" column="ConfigProductName" type="boolean" />
+			<property name="ProductName" column="ProductName" type="string" />
+			<property name="ConfigInsuredInterestCode" column="ConfigInsuredInterestCode" type="boolean" />
+			<property name="InsuredInterestCode" column="InsuredInterestCode" type="string" />
+			<property name="ConfigInsuredInterestSerialNo" column="ConfigInsuredInterestSerialNo" type="boolean" />
+			<property name="InsuredInterestSerialNo" column="InsuredInterestSerialNo" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigMemberDetail" column="ConfigMemberDetail" type="boolean" />
+			<property name="ConfigMemberAttributes" column="ConfigMemberAttributes" type="boolean" />
+			<property name="ConfigMemberAttachCoverages" column="ConfigMemberAttachCoverages" type="boolean" />
+			<property name="ConfigMemberRelations" column="ConfigMemberRelations" type="boolean" />
+			<property name="ConfigInsuredInterestPayments" column="ConfigInsuredInterestPayments" type="boolean" />
+			<property name="ConfigInsuredInterestDocuments" column="ConfigInsuredInterestDocuments" type="boolean" />
+			<property name="ConfigInsuredInterestSchedule" column="ConfigInsuredInterestSchedule" type="boolean" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigBackwardButton" column="ConfigBackwardButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

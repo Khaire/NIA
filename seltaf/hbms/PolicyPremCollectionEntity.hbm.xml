@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolicyPremCollectionEntity" table="PolicyPremCollectionEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="DependencyForCollectionNumber" column="DependencyForCollectionNumber" type="string" />
+			<property name="DependencyForPolicyPremCollectionNo" column="DependencyForPolicyPremCollectionNo" type="string" />
+			<property name="DependencyForAccountingMaintainTransaction" column="DependencyForAccountingMaintainTransaction" type="string" />
+			<property name="DependencyForAccountingChkDishonour" column="DependencyForAccountingChkDishonour" type="string" />
+			<property name="DependencyForAccountingDistribution" column="DependencyForAccountingDistribution" type="string" />
+			<property name="DependencyForAccountingCollectionSearch" column="DependencyForAccountingCollectionSearch" type="string" />
+			<property name="ConfigCollectionInstrumentAmt" column="ConfigCollectionInstrumentAmt" type="boolean" />
+			<property name="CollectionInstrumentAmt" column="CollectionInstrumentAmt" type="string" />
+			<property name="ConfigCollectionNumber" column="ConfigCollectionNumber" type="boolean" />
+			<property name="CollectionNumber" column="CollectionNumber" type="string" />
+			<property name="ConfigCollectNo" column="ConfigCollectNo" type="boolean" />
+			<property name="CollectNo" column="CollectNo" type="string" />
+			<property name="ConfigReceivedFrom" column="ConfigReceivedFrom" type="boolean" />
+			<property name="ReceivedFrom" column="ReceivedFrom" type="string" />
+			<property name="ConfigSourceofCollection" column="ConfigSourceofCollection" type="boolean" />
+			<property name="SourceofCollection" column="SourceofCollection" type="string" />
+			<property name="ConfigCollectionType" column="ConfigCollectionType" type="boolean" />
+			<property name="CollectionType" column="CollectionType" type="string" />
+			<property name="ConfigOtherApprovedSrc" column="ConfigOtherApprovedSrc" type="boolean" />
+			<property name="OtherApprovedSrc" column="OtherApprovedSrc" type="string" />
+			<property name="ConfigDateofCollection" column="ConfigDateofCollection" type="boolean" />
+			<property name="DateofCollection" column="DateofCollection" type="string" />
+			<property name="ConfigCollectionRowCheckBox" column="ConfigCollectionRowCheckBox" type="boolean" />
+			<property name="CollectionRowCheckBox" column="CollectionRowCheckBox" type="string" />
+			<property name="ConfigCollectionModeDropdown" column="ConfigCollectionModeDropdown" type="boolean" />
+			<property name="CollectionModeDropdown" column="CollectionModeDropdown" type="string" />
+			<property name="ConfigQuotationNo" column="ConfigQuotationNo" type="boolean" />
+			<property name="PolicyNoQuotationNo" column="PolicyNoQuotationNo" type="string" />
+			<property name="ConfigQuotationNoFindButton" column="ConfigQuotationNoFindButton" type="boolean" />
+			<property name="ConfigSearchQuoteNo" column="ConfigSearchQuoteNo" type="boolean" />
+			<property name="ConfigPremiumToBeCollected" column="ConfigPremiumToBeCollected" type="boolean" />
+			<property name="PremiumToBeCollected" column="PremiumToBeCollected" type="string" />
+			<property name="ConfigEffectiveDate" column="ConfigEffectiveDate" type="boolean" />
+			<property name="EffectiveDate" column="EffectiveDate" type="string" />
+			<property name="ConfigCollectionAmountRs" column="ConfigCollectionAmountRs" type="boolean" />
+			<property name="CollectionAmountRs" column="CollectionAmountRs" type="string" />
+			<property name="ConfigAccountCode" column="ConfigAccountCode" type="boolean" />
+			<property name="AccountCode" column="AccountCode" type="string" />
+			<property name="ConfigSubCode" column="ConfigSubCode" type="boolean" />
+			<property name="SubCode" column="SubCode" type="string" />
+			<property name="ConfigDrCr" column="ConfigDrCr" type="boolean" />
+			<property name="DrCr" column="DrCr" type="string" />
+			<property name="ConfigReferenceNo" column="ConfigReferenceNo" type="boolean" />
+			<property name="ReferenceNo" column="ReferenceNo" type="string" />
+			<property name="ConfigVoucherNumber" column="ConfigVoucherNumber" type="boolean" />
+			<property name="VoucherNumber" column="VoucherNumber" type="string" />
+			<property name="ConfigReferenceType" column="ConfigReferenceType" type="boolean" />
+			<property name="ReferenceType" column="ReferenceType" type="string" />
+			<property name="ConfigReferenceNoAccountingTransaction" column="ConfigReferenceNoAccountingTransaction" type="boolean" />
+			<property name="ReferenceNoAccountingTransaction" column="ReferenceNoAccountingTransaction" type="string" />
+			<property name="ConfigScrollDate" column="ConfigScrollDate" type="boolean" />
+			<property name="ScrollDate" column="ScrollDate" type="string" />
+			<property name="ConfigChequeInsDate" column="ConfigChequeInsDate" type="boolean" />
+			<property name="ChequeInsDate" column="ChequeInsDate" type="string" />
+			<property name="ConfigExcessChequeInsDate" column="ConfigExcessChequeInsDate" type="boolean" />
+			<property name="ConfigChequeInsNumber" column="ConfigChequeInsNumber" type="boolean" />
+			<property name="ChequeInsNumber" column="ChequeInsNumber" type="string" />
+			<property name="ConfigChequeInsType" column="ConfigChequeInsType" type="boolean" />
+			<property name="ChequeInsType" column="ChequeInsType" type="string" />
+			<property name="ConfigDraweeBankName" column="ConfigDraweeBankName" type="boolean" />
+			<property name="DraweeBankName" column="DraweeBankName" type="string" />
+			<property name="ConfigMICRCode" column="ConfigMICRCode" type="boolean" />
+			<property name="MICRCode" column="MICRCode" type="string" />
+			<property name="ConfigIFSCCode" column="ConfigIFSCCode" type="boolean" />
+			<property name="IFSCCode" column="IFSCCode" type="string" />
+			<property name="ConfigDraweeBankBranch" column="ConfigDraweeBankBranch" type="boolean" />
+			<property name="DraweeBankBranch" column="DraweeBankBranch" type="string" />
+			<property name="ConfigNarration" column="ConfigNarration" type="boolean" />
+			<property name="Narration" column="Narration" type="string" />
+			<property name="ConfigGetTotalButton" column="ConfigGetTotalButton" type="boolean" />
+			<property name="ConfigAddNewRowButton" column="ConfigAddNewRowButton" type="boolean" />
+			<property name="ConfigAddPreviousRowButton" column="ConfigAddPreviousRowButton" type="boolean" />
+			<property name="ConfigAddPreviousRowCheckButton" column="ConfigAddPreviousRowCheckButton" type="boolean" />
+			<property name="ConfigDeleteRowButton" column="ConfigDeleteRowButton" type="boolean" />
+			<property name="ConfigCurrencyButton" column="ConfigCurrencyButton" type="boolean" />
+			<property name="ConfigSearchButton" column="ConfigSearchButton" type="boolean" />
+			<property name="ConfigSave" column="ConfigSave" type="boolean" />
+			<property name="ConfigBack" column="ConfigBack" type="boolean" />
+			<property name="ConfigAccountingCollectionBack" column="ConfigAccountingCollectionBack" type="boolean" />
+			<property name="ConfigCompanyDropdown" column="ConfigCompanyDropdown" type="boolean" />
+			<property name="CompanyDropdown" column="CompanyDropdown" type="string" />
+			<property name="ConfigEndorseUH" column="ConfigEndorseUH" type="boolean" />
+			<property name="ConfigCollectionSearchBackButton" column="ConfigCollectionSearchBackButton" type="boolean" />
+			<property name="ConfigPolicySearchNo" column="ConfigPolicySearchNo" type="boolean" />
+			<property name="ConfigSearchStatus" column="ConfigSearchStatus" type="boolean" />
+			<property name="SearchStatus" column="SearchStatus" type="string" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

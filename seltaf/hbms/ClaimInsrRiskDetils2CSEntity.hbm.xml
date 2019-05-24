@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimInsrRiskDetils2CSEntity" table="ClaimInsrRiskDetils2CSEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="boolean" />
+			<property name="Product" column="Product" type="string" />
+			<property name="InsuredItemAttributesPageTitle" column="InsuredItemAttributesPageTitle" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigInsuredItemTab" column="ConfigInsuredItemTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigInsuredItemDetailsTab" column="ConfigInsuredItemDetailsTab" type="boolean" />
+			<property name="ConfigInsuredItemAttributesTab" column="ConfigInsuredItemAttributesTab" type="boolean" />
+			<property name="ConfigMaximumTermsOfPayment" column="ConfigMaximumTermsOfPayment" type="boolean" />
+			<property name="MaximumTermsOfPayment" column="MaximumTermsOfPayment" type="string" />
+			<property name="ConfigAgreedPaymentTerms" column="ConfigAgreedPaymentTerms" type="boolean" />
+			<property name="AgreedPaymentTerms" column="AgreedPaymentTerms" type="string" />
+			<property name="ConfigSecurityHeld" column="ConfigSecurityHeld" type="boolean" />
+			<property name="SecurityHeld" column="SecurityHeld" type="string" />
+			<property name="ConfigSecurityAmount" column="ConfigSecurityAmount" type="boolean" />
+			<property name="SecurityAmount" column="SecurityAmount" type="string" />
+			<property name="ConfigCreditLimitApproved" column="ConfigCreditLimitApproved" type="boolean" />
+			<property name="CreditLimitApproved" column="CreditLimitApproved" type="string" />
+			<property name="ConfigValidityLimitFromDate" column="ConfigValidityLimitFromDate" type="boolean" />
+			<property name="ValidityLimitFromDate" column="ValidityLimitFromDate" type="string" />
+			<property name="ConfigValidityLimitToDate" column="ConfigValidityLimitToDate" type="boolean" />
+			<property name="ValidityLimitToDate" column="ValidityLimitToDate" type="string" />
+			<property name="ConfigConditionsForPermanentLimit" column="ConfigConditionsForPermanentLimit" type="boolean" />
+			<property name="ConditionsForPermanentLimit" column="ConditionsForPermanentLimit" type="string" />
+			<property name="ConfigDiscretionaryCreditLimit" column="ConfigDiscretionaryCreditLimit" type="boolean" />
+			<property name="DiscretionaryCreditLimit" column="DiscretionaryCreditLimit" type="string" />
+			<property name="ConfigDiscretionaryCreditLimitDCLForTheSpecifiedBuyer" column="ConfigDiscretionaryCreditLimitDCLForTheSpecifiedBuyer" type="boolean" />
+			<property name="DiscretionaryCreditLimitDCLForTheSpecifiedBuyer" column="DiscretionaryCreditLimitDCLForTheSpecifiedBuyer" type="string" />
+			<property name="ConfigTemporaryLimitApproved" column="ConfigTemporaryLimitApproved" type="boolean" />
+			<property name="TemporaryLimitApproved" column="TemporaryLimitApproved" type="string" />
+			<property name="ConfigTemporaryValidityLimitFromDate" column="ConfigTemporaryValidityLimitFromDate" type="boolean" />
+			<property name="TemporaryValidityLimitFromDate" column="TemporaryValidityLimitFromDate" type="string" />
+			<property name="ConfigTemporaryValidityLimitToDate" column="ConfigTemporaryValidityLimitToDate" type="boolean" />
+			<property name="TemporaryValidityLimitToDate" column="TemporaryValidityLimitToDate" type="string" />
+			<property name="ConfigConditionsForTemporaryLimit" column="ConfigConditionsForTemporaryLimit" type="boolean" />
+			<property name="ConditionsForTemporaryLimit" column="ConditionsForTemporaryLimit" type="string" />
+			<property name="ConfigInsuredForDclBuyer" column="ConfigInsuredForDclBuyer" type="boolean" />
+			<property name="InsuredForDclBuyer" column="InsuredForDclBuyer" type="string" />
+			<property name="ConfigInsuredForCLBuyer" column="ConfigInsuredForCLBuyer" type="boolean" />
+			<property name="InsuredForCLBuyer" column="InsuredForCLBuyer" type="string" />
+			<property name="ConfigTypeOfDeductible" column="ConfigTypeOfDeductible" type="boolean" />
+			<property name="TypeOfDeductible" column="TypeOfDeductible" type="string" />
+			<property name="ConfigDeductibleAmount" column="ConfigDeductibleAmount" type="boolean" />
+			<property name="DeductibleAmount" column="DeductibleAmount" type="string" />
+			<property name="ConfigAnnualAggregateDeductible" column="ConfigAnnualAggregateDeductible" type="boolean" />
+			<property name="AnnualAggregateDeductible" column="AnnualAggregateDeductible" type="string" />
+			<property name="ConfigOptionForMaximumLiability" column="ConfigOptionForMaximumLiability" type="boolean" />
+			<property name="OptionForMaximumLiability" column="OptionForMaximumLiability" type="string" />
+			<property name="ConfigMaximumLiability" column="ConfigMaximumLiability" type="boolean" />
+			<property name="MaximumLiability" column="MaximumLiability" type="string" />
+			<property name="ConfigRecoveryMade" column="ConfigRecoveryMade" type="boolean" />
+			<property name="RecoveryMade" column="RecoveryMade" type="string" />
+			<property name="ConfigSalvageMade" column="ConfigSalvageMade" type="boolean" />
+			<property name="SalvageMade" column="SalvageMade" type="string" />
+			<property name="ConfigCostToBeDeducted" column="ConfigCostToBeDeducted" type="boolean" />
+			<property name="CostToBeDeducted" column="CostToBeDeducted" type="string" />
+			<property name="ConfigGrossClaimAmount" column="ConfigGrossClaimAmount" type="boolean" />
+			<property name="GrossClaimAmount" column="GrossClaimAmount" type="string" />
+			<property name="ConfigRecoveriesMadeDuringWaitingPeriod" column="ConfigRecoveriesMadeDuringWaitingPeriod" type="boolean" />
+			<property name="RecoveriesMadeDuringWaitingPeriod" column="RecoveriesMadeDuringWaitingPeriod" type="string" />
+			<property name="ConfigClaimNumber" column="ConfigClaimNumber" type="boolean" />
+			<property name="ClaimNumber" column="ClaimNumber" type="string" />
+			<property name="ConfigPolicyNumber" column="ConfigPolicyNumber" type="boolean" />
+			<property name="PolicyNumber" column="PolicyNumber" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="Status" column="Status" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigInsuredSerialNo" column="ConfigInsuredSerialNo" type="boolean" />
+			<property name="InsuredSerialNo" column="InsuredSerialNo" type="string" />
+			<property name="ConfigInsuredItemCode" column="ConfigInsuredItemCode" type="boolean" />
+			<property name="InsuredItemCode" column="InsuredItemCode" type="string" />
+			<property name="ConfigApplicableEventCode" column="ConfigApplicableEventCode" type="boolean" />
+			<property name="ApplicableEventCode" column="ApplicableEventCode" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigBackwardButton" column="ConfigBackwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

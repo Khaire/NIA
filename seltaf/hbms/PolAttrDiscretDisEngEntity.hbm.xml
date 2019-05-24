@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolAttrDiscretDisEngEntity" table="PolAttrDiscretDisEngEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="AddOnCoversPageTitle" column="AddOnCoversPageTitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationTab" column="ConfigRelationTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigQuoteNoLabel" column="ConfigQuoteNoLabel" type="boolean" />
+			<property name="QuoteNoLabel" column="QuoteNoLabel" type="string" />
+			<property name="ConfigStatusLabel" column="ConfigStatusLabel" type="boolean" />
+			<property name="StatusLabel" column="StatusLabel" type="string" />
+			<property name="ConfigPolicyholderLabel" column="ConfigPolicyholderLabel" type="boolean" />
+			<property name="PolicyholderLabel" column="PolicyholderLabel" type="string" />
+			<property name="ConfigProductLabel" column="ConfigProductLabel" type="boolean" />
+			<property name="ProductLabel" column="ProductLabel" type="string" />
+			<property name="ConfigDiscretionaryDiscountPercent" column="ConfigDiscretionaryDiscountPercent" type="boolean" />
+			<property name="DiscretionaryDiscountPercent" column="DiscretionaryDiscountPercent" type="string" />
+			<property name="ConfigDiscretionaryDiscountControlNumber" column="ConfigDiscretionaryDiscountControlNumber" type="boolean" />
+			<property name="DiscretionaryDiscountControlNumber" column="DiscretionaryDiscountControlNumber" type="string" />
+			<property name="ConfigDiscountInLieuOfAgentCommissionPercent" column="ConfigDiscountInLieuOfAgentCommissionPercent" type="boolean" />
+			<property name="DiscountInLieuOfAgentCommissionPercent" column="DiscountInLieuOfAgentCommissionPercent" type="string" />
+			<property name="ConfigAdditionalDiscretionaryDiscountPercent" column="ConfigAdditionalDiscretionaryDiscountPercent" type="boolean" />
+			<property name="AdditionalDiscretionaryDiscountPercent" column="AdditionalDiscretionaryDiscountPercent" type="string" />
+			<property name="ConfigAdditionalDiscretionaryDiscountControlNumber" column="ConfigAdditionalDiscretionaryDiscountControlNumber" type="boolean" />
+			<property name="AdditionalDiscretionaryDiscountControlNumber" column="AdditionalDiscretionaryDiscountControlNumber" type="string" />
+			<property name="ConfigBasisOfMonthlyDeclaration" column="ConfigBasisOfMonthlyDeclaration" type="boolean" />
+			<property name="BasisOfMonthlyDeclaration" column="BasisOfMonthlyDeclaration" type="string" />
+			<property name="ConfigProductClassification" column="ConfigProductClassification" type="boolean" />
+			<property name="ProductClassification" column="ProductClassification" type="string" />
+			<property name="ConfigExcessOptedByTheInsured" column="ConfigExcessOptedByTheInsured" type="boolean" />
+			<property name="ExcessOptedByTheInsured" column="ExcessOptedByTheInsured" type="string" />
+			<property name="ConfigApplicableVoluntaryDiscount" column="ConfigApplicableVoluntaryDiscount" type="boolean" />
+			<property name="ApplicableVoluntaryDiscount" column="ApplicableVoluntaryDiscount" type="string" />
+			<property name="ConfigVoluntaryDeductiblesChosen" column="ConfigVoluntaryDeductiblesChosen" type="boolean" />
+			<property name="VoluntaryDeductiblesChosen" column="VoluntaryDeductiblesChosen" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigBackButton" column="ConfigBackButton" type="boolean" />
+			<property name="ConfigBackwardButton" column="ConfigBackwardButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

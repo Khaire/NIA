@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.PolCovSectionDetailsEntity" table="PolCovSectionDetailsEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="NextPageTitle" column="NextPageTitle" type="string" />
+			<property name="AttCoverTitle" column="AttCoverTitle" type="string" />
+			<property name="ConfigPolicyTab" column="ConfigPolicyTab" type="boolean" />
+			<property name="ConfigAttributeTab" column="ConfigAttributeTab" type="boolean" />
+			<property name="ConfigInsuredInterestTab" column="ConfigInsuredInterestTab" type="boolean" />
+			<property name="ConfigCoverageTab" column="ConfigCoverageTab" type="boolean" />
+			<property name="ConfigLoanTab" column="ConfigLoanTab" type="boolean" />
+			<property name="ConfigClientDetailsTab" column="ConfigClientDetailsTab" type="boolean" />
+			<property name="ConfigRelationsTab" column="ConfigRelationsTab" type="boolean" />
+			<property name="ConfigPaymentsTab" column="ConfigPaymentsTab" type="boolean" />
+			<property name="ConfigFollowupTab" column="ConfigFollowupTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigMemberDetailTab" column="ConfigMemberDetailTab" type="boolean" />
+			<property name="ConfigMemberAttributesTab" column="ConfigMemberAttributesTab" type="boolean" />
+			<property name="ConfigAttachCoveragesTab" column="ConfigAttachCoveragesTab" type="boolean" />
+			<property name="ConfigMemberRelationsTab" column="ConfigMemberRelationsTab" type="boolean" />
+			<property name="ConfigMemberPaymentsTab" column="ConfigMemberPaymentsTab" type="boolean" />
+			<property name="ConfigDetailsTab" column="ConfigDetailsTab" type="boolean" />
+			<property name="ConfigAttachCoveragesAttributesTab" column="ConfigAttachCoveragesAttributesTab" type="boolean" />
+			<property name="ConfigPremiumTab" column="ConfigPremiumTab" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigIsThereAnyAddOnCoverExtAppForSectionI" column="ConfigIsThereAnyAddOnCoverExtAppForSectionI" type="boolean" />
+			<property name="IsThereAnyAddOnCoverExtAppForSectionI" column="IsThereAnyAddOnCoverExtAppForSectionI" type="string" />
+			<property name="ConfigAnyOtherAddonCoverReq" column="ConfigAnyOtherAddonCoverReq" type="boolean" />
+			<property name="AnyOtherAddonCoverReq" column="AnyOtherAddonCoverReq" type="string" />
+			<property name="ConfigMinDedAmtSectIProjWorksTestPeriod" column="ConfigMinDedAmtSectIProjWorksTestPeriod" type="boolean" />
+			<property name="MinDedAmtSectIProjWorksTestPeriod" column="MinDedAmtSectIProjWorksTestPeriod" type="string" />
+			<property name="ConfigDedWordForSectIProjWorksTestPeriod" column="ConfigDedWordForSectIProjWorksTestPeriod" type="boolean" />
+			<property name="DedWordForSectIProjWorksTestPeriod" column="DedWordForSectIProjWorksTestPeriod" type="string" />
+			<property name="ConfigMinDedAmtSectIProjWorksAOGClaims" column="ConfigMinDedAmtSectIProjWorksAOGClaims" type="boolean" />
+			<property name="MinDedAmtSectIProjWorksAOGClaims" column="MinDedAmtSectIProjWorksAOGClaims" type="string" />
+			<property name="ConfigDedWordForSectionIProjectWorksAOGClaims" column="ConfigDedWordForSectionIProjectWorksAOGClaims" type="boolean" />
+			<property name="DedWordForSectionIProjectWorksAOGClaims" column="DedWordForSectionIProjectWorksAOGClaims" type="string" />
+			<property name="ConfigMinDedAmtSectionIProjectWorksMaintPeriod" column="ConfigMinDedAmtSectionIProjectWorksMaintPeriod" type="boolean" />
+			<property name="MinDedAmtSectionIProjectWorksMaintPeriod" column="MinDedAmtSectionIProjectWorksMaintPeriod" type="string" />
+			<property name="ConfigDedWordingForSectionIProjectWorksMaintPeriod" column="ConfigDedWordingForSectionIProjectWorksMaintPeriod" type="boolean" />
+			<property name="DedWordingForSectionIProjectWorksMaintPeriod" column="DedWordingForSectionIProjectWorksMaintPeriod" type="string" />
+			<property name="ConfigMinDedAmtSectIProjWorksOthersClaims" column="ConfigMinDedAmtSectIProjWorksOthersClaims" type="boolean" />
+			<property name="MinDedAmtSectIProjWorksOthersClaims" column="MinDedAmtSectIProjWorksOthersClaims" type="string" />
+			<property name="ConfigDedWordingForSectIProjectWorksOthersClaims" column="ConfigDedWordingForSectIProjectWorksOthersClaims" type="boolean" />
+			<property name="DedWordingForSectIProjectWorksOthersClaims" column="DedWordingForSectIProjectWorksOthersClaims" type="string" />
+			<property name="ConfigForwardButton" column="ConfigForwardButton" type="boolean" />
+			<property name="ConfigAttachCoveragesPremium" column="ConfigAttachCoveragesPremium" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>

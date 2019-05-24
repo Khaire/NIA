@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+	<class abstract="false" name="com.aqm.staf.library.databin.ClaimDocumentEntity" table="ClaimDocumentEntity">
+		<id name="Reference" column="Reference" type="string">
+		</id>
+		<property name="TestScenario" column="TestScenario" type="string" />
+		<property name="RowNumber" column="RowNumber" type="integer" />
+		<property name="Action" column="Action" type="string" />
+		<property name="StepGroup" column="StepGroup" type="string" />
+		<property name="ParentKey" column="ParentKey" type="string" />
+		<property name="ChildKey" column="ChildKey" type="string" />
+		<property name="ConfigExecute" column="ConfigExecute" type="string" />
+		<dynamic-component insert="true" name="customProperties" optimistic-lock="true" unique="false" update="true">
+			<property name="LOB" column="LOB" type="string" />
+			<property name="Product" column="Product" type="string" />
+			<property name="LoginUserReference" column="LoginUserReference" type="string" />
+			<property name="ConfigClaimTab" column="ConfigClaimTab" type="boolean" />
+			<property name="ConfigMemberTab" column="ConfigMemberTab" type="boolean" />
+			<property name="ConfigDocumentTab" column="ConfigDocumentTab" type="boolean" />
+			<property name="ConfigPartiesTab" column="ConfigPartiesTab" type="boolean" />
+			<property name="ConfigReserveTab" column="ConfigReserveTab" type="boolean" />
+			<property name="ConfigPaymentTab" column="ConfigPaymentTab" type="boolean" />
+			<property name="ConfigAttributesTab" column="ConfigAttributesTab" type="boolean" />
+			<property name="ConfigClaimNo" column="ConfigClaimNo" type="boolean" />
+			<property name="ClaimNo" column="ClaimNo" type="string" />
+			<property name="ConfigPolicyNo" column="ConfigPolicyNo" type="boolean" />
+			<property name="PolicyNo" column="PolicyNo" type="string" />
+			<property name="ConfigClaimDate" column="ConfigClaimDate" type="boolean" />
+			<property name="ClaimDate" column="ClaimDate" type="string" />
+			<property name="ConfigClaimStatus" column="ConfigClaimStatus" type="boolean" />
+			<property name="ClaimStatus" column="ClaimStatus" type="string" />
+			<property name="ConfigProductCode" column="ConfigProductCode" type="boolean" />
+			<property name="ProductCode" column="ProductCode" type="string" />
+			<property name="ConfigCauseOfLoss" column="ConfigCauseOfLoss" type="boolean" />
+			<property name="CauseOfLoss" column="CauseOfLoss" type="string" />
+			<property name="ConfigNew" column="ConfigNew" type="boolean" />
+			<property name="ConfigDocName" column="ConfigDocName" type="boolean" />
+			<property name="DocName" column="DocName" type="string" />
+			<property name="ConfigTemplateRequired" column="ConfigTemplateRequired" type="boolean" />
+			<property name="TemplateRequired" column="TemplateRequired" type="string" />
+			<property name="ConfigDocType" column="ConfigDocType" type="boolean" />
+			<property name="DocType" column="DocType" type="string" />
+			<property name="ConfigRefCategory" column="ConfigRefCategory" type="boolean" />
+			<property name="RefCategory" column="RefCategory" type="string" />
+			<property name="ConfigDescription" column="ConfigDescription" type="boolean" />
+			<property name="Description" column="Description" type="string" />
+			<property name="ConfigKeyword" column="ConfigKeyword" type="boolean" />
+			<property name="Keyword" column="Keyword" type="string" />
+			<property name="ConfigFind" column="ConfigFind" type="boolean" />
+			<property name="Find" column="Find" type="string" />
+			<property name="ConfigBrowseButton" column="ConfigBrowseButton" type="boolean" />
+			<property name="ConfigMergeButton" column="ConfigMergeButton" type="boolean" />
+			<property name="ConfigSaveButton" column="ConfigSaveButton" type="boolean" />
+			<property name="ConfigCloseButton" column="ConfigCloseButton" type="boolean" />
+			<property name="ConfigNewButton" column="ConfigNewButton" type="boolean" />
+		</dynamic-component>
+	</class>
+</hibernate-mapping>
